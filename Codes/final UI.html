@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Digital History Atlas of India: Explore from 300 BCE (Mauryan Empire) to 1947 CE (Independence) with interactive maps and student tools.">
+  <title>Welcome to Digital History Atlas of India: 300 BCE to 1947 CE</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons for Search -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Inline Styles -->
+  <style>
+    body {
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar with Search Bar */
+    .navbar {
+      background: #222 !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #FF9933 !important;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #FF9933 !important;
+    }
+
+    /* Search Bar Styling */
+    .search-form {
+      max-width: 300px;
+    }
+
+    .search-input {
+      border-radius: 20px 0 0 20px;
+      border: none;
+      padding: 8px 15px;
+    }
+
+    .search-btn {
+      border-radius: 0 20px 20px 0;
+      background: #FF9933;
+      border: none;
+      padding: 8px 15px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #FF9933, #138808);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .map-placeholder {
+      max-width: 800px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      display: block;
+    }
+
+    /* Main and Featured Sections */
+    main {
+      padding: 50px 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-explore {
+      background: #FF9933;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+    }
+
+    .btn-explore:hover {
+      background: #e6892a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+    }
+
+    .featured-section {
+      padding: 50px 20px;
+      background: #fff;
+    }
+
+    .featured-section h2 {
+      text-align: center;
+      color: #138808;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    .era-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .era-card {
+      background: linear-gradient(to bottom, #fff, #f8f9fa);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 1;
+    }
+
+    .era-card.hidden {
+      display: none;
+    }
+
+    .era-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-color: #FF9933;
+    }
+
+    .era-card h3 {
+      color: #138808;
+      margin-bottom: 10px;
+    }
+
+    /* Search Results */
+    #search-results {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      display: none;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #FF9933;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .search-form { max-width: 100%; margin-top: 10px; }
+    }
+
+    /* Modal Styling */
+    .modal-content {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Alert Styling for Feedback */
+    .alert {
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar with Search and Login -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Digital History Atlas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="atlas.html">Atlas</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dynasties</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="dynasties/mauryan.html">Mauryan Empire</a></li>
+              <li><a class="dropdown-item" href="#">Gupta Empire</a></li>
+              <li><a class="dropdown-item" href="#">Mughal Empire</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="loginBtn" onclick="openAuthModal('login')">Login</a>
+            <a class="nav-link d-none" href="dashboard.html" id="dashboardLink">Dashboard</a>
+            <a class="nav-link d-none" href="#" id="logoutBtn" onclick="logout()">Logout</a>
+          </li>
+        </ul>
+        <!-- Search Bar -->
+        <form class="d-flex search-form ms-3" id="searchForm">
+          <input class="form-control me-2 search-input" type="search" placeholder="Search eras, dynasties (e.g., Mauryan)" id="searchInput" aria-label="Search">
+          <button class="btn search-btn" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Updated Title) -->
+  <section id="home" class="hero">
+    <div class="container position-relative">
+      <h1>Welcome to Digital History Atlas of India: 300 BCE to 1947 CE</h1>
+      <p>Discover the evolution of Bharat from the Mauryan unification to the triumph of Independence. Interactive maps, dynasties, and student resources for an engaging historical journey.</p>
+      <img src="https://via.placeholder.com/800x400/FF9933/fff?text=Map+of+India+(300+BCE+-+1947+CE)" alt="Historical Map of India 300 BCE - 1947 CE" class="img-fluid map-placeholder">
+      <a href="atlas.html" class="btn btn-explore mt-4">Start Exploring</a>
+    </div>
+  </section>
+
+  <!-- Main Content with Added Message -->
+  <main>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="lead text-center">Explore the rich history of India through interactive maps, dynasties, battles, trade routes, and cultural heritage. This atlas is designed to make history more visual, engaging, and student-friendly.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Featured Eras Section (Updated to Focus Period) -->
+  <section class="featured-section">
+    <div class="container">
+      <h2>Key Historical Eras (300 BCE - 1947 CE)</h2>
+      <div class="era-cards" id="eraCards">
+        <div class="era-card" data-keywords="mauryan empire ashoka chandragupta bce">
+          <h3>Mauryan Empire (322-185 BCE)</h3>
+          <p>Chandragupta's conquests and Ashoka's edicts on dharma shaped early India.</p>
+        </div>
+        <div class="era-card" data-keywords="gupta empire golden age science art ce">
+          <h3>Gupta Empire (320-550 CE)</h3>
+          <p>The Golden Age: Advances in mathematics, literature, and temple architecture.</p>
+        </div>
+        <div class="era-card" data-keywords="mughal empire taj mahal akbar shah jahan ce">
+          <h3>Mughal Empire (1526-1857 CE)</h3>
+          <p>From Babur to Aurangzeb: Fusion of arts, forts, and the iconic Taj Mahal.</p>
+        </div>
+        <div class="era-card" data-keywords="british raj independence gandhi nehru 1947 ce">
+          <h3>British Raj & Independence (1858-1947 CE)</h3>
+          <p>Colonial rule, freedom struggle, and partition—birth of modern India.</p>
+        </div>
+      </div>
+      <div id="era-details" class="mt-4 text-center" style="display: none;">
+        <p>Select an era to learn more!</p>
+      </div>
+      <div id="search-results" class="mt-4">
+        <h4>Search Results</h4>
+        <p id="results-content">No results found. Try searching for "Mauryan" or "Independence".</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login/Registration Modal -->
+  <div class="modal fade" id="authModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Student Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="alertContainer"></div>
+          <form id="authForm">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <!-- Student ID Field (Shown only in Register Mode) -->
+            <div class="mb-3 d-none" id="studentIdField">
+              <label for="studentId" class="form-label">Student ID (e.g., STU001)</label>
+              <input type="text" class="form-control" id="studentId" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <div class="text-center mt-2">
+              <a href="#" id="toggleFormLink" onclick="toggleFormMode()">Need an account? Register here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="about">
+    <div class="container">
+      <p>&copy; 2023 Digital History Atlas of India: 300 BCE to 1947 CE. | <a href="#">Sources</a> | <a href="#">Contact</a> | History Project</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Full JavaScript: Auth, Search, Eras -->
+  <script>
+    let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    let currentUser  = localStorage.getItem('currentUser ') || '';
+    let currentUser Id = localStorage.getItem('currentUser Id') || '';
+    let authMode = 'login'; // 'login' or 'register'
+
+    // Load users from localStorage
+    function getUsers() {
+      return JSON.parse(localStorage.getItem('users') || '[]');
+    }
+
+    // Save users to localStorage
+    function saveUsers(users) {
+      localStorage.setItem('users', JSON.stringify(users));
+    }
+
+    // Show Alert in Modal
+    function showAlert(message, type = 'danger') {
+      const container = document.getElementById('alertContainer');
+      container.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">${message}<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>`;
+    }
+
+    // Update Navbar
+    function updateNavbar() {
+      if (isLoggedIn) {
+        document.getElementById('loginBtn').classList.add('d-none');
+        document.getElementById('dashboardLink').classList.remove('d-none');
+        document.getElementById('logoutBtn').classList.remove('d-none');
+      } else {
+        document.getElementById('loginBtn').classList.remove('d-none');
+        document.getElementById('dashboardLink').classList.add('d-none');
+        document.getElementById('logoutBtn').classList.add('d-none');
+      }
+    }
+
+    // Open Auth Modal
+    function openAuthModal(mode) {
+      authMode = mode;
+      document.getElementById('modalTitle').textContent = mode === 'login' ? 'Student Login' : 'Student Registration';
+      document.getElementById('toggleFormLink').textContent = mode === 'login' ? 'Need an account? Register here' : 'Already have an account? Login here';
+      document.getElementById('studentIdField').classList.toggle('d-none', mode !== 'register');
+      document.getElementById('authForm').onsubmit = mode === 'login'
