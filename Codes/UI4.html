@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital History Atlas of India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #cce5ff, #e6f2ff);
+      color: #222;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #004080;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffcc00;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .search-box input {
+      border: none;
+      padding: 6px 10px;
+      font-size: 16px;
+      outline: none;
+      width: 180px;
+    }
+
+    .search-box button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #003366;
+      transition: 0.3s;
+    }
+
+    .search-box button:hover {
+      background-color: #ffd633;
+    }
+
+    .login-btn {
+      background-color: #ffcc00;
+      color: #003366;
+      border: none;
+      padding: 8px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #ffd633;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .intro h2 {
+      color: #003366;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: 10px auto;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 260px;
+      text-align: center;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Welcome to Digital History Atlas of India
+  </header>
+
+  <nav>
+    <div class="nav-left">
+      <div class="brand">Bharat Darshan</div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Ancient India</a>
+        <a href="#">Medieval India</a>
+        <a href="#">Modern India</a>
+        <a href="#">About</a>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button>🔍</button>
+      </div>
+    </div>
+
+    <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+  </nav>
+
+  <section class="intro">
+    <h2>Explore India's History from 300 BCE – 1947 CE</h2>
+    <p>
+      The <strong>Digital History Atlas of India</strong> brings India’s vast past to life — 
+      from the Mauryan Empire to the Independence Movement.  
+      Learn through interactive visuals, timelines, and easy explanations.
+    </p>
+    <p>
+      Designed especially for students, this atlas makes <strong>learning history easy, visual, and fun</strong>.
+    </p>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Empires & Kingdoms</h3>
+      <p>Explore the rise and fall of India’s great empires and dynasties.</p>
+    </div>
+
+    <div class="card">
+      <h3>Battles & Events</h3>
+      <p>Discover key battles and turning points that shaped Indian history.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cultural Heritage</h3>
+      <p>Learn about India’s art, architecture, and monuments across centuries.</p>
+    </div>
+
+    <div class="card">
+      <h3>Freedom Movement</h3>
+      <p>Trace India’s inspiring journey from colonial rule to independence in 1947.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Digital History Atlas of India
+  </footer>
+</body>
+</html>
