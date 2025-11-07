@@ -183,7 +183,8 @@ footer {
   }
 
   .nav-links {
-    display: flex;
+    display: none;
+    width: 100%;
     flex-direction: column;
     margin-top: 0.5rem;
   }
