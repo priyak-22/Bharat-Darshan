@@ -1,19 +1,24 @@
 // dynasty.js
 
+// Function used by other buttons (like opening a dynasty page)
+function openKingdom(page) {
+  window.location.href = page;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Handle Back Button
   const backBtn = document.getElementById("backBtn");
   if (backBtn) {
     backBtn.addEventListener("click", () => {
-      // Adjust path depending on your structure
-      window.location.href = "../atlas.html";
+      // ✅ Correct path to atlas.html (since it's in /html/)
+      window.location.href = "../../html/atlas.html";
     });
   }
 
-  // Optional: Smooth scroll to top on page load
+  // Smooth scroll to top on page load
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Optional: Small visual interaction for cards
+  // Subtle hover effect for info cards
   const cards = document.querySelectorAll(".info-card");
   cards.forEach(card => {
     card.addEventListener("mouseenter", () => {
