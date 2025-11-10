@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (backBtn) {
     backBtn.addEventListener("click", () => {
       // ✅ Correct path to atlas.html (since it's in /html/)
-      window.location.href = "../../html/atlas.html";
+      window.location.href = "../../html/empires.html";
     });
   }
 

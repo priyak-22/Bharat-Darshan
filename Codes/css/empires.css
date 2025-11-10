@@ -122,3 +122,12 @@ a {
   cursor: default; /* makes it look like plain text */
   
 }
+.hidden {
+  display: none;
+}
+.history-nav a.active {
+  background-color: #8B6914;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
