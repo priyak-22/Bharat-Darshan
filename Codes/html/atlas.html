@@ -4,81 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital History Atlas of India</title>
-  <link rel="stylesheet" href="../css/style.css" >   
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-  <header class="header">
-    Welcome to Digital History Atlas of India
-  </header>
+  <!-- ========================
+       FULLSCREEN WELCOME INTRO
+       ======================== -->
+  <div class="intro">
+    <div class="fade-layer"></div>
 
-  <nav class="navbar">
-    <div class="logo">Bharat Darshan</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Ancient India</a></li>
-      <li><a href="#">Medieval India</a></li>
-      <li><a href="#">Modern India</a></li>
-      <li><a href="#">Quiz</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-    <div class="search-box">
-      <input type="text" placeholder="Search...">
-      <button>🔍</button>
+    <!-- Remove src="your-image", intro BG is handled by CSS -->
+    <div class="historical-image"></div>  
+
+    <div class="dust"></div>
+
+    <div class="text-box">
+      <h1>Indian History</h1>
+      <div class="subtitle">Journey Through Time</div>
+      <div class="era-range">Ancient • Medieval • Modern</div>
+      <a href="#main" class="enter-btn">Enter</a>
     </div>
-    <button class="login">Login</button>
-  </nav>
+  </div>
 
-  <main class="main-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <a href="empires.html">
-        <div class="sidebar-box">
-          <h3>Empires & Kingdoms</h3>
-          <p>Explore the rise and fall of India’s great empires and dynasties.</p>
-        </div>
-      </a>
-      <a href="battles.html">
-        <div class="sidebar-box">
-          <h3>Battles & Events</h3>
-          <p>Discover key battles and turning points that shaped Indian history.</p>
-        </div>
-      </a>
-      <a href="cultural.html">
-        <div class="sidebar-box">
-          <h3>Cultural Heritage</h3>
-          <p>Learn about India’s art, architecture, and monuments across centuries.</p>
-        </div>
-      </a>
-      <a href="freedom.html">
-        <div class="sidebar-box">
-          <h3>Freedom Movement</h3>
-          <p>Trace India’s inspiring journey from colonial rule to independence in 1947.</p>
-        </div>
-      </a>
-    </aside>
+  <!-- ========================
+       MAIN CONTENT (same position)
+       ======================== -->
+  <div id="main" class="main-site">
 
-    <!-- Main Content -->
-    <section class="content">
-      <h2>Explore India's History from 300 BCE – 1947 CE</h2>
-      <img src="https://cdn.sketchbubble.com/pub/media/catalog/product/optimized1/5/f/5f42586452b5596a558691b6e44b882b58684d3ca9ca1204dd1b578011d953c7/history-of-india-slide1.png" alt="India Historical Map" height="300" width="500">
-      <p>
-        The <strong>Digital History Atlas of India</strong> brings India’s vast past to life —
-        from the Mauryan Empire to the Independence Movement. Learn through interactive visuals,
-        timelines, and easy explanations.
-      </p>
-       <p><b>“Preserving India's heritage through knowledge and visualization.”</b></p>
-      <p>
-        Designed especially for students, this atlas makes
-        <strong>learning history easy, visual, and fun.</strong>
-      </p>
-    </section>
-  </main>
+    <header class="header">
+      Welcome to Digital History Atlas of India
+    </header>
 
-  <footer>
-    <p>© 2025 Digital History Atlas of India | Bharat Darshan Project</p>
-    <p><a href="#">Contact Us</a> | <a href="#">Privacy Policy</a></p>
-  </footer>
+    <nav class="navbar">
+      <div class="logo">Bharat Darshan</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="AncientIndia.html">Ancient India</a></li>
+        <li><a href="#">Medieval India</a></li>
+        <li><a href="#">Modern India</a></li>
+        <li><a href="#">Quiz</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button>🔍</button>
+      </div>
+
+      <button class="login">Login</button>
+    </nav>
+
+    <main class="main-container">
+      <!-- Sidebar -->
+       
+      <aside class="sidebar">
+        <a href="empires.html">
+          <div class="sidebar-box">
+            <h3>Empires & Kingdoms</h3>
+            <p>Explore the rise and fall of India’s great empires and dynasties.</p>
+          </div>
+        </a>
+        <a href="battles.html">
+          <div class="sidebar-box">
+            <h3>Battles & Events</h3>
+            <p>Discover key battles and turning points that shaped Indian history.</p>
+          </div>
+        </a>
+        <a href="cultural.html">
+          <div class="sidebar-box">
+            <h3>Cultural Heritage</h3>
+            <p>Learn about India’s art, architecture, and monuments across centuries.</p>
+          </div>
+        </a>
+        <a href="freedom.html">
+          <div class="sidebar-box">
+            <h3>Freedom Movement</h3>
+            <p>Trace India’s inspiring journey from colonial rule to independence in 1947.</p>
+          </div>
+        </a>
+      </aside>
+
+      <!-- Main content -->
+      <section class="content">
+        <h2>Explore India's History from 300 BCE – 1947 CE</h2>
+
+        <img src="https://cdn.sketchbubble.com/pub/media/catalog/product/optimized1/5/f/5f42586452b5596a558691b6e44b882b58684d3ca9ca1204dd1b578011d953c7/history-of-india-slide1.png" 
+             alt="India Historical Map">
+
+        <p>
+          The <strong>Digital History Atlas of India</strong> brings India’s vast past to life —
+          from the Mauryan Empire to the Independence Movement. Learn through interactive visuals,
+          timelines, and easy explanations.
+        </p>
+        <p><b>“Preserving India's heritage through knowledge and visualization.”</b></p>
+        <p>
+          Designed especially for students, this atlas makes
+          <strong>learning history easy, visual, and fun.</strong>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Digital History Atlas of India | Bharat Darshan Project</p>
+      <p><a href="#">Contact Us</a> | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+  </div>
 
 </body>
 </html>
