@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ancient India Horizontal Timeline</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #f5f0e5;
+}
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #4b341f;
+  padding: 25px 0 10px;
+}
+
+.timeline-line {
+  height: 4px;
+  background: #6b4f2f;
+  margin: 0 20px 25px;
+  border-radius: 2px;
+}
+
+.timeline-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 180px;
+  gap: 25px;
+  padding: 20px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #b5966d #f5f0e5;
+}
+
+.timeline-container::-webkit-scrollbar {
+  height: 10px;
+}
+.timeline-container::-webkit-scrollbar-track {
+  background: #f5f0e5;
+}
+.timeline-container::-webkit-scrollbar-thumb {
+  background: #b5966d;
+  border-radius: 5px;
+}
+
+.card {
+  width: 120px;
+  height: 120px;
+  background: #fff8e6;
+  border: 3px solid #b5966d;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card strong {
+  font-size: 18px;
+  color: #4b341f;
+}
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 30px;
+}
+
+.section-box {
+  background: #fff8e6;
+  border: 2px solid #b5966d;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 350px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section-box h2 {
+  margin-top: 0;
+  color: #4b341f;
+  font-size: 24px;
+}
+
+.section-box img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section-box img.visible {
+  opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Ancient India Timeline</div>
+<div class="timeline-line"></div>
+
+<div class="timeline-container" id="timeline"></div>
+
+<div class="bottom-section">
+  <div class="section-box" id="mapRegion">
+    <h2>Map Region</h2>
+    <p>Select a dynasty to view its territorial area.</p>
+  </div>
+
+  <div class="section-box" id="infoRegion">
+    <h2>Information</h2>
+    <p>Select a dynasty to see historical details.</p>
+  </div>
+</div>
+
+<script>
+// Dynasties with complete details
+const dynasties = [
+  {name:"Nanda Dynasty", years:"345 – 322 BCE", founder:"Mahapadma Nanda", rulers:"Dhana Nanda, others", end:"Overthrown by Chandragupta Maurya", info:"Known for great wealth and strong army in Magadha.", region:"Magadha (Bihar)", img:"https://upload.wikimedia.org/wikipedia/commons/9/90/Nanda_Empire%2C_c.325_BCE.png"},
+  {name:"Maurya Empire", years:"322 – 185 BCE", founder:"Chandragupta Maurya", rulers:"Chandragupta, Bindusara, Ashoka", end:"Declined after last ruler Brihadratha was assassinated by Pushyamitra Shunga", info:"Largest Indian empire under Ashoka.", region:"Indian subcontinent", img:"https://upload.wikimedia.org/wikipedia/commons/2/2f/Maurya_Empire%2C_c.250_BCE_network_model_v01.png"},
+  {name:"Shunga Dynasty", years:"185 – 73 BCE", founder:"Pushyamitra Shunga", rulers:"Pushyamitra Shunga, Agnimitra", end:"Replaced by Kanva dynasty", info:"Succeeded the Mauryas in Magadha.", region:"Magadha & Central India", img:"https://via.placeholder.com/400x250?text=Shunga+Dynasty"},
+  {name:"Kanva Dynasty", years:"73 – 28 BCE", founder:"Vasudeva Kanva", rulers:"Vasudeva, Bhumimitra", end:"Overthrown by Satavahanas", info:"Replaced the Shungas.", region:"Magadha", img:"https://via.placeholder.com/400x250?text=Kanva+Dynasty"},
+  {name:"Indo-Greek Kingdom", years:"180 – 10 BCE", founder:"Demetrius I of Bactria", rulers:"Demetrius, Menander I", end:"Declined due to local Indian rulers and invasions", info:"Greek influence on art & coins.", region:"Punjab & NW India", img:"https://via.placeholder.com/400x250?text=Indo-Greek"},
+  {name:"Saka Dynasty", years:"200 BCE – 400 CE", founder:"Saka rulers", rulers:"Nahapana, Rudradaman I", end:"Absorbed into Gupta Empire", info:"Central Asian Saka rulers.", region:"Gujarat & Western India", img:"https://via.placeholder.com/400x250?text=Saka+Dynasty"},
+  {name:"Indo-Parthian Kingdom", years:"20 – 240 CE", founder:"Gondophares", rulers:"Gondophares, Abdagases", end:"Declined due to Kushan expansion", info:"Ruled NW regions.", region:"Afghanistan & Punjab", img:"https://via.placeholder.com/400x250?text=Indo-Parthian"},
+  {name:"Satavahana Dynasty", years:"200 BCE – 200 CE", founder:"Simuka", rulers:"Simuka, Gautamiputra Satakarni", end:"Declined and fragmented into regional powers", info:"Major Deccan rulers.", region:"Maharashtra & Telangana", img:"https://via.placeholder.com/400x250?text=Satavahana"},
+  {name:"Kushan Empire", years:"30 – 375 CE", founder:"Kujula Kadphises", rulers:"Kanishka, Huvishka", end:"Declined due to invasions and internal decline", info:"Controlled Silk Route.", region:"NW India & Afghanistan", img:"https://via.placeholder.com/400x250?text=Kushan+Empire"},
+  {name:"Western Kshatrapas", years:"35 – 405 CE", founder:"Chastana", rulers:"Chastana, Rudrasimha I", end:"Declined after Gupta expansion", info:"Rivals of Satavahanas.", region:"Gujarat & Malwa", img:"https://via.placeholder.com/400x250?text=Western+Kshatrapas"},
+  {name:"Gupta Empire", years:"319 – 550 CE", founder:"Sri Gupta", rulers:"Chandragupta I, Samudragupta, Chandragupta II", end:"Declined due to Huna invasions", info:"Golden Age of India.", region:"North & Central India", img:"https://via.placeholder.com/400x250?text=Gupta+Empire"},
+  {name:"Vakataka Dynasty", years:"250 – 500 CE", founder:"Vindhyashakti", rulers:"Pravarasena, Harishena", end:"Declined and absorbed by other regional kingdoms", info:"Patrons of Ajanta caves.", region:"Vidarbha", img:"https://via.placeholder.com/400x250?text=Vakataka"},
+  {name:"Huna Invasions", years:"450 – 528 CE", founder:"Toramana", rulers:"Mihirakula", end:"Defeated by Indian kings", info:"Central Asian tribes invaded India.", region:"Punjab & Kashmir", img:"https://via.placeholder.com/400x250?text=Huna+Invasions"},
+  {name:"Maukharis", years:"550 – 700 CE", founder:"Ishanavarman", rulers:"Ishanavarman, Sharvavarman", end:"Declined after Harsha rise", info:"Controlled Ganga plains.", region:"Kannauj region", img:"https://via.placeholder.com/400x250?text=Maukharis"},
+  {name:"Maitraka Dynasty", years:"475 – 776 CE", founder:"Bhatarka", rulers:"Dhruvasena I, Siladitya", end:"Overthrown by Arabs in West India", info:"Ruled from Vallabhi.", region:"Gujarat", img:"https://via.placeholder.com/400x250?text=Maitraka"},
+  {name:"Gauda Kingdom", years:"600 – 750 CE", founder:"Shashanka", rulers:"Shashanka", end:"Declined after Pala rise", info:"Powerful Bengal kingdom.", region:"West Bengal", img:"https://via.placeholder.com/400x250?text=Gauda+Kingdom"},
+  {name:"Harsha Empire", years:"606 – 647 CE", founder:"Harshavardhana", rulers:"Harsha", end:"Empire dissolved after Harsha's death", info:"Harshavardhana united much of North India.", region:"North India", img:"https://via.placeholder.com/400x250?text=Harsha+Empire"},
+  {name:"Gurjara Pratihara Empire", years:"650 – 1036 CE", founder:"Nagabhata I", rulers:"Nagabhata I, Mihira Bhoja", end:"Decline due to internal struggles and invasions", info:"Strong Rajput empire.", region:"Rajasthan, UP, MP", img:"https://via.placeholder.com/400x250?text=Gurjara+Pratihara"},
+  {name:"Pala Empire", years:"750 – 1174 CE", founder:"Gopala", rulers:"Gopala, Dharmapala, Devapala", end:"Decline due to internal weakness and invasions", info:"Buddhist empire supporting Nalanda.", region:"Bengal & Bihar", img:"https://via.placeholder.com/400x250?text=Pala+Empire"},
+  {name:"Chera Dynasty", years:"3rd century BCE – 12th century CE", founder:"Early Tamil rulers", rulers:"Cheran Senguttuvan, others", end:"Declined with rise of Cholas and Pandyas", info:"Early Tamil kingdom.", region:"Kerala", img:"https://via.placeholder.com/400x250?text=Chera+Dynasty"},
+  {name:"Pandya Dynasty", years:"4th century BCE – 1345 CE", founder:"Kadungon", rulers:"Maravarman Sundara Pandya, Jatavarman Sundara Pandya", end:"Decline due to invasions and internal decline", info:"Known for pearl trade.", region:"Tamil Nadu", img:"https://via.placeholder.com/400x250?text=Pandya+Dynasty"},
+  {name:"Pallava Dynasty", years:"275 – 897 CE", founder:"Simhavarman", rulers:"Mahendravarman I, Narasimhavarman I", end:"Decline due to Chola expansion", info:"Built Mahabalipuram temples.", region:"Tamil Nadu", img:"https://via.placeholder.com/400x250?text=Pallava+Dynasty"},
+  {name:"Chalukya Dynasty", years:"543 – 1156 CE", founder:"Pulakeshin I", rulers:"Pulakeshin II, Vikramaditya I", end:"Decline due to Rashtrakuta conquest", info:"Great South Indian empire.", region:"Karnataka", img:"https://via.placeholder.com/400x250?text=Chalukya+Dynasty"},
+  {name:"Chola Dynasty", years:"300 BCE – 1279 CE", founder:"Karikala Chola", rulers:"Rajaraja Chola I, Rajendra Chola I", end:"Decline due to Pandya and Hoysala rise", info:"Great naval empire.", region:"Tamil Nadu", img:"https://via.placeholder.com/400x250?text=Chola+Dynasty"}
+];
+
+const container = document.getElementById("timeline");
+
+function showDetails(d) {
+  const mapRegion = document.getElementById("mapRegion");
+  const infoRegion = document.getElementById("infoRegion");
+
+  mapRegion.innerHTML = `
+    <h2>Map Region</h2>
+    <p><strong>Region:</strong> ${d.region}</p>
+    <img id="dynastyMap" src="${d.img}" alt="${d.name} map">
+  `;
+
+  infoRegion.innerHTML = `
+    <h2>${d.name}</h2>
+    <p><strong>Period:</strong> ${d.years}</p>
+    <p><strong>Founder:</strong> ${d.founder}</p>
+    <p><strong>Main Rulers:</strong> ${d.rulers}</p>
+    <p><strong>End:</strong> ${d.end}</p>
+    <p>${d.info}</p>
+  `;
+
+  const img = document.getElementById("dynastyMap");
+  setTimeout(() => img.classList.add("visible"), 50);
+}
+
+dynasties.forEach(d => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `<strong>${d.years}</strong>`;
+  card.onclick = () => showDetails(d);
+  container.appendChild(card);
+});
+</script>
+
+</body>
+</html>
