@@ -3,182 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Medieval India Horizontal Timeline</title>
+<title>Palm Leaf Scroll Timeline - From Image</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Georgia, serif;
-  background: #f5f0e5;
-}
-
-.header {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: #4b341f;
-  padding: 25px 0 10px;
-}
-
-.timeline-line {
-  height: 4px;
-  background: #6b4f2f;
-  margin: 0 20px 25px;
-  border-radius: 2px;
-}
-
-.timeline-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 180px;
-  gap: 25px;
   padding: 20px;
+  background: #f2e5c4;
+  font-family: Georgia, serif;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Scroll container */
+.scroll-container {
+  width: 100%;
   overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #b5966d #f5f0e5;
+  white-space: nowrap;
+  padding-bottom: 20px;
 }
 
-.timeline-container::-webkit-scrollbar {
-  height: 10px;
-}
-.timeline-container::-webkit-scrollbar-track {
-  background: #f5f0e5;
-}
-.timeline-container::-webkit-scrollbar-thumb {
-  background: #b5966d;
-  border-radius: 5px;
+/* Scroll background */
+.scroll {
+  display: inline-block;
+  padding: 30px 0;
+  background: #e8d7a8;
+  border: 5px solid #b39458;
+  border-radius: 10px;
+  background-color: #e8d7a8; 
 }
 
+/* Wooden rods */
+.rod-left,
+.rod-right {
+  width: 40px;
+  height: 100%;
+  background: #8c5a27;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Dynasty cards */
 .card {
-  width: 120px;
-  height: 120px;
-  background: #fff8e6;
-  border: 3px solid #b5966d;
-  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  width: 180px;
+  margin: 0 20px;
+  padding: 15px;
+  background: #f5e7c4;
+  border: 2px solid #a48445;
+  border-radius: 6px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   text-align: center;
   cursor: pointer;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
-.card strong {
-  font-size: 18px;
-  color: #4b341f;
+.card b {
+  font-size: 17px;
 }
 
-.bottom-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  padding: 30px;
-}
-
-.section-box {
-  background: #fff8e6;
-  border: 2px solid #b5966d;
-  border-radius: 12px;
+/* Details Box */
+#details-box {
+  width: 90%;
+  margin: 30px auto;
   padding: 20px;
-  min-height: 350px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  background: #fff4d6;
+  border: 3px solid #b39458;
+  border-radius: 10px;
+  display: none;
+  animation: fadeIn 0.4s ease;
 }
 
-.section-box h2 {
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#details-box h2 {
   margin-top: 0;
-  color: #4b341f;
-  font-size: 24px;
-}
-
-.section-box img {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.section-box img.visible {
-  opacity: 1;
+  color: #6b4b1f;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">Medieval India Timeline</div>
-<div class="timeline-line"></div>
+<h1>Medival India Timeline</h1>
 
-<div class="timeline-container" id="timeline"></div>
+<div class="scroll-container">
+  
+  <div class="rod-left"></div>
 
-<div class="bottom-section">
-  <div class="section-box" id="mapRegion">
-    <h2>Map Region</h2>
-    <p>Select a dynasty to view its territorial area.</p>
+  <div class="scroll">
+
+    <!-- Order based on the provided image's periods -->
+    <div class="card" onclick="showDetails('pratihara')"><b>Gurjara-Pratihara</b><br>8th–11th CE</div>
+    <div class="card" onclick="showDetails('rashtrakuta')"><b>Rashtrakuta</b><br>8th–10th CE</div>
+    <div class="card" onclick="showDetails('chola')"><b>Chola</b><br>9th–13th CE</div>
+    <div class="card" onclick="showDetails('chandela_chauhan')"><b>Chandela & Chauhan</b><br>9th–12th CE</div>
+    <div class="card" onclick="showDetails('rajput')"><b>Rajput Kingdoms</b><br>8th–15th CE</div>
+    <div class="card" onclick="showDetails('mewar')"><b>Mewar (Sisodia)</b><br>13th–15th CE</div>
+    <div class="card" onclick="showDetails('kakatiya_hoysala')"><b>Kakatiya & Hoysala</b><br>12th–14th CE</div>
+    <div class="card" onclick="showDetails('delhi_sultanate')"><b>Delhi Sultanate</b><br>1206–1526 CE</div>
+    <div class="card" onclick="showDetails('vijayanagara')"><b>Vijayanagara Empire</b><br>1336–1646 CE</div>
+    <div class="card" onclick="showDetails('bahmani')"><b>Bahmani Kingdom</b><br>1347–1527 CE</div>
+    <div class="card" onclick="showDetails('end_medieval')"><b>End of Medieval Period</b><br>1498 CE</div>
+
   </div>
 
-  <div class="section-box" id="infoRegion">
-    <h2>Information</h2>
-    <p>Select a dynasty to see historical details.</p>
-  </div>
+  <div class="rod-right"></div>
+
 </div>
 
+<!-- DETAILS SECTION -->
+<div id="details-box">
+  <h2 id="title"></h2>
+  <p id="info"></p>
+</div>
+
+
 <script>
-// Medieval India dynasties
-const dynasties = [
-  {name:"Gurjara-Pratihara", years:"650 – 1036 CE", founder:"Nagabhata I", rulers:"Nagabhata I, Mihira Bhoja", end:"Declined due to invasions and internal conflicts", info:"Strong Rajput empire in North India.", region:"Rajasthan, UP, MP", img:"https://via.placeholder.com/400x250?text=Gurjara+Pratihara"},
-  {name:"Rashtrakuta", years:"753 – 982 CE", founder:"Dantidurga", rulers:"Dantidurga, Krishna III", end:"Overthrown by Western Chalukyas", info:"Dominant Deccan empire.", region:"Maharashtra, Karnataka", img:"https://via.placeholder.com/400x250?text=Rashtrakuta"},
-  {name:"Chola Dynasty", years:"850 – 1279 CE", founder:"Vijayalaya Chola", rulers:"Rajaraja Chola I, Rajendra Chola I", end:"Declined due to Pandya resurgence", info:"Famous South Indian naval and cultural empire.", region:"Tamil Nadu, Kerala", img:"https://via.placeholder.com/400x250?text=Chola"},
-  {name:"Chandela Dynasty", years:"9th – 13th century CE", founder:"Nannuka", rulers:"Yashovarman, Dhanga", end:"Defeated by Delhi Sultanate", info:"Known for Khajuraho temples.", region:"Bundelkhand", img:"https://via.placeholder.com/400x250?text=Chandela"},
-  {name:"Chauhan (Chahamana)", years:"7th – 12th century CE", founder:"Chandrasen", rulers:"Prithviraj Chauhan", end:"Defeated by Ghurids", info:"Rajput dynasty of Ajmer and Delhi.", region:"Rajasthan", img:"https://via.placeholder.com/400x250?text=Chauhan"},
-  {name:"Rajput Kingdoms", years:"8th – 16th century CE", founder:"Various", rulers:"Various Rajput rulers", end:"Integrated into Mughal Empire", info:"Collection of Rajput kingdoms in North and West India.", region:"Rajasthan, MP, Gujarat", img:"https://via.placeholder.com/400x250?text=Rajput+Kingdoms"},
-  {name:"Delhi Sultanate", years:"1206 – 1526 CE", founder:"Qutb-ud-din Aibak", rulers:"Mamluk, Khilji, Tughlaq, Sayyid, Lodi dynasties", end:"Defeated by Babur", info:"Islamic rulers dominating North India.", region:"Northern India", img:"https://via.placeholder.com/400x250?text=Delhi+Sultanate"},
-  {name:"Vijayanagara Empire", years:"1336 – 1646 CE", founder:"Harihara I & Bukka Raya I", rulers:"Krishna Deva Raya", end:"Defeated by Deccan Sultanates", info:"Hindu empire in South India.", region:"Southern India", img:"https://via.placeholder.com/400x250?text=Vijayanagara"},
-  {name:"Bahmani Sultanate", years:"1347 – 1527 CE", founder:"Ala-ud-Din Bahman Shah", rulers:"Various", end:"Fragmented into Deccan Sultanates", info:"Islamic state in Deccan.", region:"Deccan Plateau", img:"https://via.placeholder.com/400x250?text=Bahmani"},
-  {name:"Mewar Kingdom", years:"8th – 1947 CE", founder:"Bappa Rawal", rulers:"Maharana Pratap", end:"Merged into Indian Union", info:"Famous Rajput kingdom in Rajasthan.", region:"Rajasthan", img:"https://via.placeholder.com/400x250?text=Mewar"},
-  {name:"Kakatiya Dynasty", years:"1083 – 1323 CE", founder:"Prola II", rulers:"Ganapati Deva, Rudrama Devi", end:"Conquered by Delhi Sultanate", info:"South Indian Telugu dynasty.", region:"Telangana, Andhra Pradesh", img:"https://via.placeholder.com/400x250?text=Kakatiya"},
-  {name:"Hoysalas", years:"1026 – 1343 CE", founder:"Nripa Hoysala", rulers:"Vishnuvardhana, Veera Ballala III", end:"Defeated by Vijayanagara", info:"Known for temples and art in Karnataka.", region:"Karnataka", img:"https://via.placeholder.com/400x250?text=Hoysalas"}
-];
+function showDetails(key) {
+  const data = {
+    pratihara: {
+      title: "Gurjara-Pratihara Dynasty",
+      info: "8th–11th century CE | Kannauj. Resisted Arab invasions and ruled much of North India."
+    },
+    rashtrakuta: {
+      title: "Rashtrakuta Dynasty",
+      info: "8th–10th century CE | Deccan Region. Built the grand Kailasa Temple at Ellora."
+    },
+    chola: {
+      title: "Chola Dynasty",
+      info: "9th–13th century CE | Tamil Nadu. Rajaraja I built the Brihadeeswara Temple, known for trade and navy."
+    },
+    chandela_chauhan: {
+      title: "Chandela & Chauhan Dynasties",
+      info: "9th–12th century CE | Central & North India. Famous for Khajuraho temples and Prithviraj Chauhan's reign."
+    },
+    rajput: {
+      title: "Rajput Kingdoms",
+      info: "8th–15th century CE | Northern, Western & Central India. Known for their valor, architecture, and resistance to invasions; included dynasties like Chauhans, Solankis, and Paramaras."
+    },
+    mewar: {
+      title: "Mewar (Sisodia Rajputs)",
+      info: "13th–15th century CE | Rajasthan. Symbol of Rajput pride; rulers like Rana Kumbha strengthened its glory."
+    },
+    kakatiya_hoysala: {
+      title: "Kakatiya & Hoysala Dynasties",
+      info: "12th–14th century CE | Telangana & Karnataka. Promoted art, architecture, and trade."
+    },
+    delhi_sultanate: {
+      title: "Delhi Sultanate",
+      info: "1206–1526 CE | Delhi. Five dynasties—Slave, Khilji, Tughlaq, Sayyid, and Lodi—ruled North India."
+    },
+    vijayanagara: {
+      title: "Vijayanagara Empire",
+      info: "1336–1646 CE | South India. Founded by Harihara and Bukka; major cultural revival."
+    },
+    bahmani: {
+      title: "Bahmani Kingdom",
+      info: "1347–1527 CE | Deccan Region. First major Muslim kingdom in the Deccan; later split into Sultanates."
+    },
+    end_medieval: {
+      title: "End of Medieval Period",
+      info: "1498 CE | Calicut (Kerala). Vasco da Gama's arrival marked the beginning of European influence."
+    }
+  };
 
-const container = document.getElementById("timeline");
+  document.getElementById("title").innerText = data[key].title;
+  document.getElementById("info").innerText = data[key].info;
 
-function showDetails(d) {
-  const mapRegion = document.getElementById("mapRegion");
-  const infoRegion = document.getElementById("infoRegion");
-
-  mapRegion.innerHTML = `
-    <h2>Map Region</h2>
-    <p><strong>Region:</strong> ${d.region}</p>
-    <img id="dynastyMap" src="${d.img}" alt="${d.name} map">
-  `;
-
-  infoRegion.innerHTML = `
-    <h2>${d.name}</h2>
-    <p><strong>Period:</strong> ${d.years}</p>
-    <p><strong>Founder:</strong> ${d.founder}</p>
-    <p><strong>Main Rulers:</strong> ${d.rulers}</p>
-    <p><strong>End:</strong> ${d.end}</p>
-    <p>${d.info}</p>
-  `;
-
-  const img = document.getElementById("dynastyMap");
-  setTimeout(() => img.classList.add("visible"), 50);
+  document.getElementById("details-box").style.display = "block";
 }
-
-dynasties.forEach(d => {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `<strong>${d.years}</strong>`;
-  card.onclick = () => showDetails(d);
-  container.appendChild(card);
-});
 </script>
 
 </body>

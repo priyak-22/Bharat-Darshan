@@ -3,179 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern India Horizontal Timeline</title>
+<title>Palm Leaf Scroll Timeline - Modern India (All Fitted)</title>
 
 <style>
+/* --- Original Color Scheme & Layout --- */
 body {
   margin: 0;
-  font-family: Georgia, serif;
-  background: #f5f0e5;
-}
-
-.header {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: #4b341f;
-  padding: 25px 0 10px;
-}
-
-.timeline-line {
-  height: 4px;
-  background: #6b4f2f;
-  margin: 0 20px 25px;
-  border-radius: 2px;
-}
-
-.timeline-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 180px;
-  gap: 25px;
   padding: 20px;
+  background: #f2e5c4; 
+  font-family: Georgia, serif;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Scroll container */
+.scroll-container {
+  width: 100%;
   overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #b5966d #f5f0e5;
+  white-space: nowrap;
+  padding-bottom: 20px;
 }
 
-.timeline-container::-webkit-scrollbar {
-  height: 10px;
-}
-.timeline-container::-webkit-scrollbar-track {
-  background: #f5f0e5;
-}
-.timeline-container::-webkit-scrollbar-thumb {
-  background: #b5966d;
-  border-radius: 5px;
+/* Scroll background */
+.scroll {
+  display: inline-block;
+  padding: 30px 0;
+  background: #e8d7a8;
+  border: 5px solid #b39458;
+  border-radius: 10px;
 }
 
+/* Wooden rods */
+.rod-left,
+.rod-right {
+  width: 40px;
+  height: 100%;
+  background: #8c5a27;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Base style for all event cards (Width increased to fit all content) */
 .card {
-  width: 120px;
-  height: 120px;
-  background: #fff8e6;
-  border: 3px solid #b5966d;
-  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  width: 260px; /* UNIFORM WIDTH INCREASED TO FIT ALL TEXT */
+  margin: 0 20px;
+  padding: 15px;
+  background: #f5e7c4; 
+  border: 2px solid #a48445; 
+  border-radius: 6px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   text-align: center;
   cursor: pointer;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
-.card strong {
-  font-size: 18px;
-  color: #4b341f;
+.card b {
+  font-size: 17px;
 }
 
-.bottom-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  padding: 30px;
-}
-
-.section-box {
-  background: #fff8e6;
-  border: 2px solid #b5966d;
-  border-radius: 12px;
+/* Details Box */
+#details-box {
+  width: 90%;
+  margin: 30px auto;
   padding: 20px;
-  min-height: 350px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  background: #fff4d6; 
+  border: 3px solid #b39458; 
+  border-radius: 10px;
+  display: none;
+  animation: fadeIn 0.4s ease;
 }
 
-.section-box h2 {
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#details-box h2 {
   margin-top: 0;
-  color: #4b341f;
-  font-size: 24px;
-}
-
-.section-box img {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.section-box img.visible {
-  opacity: 1;
+  color: #6b4b1f;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">Modern India Timeline</div>
-<div class="timeline-line"></div>
+<h1>Modern India Timeline</h1>
 
-<div class="timeline-container" id="timeline"></div>
+<div class="scroll-container">
+  
+  <div class="rod-left"></div>
 
-<div class="bottom-section">
-  <div class="section-box" id="mapRegion">
-    <h2>Map/Region</h2>
-    <p>Select an event to view its region or influence area.</p>
+  <div class="scroll">
+
+    <!-- Events with uniform widths applied -->
+    <div class="card" onclick="showDetails('reform')"><b>Social & Religious Reform</b><br>19th century</div>
+    <div class="card" onclick="showDetails('revolt')"><b>Revolt of 1857</b><br>1857 CE</div>
+    <div class="card" onclick="showDetails('inc')"><b>Formation of INC</b><br>1885 CE</div>
+    <div class="card" onclick="showDetails('partition')"><b>Partition of Bengal</b><br>1905–1911 CE</div>
+    <div class="card" onclick="showDetails('homeRule')"><b>Home Rule Movement</b><br>1916–1918 CE</div>
+    <div class="card" onclick="showDetails('jallianwala')"><b>Jallianwala Bagh Massacre</b><br>1919 CE</div>
+    <div class="card" onclick="showDetails('nonCooperation')"><b>Non-Cooperation Movement</b><br>1920–1922 CE</div>
+    <div class="card" onclick="showDetails('civilDisobedience')"><b>Civil Disobedience Movement</b><br>1930–1934 CE</div>
+    <div class="card" onclick="showDetails('quitIndia')"><b>Quit India Movement</b><br>1942 CE</div>
+    <div class="card" onclick="showDetails('independence')"><b>Independence of India</b><br>15 August 1947 CE</div>
+    
   </div>
 
-  <div class="section-box" id="infoRegion">
-    <h2>Information</h2>
-    <p>Select an event to see details.</p>
-  </div>
+  <div class="rod-right"></div>
+
 </div>
 
+<!-- DETAILS SECTION -->
+<div id="details-box">
+  <h2 id="title"></h2>
+  <p id="info"></p>
+</div>
+
+
 <script>
-// Modern India events timeline
-const events = [
-  {name:"Social & Religious Reform Movements", years:"1818 – 1900", founder:"Raja Ram Mohan Roy, Swami Vivekananda", leaders:"Raja Ram Mohan Roy, Ishwar Chandra Vidyasagar", end:"Became basis for Indian socio-reform and awakening", info:"Movements to reform Indian society and religion.", region:"All over India", img:"https://via.placeholder.com/400x250?text=Reforms"},
-  {name:"Revolt of 1857", years:"1857", founder:"Mangal Pandey", leaders:"Rani Laxmibai, Bahadur Shah Zafar", end:"Suppressed by British", info:"First major revolt against British East India Company.", region:"North & Central India", img:"https://via.placeholder.com/400x250?text=1857+Revolt"},
-  {name:"Indian National Congress Formation", years:"1885", founder:"A.O. Hume", leaders:"Dadabhai Naoroji, Gopal Krishna Gokhale", end:"Became main political platform for independence", info:"Formation of political party for Indian interests.", region:"Pan India", img:"https://via.placeholder.com/400x250?text=INC+Formation"},
-  {name:"Partition of Bengal & Swadeshi Movement", years:"1905 – 1911", founder:"Surendranath Banerjee", leaders:"Bal Gangadhar Tilak, Bipin Chandra Pal", end:"Partition annulled in 1911", info:"Protest against British policy, encouraged indigenous goods.", region:"Bengal", img:"https://via.placeholder.com/400x250?text=Partition+of+Bengal"},
-  {name:"Home Rule Movement", years:"1916 – 1918", founder:"Bal Gangadhar Tilak, Annie Besant", leaders:"Tilak, Besant", end:"Merged with wider national movement", info:"Demanded self-government for India.", region:"All India", img:"https://via.placeholder.com/400x250?text=Home+Rule"},
-  {name:"Jallianwala Bagh Massacre", years:"1919", founder:"-", leaders:"General Dyer", end:"Triggered nationwide outrage", info:"Massacre of unarmed civilians in Amritsar.", region:"Amritsar, Punjab", img:"https://via.placeholder.com/400x250?text=Jallianwala+Bagh"},
-  {name:"Non-Cooperation Movement", years:"1920 – 1922", founder:"Mahatma Gandhi", leaders:"Jawaharlal Nehru, Sardar Patel", end:"Called off after Chauri Chaura incident", info:"Mass civil disobedience against British rule.", region:"All India", img:"https://via.placeholder.com/400x250?text=Non+Cooperation"},
-  {name:"Civil Disobedience Movement", years:"1930 – 1934", founder:"Mahatma Gandhi", leaders:"Jawaharlal Nehru, Subhas Chandra Bose", end:"Suppressed by British", info:"Protests against salt tax and colonial laws.", region:"All India", img:"https://via.placeholder.com/400x250?text=Civil+Disobedience"},
-  {name:"Quit India Movement", years:"1942", founder:"Mahatma Gandhi", leaders:"All Congress leaders", end:"Mass arrests by British", info:"Call for immediate British withdrawal from India.", region:"All India", img:"https://via.placeholder.com/400x250?text=Quit+India"},
-  {name:"Independence of India", years:"1947", founder:"Indian National Congress & Leaders", leaders:"Mahatma Gandhi, Nehru, Sardar Patel", end:"India became independent", info:"End of British colonial rule.", region:"India", img:"https://via.placeholder.com/400x250?text=Independence+1947"}
-];
+function showDetails(key) {
+  const data = {
+    reform: {
+      title: "Social & Religious Reform Movements",
+      info: "19th century. Key figures like Raja Ram Mohan Roy, Ishwar Chandra Vidyasagar, and Dayanand Saraswati worked to reform Indian society and religion."
+    },
+    revolt: {
+      title: "Revolt of 1857",
+      info: "1857 CE. First major armed resistance against British rule. It was suppressed but marked a turning point in the struggle for independence."
+    },
+    inc: {
+      title: "Formation of Indian National Congress",
+      info: "1885 CE. Founded by A.O. Hume to provide a platform for political dialogue among educated Indians."
+    },
+    partition: {
+      title: "Partition of Bengal & Swadeshi Movement",
+      info: "1905–1911 CE. Anti-partition protests led to a rise of nationalist fervor and the promotion of Indian goods (Swadeshi)."
+    },
+    homeRule: {
+      title: "Home Rule Movement",
+      info: "1916–1918 CE. Led by Bal Gangadhar Tilak and Annie Besant, demanding self-governance (Home Rule) for India within the British Empire."
+    },
+    jallianwala: {
+      title: "Jallianwala Bagh Massacre",
+      info: "1919 CE. British troops opened fire on peaceful protesters gathered at Jallianwala Bagh in Amritsar, sparking outrage across the nation."
+    },
+    nonCooperation: {
+      title: "Non-Cooperation Movement",
+      info: "1920–1922 CE. Led by Mahatma Gandhi, calling for a non-violent boycott of British goods, institutions, and services."
+    },
+    civilDisobedience: {
+      title: "Civil Disobedience Movement",
+      info: "1930–1934 CE. Involved acts of peaceful refusal to obey unjust British laws, famously beginning with the Salt March (Dandi March)."
+    },
+    quitIndia: {
+      title: "Quit India Movement",
+      info: "1942 CE. A mass protest demanding an immediate end to British rule during World War II."
+    },
+    independence: {
+      title: "Independence of India",
+      info: "15 August 1947 CE. British rule officially ended, and India and Pakistan were established as independent nations."
+    }
+  };
 
-const container = document.getElementById("timeline");
+  document.getElementById("title").innerText = data[key].title;
+  document.getElementById("info").innerText = data[key].info;
 
-function showDetails(d) {
-  const mapRegion = document.getElementById("mapRegion");
-  const infoRegion = document.getElementById("infoRegion");
-
-  mapRegion.innerHTML = `
-    <h2>Map/Region</h2>
-    <p><strong>Region:</strong> ${d.region}</p>
-    <img id="eventMap" src="${d.img}" alt="${d.name} map">
-  `;
-
-  infoRegion.innerHTML = `
-    <h2>${d.name}</h2>
-    <p><strong>Period:</strong> ${d.years}</p>
-    <p><strong>Founder/Leaders:</strong> ${d.founder}</p>
-    <p><strong>Main Leaders/Participants:</strong> ${d.leaders}</p>
-    <p>${d.info}</p>
-  `;
-
-  const img = document.getElementById("eventMap");
-  setTimeout(() => img.classList.add("visible"), 50);
+  document.getElementById("details-box").style.display = "block";
 }
-
-events.forEach(d => {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `<strong>${d.years}</strong>`;
-  card.onclick = () => showDetails(d);
-  container.appendChild(card);
-});
 </script>
 
 </body>
