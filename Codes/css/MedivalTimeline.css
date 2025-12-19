@@ -1,0 +1,87 @@
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f2e5c4;
+  font-family: Georgia, serif;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Scroll container */
+.scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 20px;
+}
+
+/* Scroll background */
+.scroll {
+   display: inline-block;
+  padding: 30px 0;
+  background: #e8d7a8;
+  border: 5px solid #b39458;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+/* Wooden rods */
+.rod-left,
+.rod-right {
+  width: 40px;
+  height: 100%;
+  background: #8c5a27;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Dynasty cards */
+.card {
+  display: inline-block;
+  vertical-align: top;
+  width: 180px;
+  margin: 0 20px;
+  padding: 15px;
+  background: #f5e7c4;
+  border: 2px solid #a48445;
+  border-radius: 6px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card b {
+  font-size: 17px;
+}
+
+/* Details Box */
+#details-box {
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff4d6;
+  border: 3px solid #b39458;
+  border-radius: 10px;
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#details-box h2 {
+  margin-top: 0;
+  color: #6b4b1f;
+}
