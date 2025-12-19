@@ -5,94 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Palm Leaf Scroll Timeline - From Image</title>
 
-<style>
-body {
-  margin: 0;
-  padding: 20px;
-  background: #f2e5c4;
-  font-family: Georgia, serif;
-}
-
-/* Heading */
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* Scroll container */
-.scroll-container {
-  width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 20px;
-}
-
-/* Scroll background */
-.scroll {
-  display: inline-block;
-  padding: 30px 0;
-  background: #e8d7a8;
-  border: 5px solid #b39458;
-  border-radius: 10px;
-  background-color: #e8d7a8; 
-}
-
-/* Wooden rods */
-.rod-left,
-.rod-right {
-  width: 40px;
-  height: 100%;
-  background: #8c5a27;
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Dynasty cards */
-.card {
-  display: inline-block;
-  vertical-align: top;
-  width: 180px;
-  margin: 0 20px;
-  padding: 15px;
-  background: #f5e7c4;
-  border: 2px solid #a48445;
-  border-radius: 6px;
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card b {
-  font-size: 17px;
-}
-
-/* Details Box */
-#details-box {
-  width: 90%;
-  margin: 30px auto;
-  padding: 20px;
-  background: #fff4d6;
-  border: 3px solid #b39458;
-  border-radius: 10px;
-  display: none;
-  animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-#details-box h2 {
-  margin-top: 0;
-  color: #6b4b1f;
-}
-</style>
+<link rel="stylesheet"  href="../css/MedivalTimeline.css">
 </head>
 
 <body>
@@ -130,62 +43,7 @@ h1 {
   <p id="info"></p>
 </div>
 
-
-<script>
-function showDetails(key) {
-  const data = {
-    pratihara: {
-      title: "Gurjara-Pratihara Dynasty",
-      info: "8th–11th century CE | Kannauj. Resisted Arab invasions and ruled much of North India."
-    },
-    rashtrakuta: {
-      title: "Rashtrakuta Dynasty",
-      info: "8th–10th century CE | Deccan Region. Built the grand Kailasa Temple at Ellora."
-    },
-    chola: {
-      title: "Chola Dynasty",
-      info: "9th–13th century CE | Tamil Nadu. Rajaraja I built the Brihadeeswara Temple, known for trade and navy."
-    },
-    chandela_chauhan: {
-      title: "Chandela & Chauhan Dynasties",
-      info: "9th–12th century CE | Central & North India. Famous for Khajuraho temples and Prithviraj Chauhan's reign."
-    },
-    rajput: {
-      title: "Rajput Kingdoms",
-      info: "8th–15th century CE | Northern, Western & Central India. Known for their valor, architecture, and resistance to invasions; included dynasties like Chauhans, Solankis, and Paramaras."
-    },
-    mewar: {
-      title: "Mewar (Sisodia Rajputs)",
-      info: "13th–15th century CE | Rajasthan. Symbol of Rajput pride; rulers like Rana Kumbha strengthened its glory."
-    },
-    kakatiya_hoysala: {
-      title: "Kakatiya & Hoysala Dynasties",
-      info: "12th–14th century CE | Telangana & Karnataka. Promoted art, architecture, and trade."
-    },
-    delhi_sultanate: {
-      title: "Delhi Sultanate",
-      info: "1206–1526 CE | Delhi. Five dynasties—Slave, Khilji, Tughlaq, Sayyid, and Lodi—ruled North India."
-    },
-    vijayanagara: {
-      title: "Vijayanagara Empire",
-      info: "1336–1646 CE | South India. Founded by Harihara and Bukka; major cultural revival."
-    },
-    bahmani: {
-      title: "Bahmani Kingdom",
-      info: "1347–1527 CE | Deccan Region. First major Muslim kingdom in the Deccan; later split into Sultanates."
-    },
-    end_medieval: {
-      title: "End of Medieval Period",
-      info: "1498 CE | Calicut (Kerala). Vasco da Gama's arrival marked the beginning of European influence."
-    }
-  };
-
-  document.getElementById("title").innerText = data[key].title;
-  document.getElementById("info").innerText = data[key].info;
-
-  document.getElementById("details-box").style.display = "block";
-}
-</script>
+<script src="../js/MeT.js"></script>
 
 </body>
 </html>
