@@ -34,35 +34,52 @@ body {
 
 /* Animated gradient */
 .page-header {
+  position: relative;
+  height: 250px;        
+  overflow: hidden;     
   text-align: center;
-  background: linear-gradient(135deg, #5c3b0c, #b88946, #7a4e0a, #d8b06a);
-  background-size: 300% 300%;
-  animation: headerFlow 7s ease infinite;
-  font-size: larger;
-  color: #fff3d9;
-  padding: 2.5rem 1rem;
-
+  color: rgb(239, 239, 239);
+  font-family: 'Playfair Display', serif;
   box-shadow: 0 4px 12px rgba(0,0,0,0.45);
   border-bottom: 2px solid #e5c27a;
-  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center the text */
+  align-items: center;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
-/* Fancy shimmering subheading */
-.subheading {
-  margin-top: 0.6rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #ffe9b5;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 0.5px;
+.header-image-container {
+  position: absolute;
+  top: 60%;               /* move image up so lower-middle is visible */
+  left: 50%;
+  transform: translate(-50%, -60%); /* centers and shifts up */
+  width: auto;
+  height: auto;
+  min-width: 100%;        
+  min-height: 100%;       
+  z-index: 0;       
+  opacity: 70%;      
 }
 
-/* Header animation */
-@keyframes headerFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.header-image-container img {
+  display: block;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
 }
+
+.page-header h1,
+.page-header .subheading {
+  position: relative;
+  z-index: 1;             
+  margin: 0;
+  padding: 0.2rem 0;
+}
+
 
 
 /* Navigation Bar */

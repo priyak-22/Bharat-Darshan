@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Battles & Events | Digital History Atlas of India</title>
-  <link rel="stylesheet" href="../css/battles.css">
+  <link rel="stylesheet" href="../css/battles.css" />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
 </head>
-
 <body>
-  <header>
-    Welcome to Digital History Atlas of India
+  <header class="page-header">
+    <div class="header-image-container">
+      <img src="https://img.freepik.com/premium-photo/kurukshetra-war-depicting-epic-battlefield-with-stirring-scenes-triumph-tragedy_1163744-478.jpg?w=740" alt="Historical Header">
+    </div>
+    <h1>Battles & Events in Indian History</h1>
+    <p class="subheading">Discover the key battles, invasions, revolts and turning points that shaped India’s destiny.</p>
   </header>
 
   <nav>
@@ -33,49 +42,34 @@
     <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
   </nav>
 
-  <section class="page-header">
-    <h1>Battles & Events in Indian History</h1>
-    <p>Discover the key battles, invasions, and turning points that shaped India’s destiny.</p>
-  </section>
+<main class="map-layout">
 
-  <main class="content">
-    <section class="battle-grid">
+    <div class="map-wrapper">
 
-      <!-- Example Card 1 -->
-      <div class="battle-card">
-        <h2>Battle of Hydaspes (326 BCE)</h2>
-        <p><strong>Region:</strong> Punjab, near River Jhelum</p>
-        <p><strong>Between:</strong> Alexander the Great vs. King Porus</p>
-        <p><strong>Outcome:</strong> Greek victory but Porus retained his kingdom under Alexander’s rule.</p>
-      </div>
+        <!-- Map -->
+        <div id="map"></div>
 
-      <!-- Example Card 2 -->
-      <div class="battle-card">
-        <h2>Battle of Kalinga (261 BCE)</h2>
-        <p><strong>Region:</strong> Kalinga (modern Odisha)</p>
-        <p><strong>Ruler:</strong> Emperor Ashoka (Maurya Empire)</p>
-        <p><strong>Outcome:</strong> Massive casualties led Ashoka to embrace Buddhism and non-violence.</p>
-      </div>
+        <!-- Info Panel -->
+        <aside class="info-panel" id="infoPanel" aria-hidden="true">
+            <button class="close-panel" id="closePanel">✕</button>
+            <div class="info-content">
+    <h2 id="battleTitle">Select a marker</h2>
+    <p id="battleYear"></p>
+    <p id="battleRegion"></p>
+    <p id="battleSummary"></p>
 
-      <!-- Example Card 3 -->
-      <div class="battle-card">
-        <h2>First Battle of Panipat (1526 CE)</h2>
-        <p><strong>Region:</strong> Haryana</p>
-        <p><strong>Between:</strong> Babur vs. Ibrahim Lodi</p>
-        <p><strong>Outcome:</strong> Babur’s victory established the Mughal Empire in India.</p>
-      </div>
+    <a id="learnMoreBtn" class="learn-more" href="#" target="_blank" rel="noopener">
+      Learn More →
+    </a>
+</div>
 
-      <!-- Add more events/battles as you expand -->
-    </section>
+        </aside>
 
-    <button id="backBtn" class="back-button">← Back to Atlas</button>
-  </main>
+    </div>
+</main>
 
-  <footer>
-    © 2025 Digital History Atlas of India
-  </footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/battles.js"></script>
 
-  <script src="../js/battles.js"></script>
 </body>
-
 </html>
