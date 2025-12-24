@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins:wght@400;600&display=swap');
+
+/* ======== Base ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f1e1;
+  margin: 0;
+  padding: 0;
+  color: #2f1c0e;
+  background-image: url("../images/parchment-bg.jpg");
+  /* optional texture */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ======== Ancient-styled Header (Highlighted Version) ======== */
+.page-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #f7e3b0 0%, #e4c276 60%, #c6974f 100%);
+  background-image: url("../images/scroll-texture.jpg");
+  /* optional parchment texture */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: lighten;
+  color: #3b240b;
+  box-shadow: inset 0 -15px 25px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-top: 6px solid #8b4a00;
+  border-bottom: 6px solid #8b4a00;
+  font-family: 'Cinzel Decorative', serif;
+  position: relative;
+}
+
+/* Decorative lower gold bar */
+.page-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd977, #f5c04e, #d18b2f);
+  box-shadow: 0 0 8px rgba(255, 215, 120, 0.6);
+  border-radius: 2px;
+}
+
+/* Golden Embossed Heading */
+.page-header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  background: linear-gradient(180deg, #a45a06 0%, #6a3b04 40%, #2d1400 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 215, 130, 0.8), 2px 2px 5px rgba(0, 0, 0, 0.5), -1px -1px 4px rgba(255, 240, 180, 0.3);
+}
+
+/* Subheading with Glow */
+.subheading {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  font-weight: 500;
+  color: #5c360a;
+  text-shadow: 0 0 6px rgba(255, 230, 150, 0.9), 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-style: italic;
+}
+
+/* ======== Content ======== */
+.content {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ======== Info Cards (Redesigned) ======== */
+.info-card {
+  background: linear-gradient(135deg, #fff8dc, #f2d59a);
+  border-left: 6px solid #9b6010;
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.15),
+    inset 0 0 8px rgba(255, 240, 190, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+/* Decorative flourish at top */
+.info-card::before {
+  content: "❧";
+  font-size: 1.2rem;
+  color: #b97b1a;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  opacity: 0.8;
+}
+
+.info-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings inside cards */
+.info-card h2 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #7a3b1d;
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px rgba(255, 210, 120, 0.6);
+  position: relative;
+}
+
+.info-card h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4a33f, #8b4a00);
+  margin-top: 0.3rem;
+  border-radius: 2px;
+}
+
+/* Text */
+.info-card p,
+.info-card li {
+  color: #3b240b;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.info-card strong {
+  color: #8b4a00;
+  font-weight: 600;
+}
+
+.info-card ul {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+}
+
+.info-card ul li {
+  margin-bottom: 0.3rem;
+  list-style: "✦ ";
+}
+
+/* ======== Map Section ======== */
+.map-section {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.map-section h2 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #7a3b1d;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px rgba(255, 210, 120, 0.7);
+}
+
+.map-section img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  border: 3px solid #9b6010;
+}
+
+/* ======== Back Button ======== */
+.back-button {
+  display: block;
+  margin: 2.5rem auto;
+  background-color: #7a3b1d;
+  color: #fdf5e6;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Cinzel Decorative', serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #4b1a13;
+  transform: translateY(-2px);
+}
+
+/* ======== Footer (optional) ======== */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #6d4a1f;
+  background: #fffaf0;
+  border-top: 3px solid #9b6010;
+  margin-top: 2rem;
+}
+
+/* ======== Links (no blue lines) ======== */
+a {
+  text-decoration: none;
+  color: #9b6010;
+  font-weight: 600;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: #b97b1a;
+  text-shadow: 0 0 6px rgba(185, 123, 26, 0.5);
+}

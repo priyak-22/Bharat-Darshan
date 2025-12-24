@@ -1,0 +1,125 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Source Serif 4", serif;
+  background: linear-gradient(
+    120deg,
+    #f6f0e4,
+    #efe1b6,
+    #f6f0e4
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a2c1a;
+}
+
+/* =========================
+   LOGIN WRAPPER
+========================= */
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* =========================
+   LOGIN CARD
+========================= */
+.login-card {
+  background: #ffffff;
+  width: 360px;
+  padding: 2.5rem 2.2rem;
+  border-radius: 16px;
+  text-align: center;
+
+  border-top: 5px solid #b89b3c;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+/* Title */
+.login-card h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+
+  background: linear-gradient(90deg, #6b5600, #b89b3c, #6b5600);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: #5a4a2a;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  color: #4a3a20;
+}
+
+input {
+  width: 100%;
+  padding: 0.65rem 0.7rem;
+  margin-bottom: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #cdbb8a;
+  font-family: "Source Serif 4", serif;
+  font-size: 0.9rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #b89b3c;
+  box-shadow: 0 0 0 2px rgba(184,155,60,0.25);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+
+  background: linear-gradient(90deg, #2f3e5c, #4a5f8a);
+  color: #f8f4e8;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   NOTE
+========================= */
+.note {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #6a5a3a;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palm Leaf Scroll Timeline</title>
+<link rel="stylesheet" href="../css/AncientTimeline.css">
+</head>
+
+<body>
+
+<h1>Ancient India Timeline</h1>
+
+<div class="scroll-container">
+  
+  <div class="rod-left"></div>
+
+  <div class="scroll">
+
+    <!-- Correct Chronological Order -->
+    <div class="card" onclick="showDetails('nanda')"><b>Nanda</b><br>345–322 BCE</div>
+    <div class="card" onclick="showDetails('maurya')"><b>Maurya</b><br>322–185 BCE</div>
+    <div class="card" onclick="showDetails('shunga')"><b>Shunga</b><br>185–73 BCE</div>
+    <div class="card" onclick="showDetails('kanva')"><b>Kanva</b><br>73–28 BCE</div>
+
+    <div class="card" onclick="showDetails('indoGreek')"><b>Indo-Greek</b><br>2nd BCE–10 CE</div>
+    <div class="card" onclick="showDetails('indoParthian')"><b>Indo-Parthian</b><br>19–226 CE</div>
+
+    <div class="card" onclick="showDetails('saka')"><b>Saka</b><br>1st BCE–4th CE</div>
+    <div class="card" onclick="showDetails('westernKshatrapas')"><b>Western Kshatrapas</b><br>35–405 CE</div>
+
+    <div class="card" onclick="showDetails('satavahana')"><b>Satavahana</b><br>1st BCE–3rd CE</div>
+    <div class="card" onclick="showDetails('kushana')"><b>Kushana</b><br>1st–3rd CE</div>
+
+    <div class="card" onclick="showDetails('gupta')"><b>Gupta</b><br>320–550 CE</div>
+    <div class="card" onclick="showDetails('vakataka')"><b>Vakataka</b><br>3rd–6th CE</div>
+    <div class="card" onclick="showDetails('huna')"><b>Huna</b><br>5th–6th CE</div>
+
+    <div class="card" onclick="showDetails('maitraka')"><b>Maitraka</b><br>475–776 CE</div>
+    <div class="card" onclick="showDetails('gauda')"><b>Gauda Kingdom</b><br>5th–8th CE</div>
+    <div class="card" onclick="showDetails('maukharis')"><b>Maukharis</b><br>6th CE</div>
+
+    <div class="card" onclick="showDetails('harsha')"><b>Harsha Empire</b><br>606–647 CE</div>
+
+    <div class="card" onclick="showDetails('pratihara')"><b>Gurjara-Pratihara</b><br>730–1036 CE</div>
+    <div class="card" onclick="showDetails('pala')"><b>Pala Empire</b><br>750–1174 CE</div>
+
+    <!-- Added 'card-fitted' class to this last card -->
+    <div class="card card-fitted" onclick="showDetails('southern')"><b>Southern Kingdoms</b><br>Chola • Chera • Pandya</div>
+
+  </div>
+
+  <div class="rod-right"></div>
+
+</div>
+
+<!-- DETAILS SECTION -->
+<div id="details-box">
+  <h2 id="title"></h2>
+  <p id="info"></p>
+</div>
+
+
+ <script src="../js/AT.js"></script>
+
+</body>
+</html>

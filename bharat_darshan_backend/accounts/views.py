@@ -1,5 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login , logout
+from django.shortcuts import render
+
+def home(request):
+    return render(request, "atlas.html")
 
 def login_view(request):
     if request.method == "POST":
@@ -19,3 +23,12 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+def home(request):
+    return render(request, "html/atlas.html")
+
+def about(request):
+    return render(request, "about.html")
+
+def map_page(request):
+    return render(request, "map.html")

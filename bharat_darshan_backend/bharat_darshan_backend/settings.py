@@ -70,6 +70,10 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATES[0]['DIRS'] = [
+    BASE_DIR / "frontend"
+]
+
 
 WSGI_APPLICATION = 'bharat_darshan_backend.wsgi.application'
 
@@ -127,5 +131,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 STATICFILES_DIRS = [
-    BASE_DIR.parent / "frontend",  # <-- points to your frontend folder
+    BASE_DIR / "frontend",  # <-- points to your frontend folder
+]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend')
 ]
