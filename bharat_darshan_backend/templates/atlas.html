@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital History Atlas of India</title>
+  <link rel="stylesheet" href="{% static 'css/atlas.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="main" class="main-site">
+
+    <nav class="navbar">
+      <div class="logo">Bharat Darshan</div>
+      <ul>
+        <li><a href="atlas.html">Home</a></li>
+        <li><a href="AncientIndia.html">Ancient India</a></li>
+        <li><a href="MedievalIndia.html">Medieval India</a></li>
+        <li><a href="ModernIndia.html">Modern India</a></li>
+        <li><a href="#">Quiz</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <button class="login"><a href="{% url 'atlas' %}">Login</a></button>
+    </nav>
+
+
+  <!-- ========================
+       FULLSCREEN WELCOME INTRO
+       ======================== -->
+  <div class="intro">
+    <div class="fade-layer"></div>
+
+    <!-- Remove src="your-image", intro BG is handled by CSS -->
+    <div class="historical-image"></div>  
+
+    <div class="dust"></div>
+
+    <div class="text-box">
+      <h1>Indian History</h1>
+      <div class="subtitle">Journey Through Time</div>
+      <div class="era-range">Ancient • Medieval • Modern</div>
+      <a href="main.html" class="enter-btn">Enter</a>
+    </div>
+  </div>
+
+  <!-- ========================
+       MAIN CONTENT (same position) 
+       ======================== -->
+  
+</body>
+</html>
