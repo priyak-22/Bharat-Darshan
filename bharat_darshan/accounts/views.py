@@ -60,4 +60,43 @@ def freedom_movement(request):
 
 # Ancient Dynasties
 def gauda(request):
-    return render(request, 'dynasties/Ancient_history/gauda.html')
+    return render(request, 'dynasties/Ancient_history/Gauda.html')
+def gupta(request):
+    return render(request, 'dynasties/Ancient_history/gupta.html')
+def  gurjara_pratihara(request):
+    return render(request, 'dynasties/Ancient_history/gujara-pratihara.html')
+def harsha(request):
+    return render(request, 'dynasties/Ancient_history/harsha.html')
+def huna(request):
+    return render(request, 'dynasties/Ancient_history/huna.html')
+def indo_greek(request):
+    return render(request, 'dynasties/Ancient_history/indo-greek.html')
+def indo_parthian(request):
+    return render(request, 'dynasties/Ancient_history/indo-parthians.html')
+def kanva(request):
+    return render(request, 'dynasties/Ancient_history/kanva.html')
+def kushana(request):
+    return render(request, 'dynasties/Ancient_history/kushana.html')
+def maitraka(request):
+    return render(request, 'dynasties/Ancient_history/maitraka.html')
+def maurya(request):
+    return render(request, 'dynasties/Ancient_history/mauryan.html')
+def mukharis(request):
+    return render(request, 'dynasties/Ancient_history/mukharis.html')
+def nanda(request):
+    return render(request, 'dynasties/Ancient_history/nanda.html')
+def pala(request):
+    return render(request, 'dynasties/Ancient_history/pala.html')
+def saka(request):
+    return render(request, 'dynasties/Ancient_history/saka.html')
+def sathavahana(request):
+    return render(request, 'dynasties/Ancient_history/satavahana.html')
+def shunga(request):
+    return render(request, 'dynasties/Ancient_history/shunga.html')
+def southern_kingdoms(request):
+    return render(request, 'dynasties/Ancient_history/southern-kingdoms.html')
+def vakataka(request):
+    return render(request, 'dynasties/Ancient_history/vakataka.html')  
+def western_kshatrapas(request):
+    return render(request, 'dynasties/Ancient_history/western-kshatrapas.html')
+
