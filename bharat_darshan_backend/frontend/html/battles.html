@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Battles & Events | Digital History Atlas of India</title>
-  <link rel="stylesheet" href="../css/battles.css" />
+  <link rel="stylesheet" href="{% static 'css/battles.css' %}" />
   <link
   rel="stylesheet"
   href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -69,7 +70,7 @@
 </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="../js/battles.js"></script>
+<script src="{% static 'js/battles.js' %}"></script>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Empires & Kingdoms | Digital Atlas of India</title>
-  <link rel="stylesheet" href="../css/empires.css">
+  <link rel="stylesheet" href="{% static 'css/empires.css' %}">
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -468,7 +470,7 @@
     <p>© 2025 Digital History Atlas of India | Developed by Priya & Pooja</p>
   </footer>
 
-  <script src="../js/empires.js"></script>
+  <script src="{% static 'js/empires.js' %}"></script>
 </body>
 
 </html>

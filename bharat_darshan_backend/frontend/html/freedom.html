@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Freedom Movement | Digital History Atlas of India</title>
-  <link rel="stylesheet" href="../css/freedom.css">
+  <link rel="stylesheet" href="{% static 'css/freedom.css' %}">
 </head>
 
 <body>
@@ -97,7 +98,7 @@
     © 2025 Digital History Atlas of India
   </footer>
 
-  <script src="../js/freedom.js"></script>
+  <script src="{% static 'js/freedom.js' %}"></script>
 </body>
 
 </html>

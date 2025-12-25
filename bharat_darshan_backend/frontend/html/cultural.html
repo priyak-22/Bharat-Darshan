@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cultural Heritage | Digital History Atlas of India</title>
-  <link rel="stylesheet" href="../css/cultural.css">
+  <link rel="stylesheet" href="{% static 'css/cultural.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
@@ -73,7 +74,7 @@
     © 2025 Digital History Atlas of India
   </footer>
 
-  <script src="../js/cultural.js"></script>
+  <script src="{% static 'js/cultural.js' %}"></script>
 </body>
 
 </html>

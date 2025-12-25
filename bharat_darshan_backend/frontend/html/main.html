@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital History Atlas of India - Home</title>
 
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
@@ -14,10 +15,10 @@
     <nav class="navbar">
       <div class="logo">Bharat Darshan</div>
       <ul>
-        <li><a href="atlas.html">Home</a></li>
-        <li><a href="AncientIndia.html">Ancient India</a></li>
-        <li><a href="MedievalIndia.html">Medieval India</a></li>
-        <li><a href="ModernIndia.html">Modern India</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'ancient' %}">Ancient India</a></li>
+        <li><a href="{% url 'medieval' %}">Medieval India</a></li>
+        <li><a href="{% url 'modern' %}">Modern India</a></li>
         <li><a href="#">Quiz</a></li>
         <li><a href="#">About</a></li>
       </ul>
@@ -31,28 +32,28 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
-      <a href="empires.html" class="sidebar-link">
+      <a href="{% url 'empires' %}" class="sidebar-link">
         <div class="sidebar-box">
           <h3>Empires & Kingdoms</h3>
           <p>Explore the rise and fall of India’s great empires and dynasties.</p>
         </div>
       </a>
 
-      <a href="battles.html" class="sidebar-link">
+      <a href="{% url 'battles' %}" class="sidebar-link">
         <div class="sidebar-box">
           <h3>Battles & Events</h3>
           <p>Discover key battles and turning points that shaped Indian history.</p>
         </div>
       </a>
 
-      <a href="cultural.html" class="sidebar-link">
+      <a href="{% url 'cultural_heritage' %}" class="sidebar-link">
         <div class="sidebar-box">
           <h3>Cultural Heritage</h3>
           <p>Learn about India’s art, architecture, and monuments across centuries.</p>
         </div>
       </a>
 
-      <a href="freedom.html" class="sidebar-link">
+      <a href="{% url 'freedom_movement' %}" class="sidebar-link">
         <div class="sidebar-box">
           <h3>Freedom Movement</h3>
           <p>Trace India’s journey from colonial rule to independence in 1947.</p>
