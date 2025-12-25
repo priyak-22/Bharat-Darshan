@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gauda Empire | Digital Atlas of India</title>
-  <link rel="stylesheet" href="Gauda.css">
+  <link rel="stylesheet" href="{%static  'dynasties/Ancient_history/Gauda.css' %}">
 </head>
 <body>
   <header class="page-header">
@@ -50,9 +51,9 @@
       <img src="images/gauda-map.jpg" alt="Map of Gauda Empire region">
     </section>
 
-    <button id="backBtn" class="back-button">← Back to Atlas</button>
+    <button id="backBtn" class="back-button"><a href="{% url 'empires' %}">← Back to Atlas</a></button>
   </main>
 
-  <script src="../kingdom.js"></script>
+  <script src="{%static 'dynasties/kingdom.js' %}"></script>
 </body>
 </html>

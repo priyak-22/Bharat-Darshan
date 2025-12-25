@@ -18,4 +18,7 @@ urlpatterns = [
     path('battles/', views.battles, name='battles'),
     path('cultural-heritage/', views.cultural_heritage, name='cultural_heritage'),
     path('freedom-movement/', views.freedom_movement, name='freedom_movement'),
+
+    # Ancient Dynasties
+    path('dynasties/Ancient_history/gauda/', views.gauda, name='gauda'),
 ]

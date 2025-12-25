@@ -57,3 +57,7 @@ def cultural_heritage(request):
 
 def freedom_movement(request):
     return render(request, 'html/freedom.html')
+
+# Ancient Dynasties
+def gauda(request):
+    return render(request, 'dynasties/Ancient_history/gauda.html')
