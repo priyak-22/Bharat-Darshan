@@ -58,7 +58,7 @@ DATABASES = {
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "frontend",  # points to your frontend folder
+    BASE_DIR / "frontend", BASE_DIR / "Data"  # points to your frontend folder
 ]
 
 

@@ -100,3 +100,4 @@ def vakataka(request):
 def western_kshatrapas(request):
     return render(request, 'dynasties/Ancient_history/western-kshatrapas.html')
 
+

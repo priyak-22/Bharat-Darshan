@@ -89,8 +89,9 @@ fetch('../data/india_states.json')
    CUSTOM MARKER ICON
 ========================= */
 
+
 const battleIcon = L.icon({
-  iconUrl: "../../Data/map_11788777.png",
+  iconUrl: BATTLE_ICON_URL,
   iconSize: [38, 38],
   iconAnchor: [19, 38],
   popupAnchor: [0, -30]
