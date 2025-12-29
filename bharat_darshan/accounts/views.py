@@ -60,44 +60,44 @@ def freedom_movement(request):
 
 # Ancient Dynasties
 def gauda(request):
-    return render(request, 'dynasties/Ancient_history/Gauda.html')
+    return render(request, 'html/Gauda.html')
 def gupta(request):
-    return render(request, 'dynasties/Ancient_history/gupta.html')
+    return render(request, 'html/gupta.html')
 def  gurjara_pratihara(request):
-    return render(request, 'dynasties/Ancient_history/gujara-pratihara.html')
+    return render(request, 'html/gujara-pratihara.html')
 def harsha(request):
-    return render(request, 'dynasties/Ancient_history/harsha.html')
+    return render(request, 'html/harsha.html')
 def huna(request):
-    return render(request, 'dynasties/Ancient_history/huna.html')
+    return render(request, 'html/huna.html')
 def indo_greek(request):
-    return render(request, 'dynasties/Ancient_history/indo-greek.html')
+    return render(request, 'html/indo-greek.html')
 def indo_parthian(request):
-    return render(request, 'dynasties/Ancient_history/indo-parthians.html')
+    return render(request, 'html/indo-parthians.html')
 def kanva(request):
-    return render(request, 'dynasties/Ancient_history/kanva.html')
+    return render(request, 'html/kanva.html')
 def kushana(request):
-    return render(request, 'dynasties/Ancient_history/kushana.html')
+    return render(request, 'html/kushana.html')
 def maitraka(request):
-    return render(request, 'dynasties/Ancient_history/maitraka.html')
+    return render(request, 'html/maitraka.html')
 def maurya(request):
-    return render(request, 'dynasties/Ancient_history/mauryan.html')
+    return render(request, 'html/mauryan.html')
 def mukharis(request):
-    return render(request, 'dynasties/Ancient_history/mukharis.html')
+    return render(request, 'html/mukharis.html')
 def nanda(request):
-    return render(request, 'dynasties/Ancient_history/nanda.html')
+    return render(request, 'html/nanda.html')
 def pala(request):
-    return render(request, 'dynasties/Ancient_history/pala.html')
+    return render(request, 'html/pala.html')
 def saka(request):
-    return render(request, 'dynasties/Ancient_history/saka.html')
+    return render(request, 'html/saka.html')
 def sathavahana(request):
-    return render(request, 'dynasties/Ancient_history/satavahana.html')
+    return render(request, 'html/satavahana.html')
 def shunga(request):
-    return render(request, 'dynasties/Ancient_history/shunga.html')
+    return render(request, 'html/shunga.html')
 def southern_kingdoms(request):
-    return render(request, 'dynasties/Ancient_history/southern-kingdoms.html')
+    return render(request, 'html/southern-kingdoms.html')
 def vakataka(request):
-    return render(request, 'dynasties/Ancient_history/vakataka.html')  
+    return render(request, 'html/vakataka.html')  
 def western_kshatrapas(request):
-    return render(request, 'dynasties/Ancient_history/western-kshatrapas.html')
+    return render(request, 'html/western-kshatrapas.html')
 
 
