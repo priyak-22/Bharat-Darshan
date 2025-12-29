@@ -20,30 +20,27 @@ urlpatterns = [
     path('freedom-movement/', views.freedom_movement, name='freedom_movement'),
 
     # Ancient Dynasties
-    path('dynasties/Ancient_history/gauda/', views.gauda, name='gauda'),
-    path('dynasties/Ancient_history/Gupta/', views.gupta, name='gupta'),
-    path('dynasties/Ancient_history/gurjaraPratihara/', views.gurjara_pratihara, name='gurjara_pratihara'),
-    path('dynasties/Ancient_history/harsha/', views.harsha, name='harsha'),
-    path('dynasties/Ancient_history/huna/', views.huna, name='huna'),
-    path('dynasties/Ancient_history/indo-greek/', views.indo_greek, name='indo_greek'),
-    path('dynasties/Ancient_history/indo-parthians/', views.indo_parthian, name='indo_parthian'),
-    path('dynasties/Ancient_history/kanva/', views.kanva, name='kanva'),
-    path('dynasties/Ancient_history/kushan/', views.kushana, name='kushana'),
-    path('dynasties/Ancient_history/maurya/', views.maurya, name='maurya'),
-    path('dynasties/Ancient_history/mukharis/', views.mukharis, name='mukharis'),
-    path('dynasties/Ancient_history/maitraka/', views.maitraka, name='maitraka'),
-    path('dynasties/Ancient_history/nanda/', views.nanda, name='nanda'),
-    path('dynasties/Ancient_history/pala/', views.pala, name='pala'),
-    path('dynasties/Ancient_history/saka/', views.saka, name='saka'),
-    path('dynasties/Ancient_history/satavahana/', views.sathavahana, name='sathavahana'),
-    path('dynasties/Ancient_history/shunga/', views.shunga, name='shunga'),
-    path('dynasties/Ancient_history/vakataka/', views.vakataka, name='vakataka'),
-    path('dynasties/Ancient_history/southern-kingdoms/', views.southern_kingdoms, name='southern_kingdoms'),
-    path('dynasties/Ancient_history/western-kshatrapas/', views.western_kshatrapas, name='western_kshatrapas'),
-
+    path('gauda/', views.gauda, name='gauda'),
+    path('Gupta/', views.gupta, name='gupta'),
+    path('gurjaraPratihara/', views.gurjara_pratihara, name='gurjara_pratihara'),
+    path('harsha/', views.harsha, name='harsha'),
+    path('huna/', views.huna, name='huna'),
+    path('indo-greek/', views.indo_greek, name='indo_greek'),
+    path('indo-parthians/', views.indo_parthian, name='indo_parthian'),
+    path('kanva/', views.kanva, name='kanva'),
+    path('kushan/', views.kushana, name='kushana'),
+    path('maurya/', views.maurya, name='maurya'),
+    path('mukharis/', views.mukharis, name='mukharis'),
+    path('maitraka/', views.maitraka, name='maitraka'),
+    path('nanda/', views.nanda, name='nanda'),
+    path('pala/', views.pala, name='pala'),
+    path('saka/', views.saka, name='saka'),
+    path('satavahana/', views.sathavahana, name='sathavahana'),
+    path('shunga/', views.shunga, name='shunga'),
+    path('vakataka/', views.vakataka, name='vakataka'),
+    path('southern-kingdoms/', views.southern_kingdoms, name='southern_kingdoms'),
+    path('western-kshatrapas/', views.western_kshatrapas, name='western_kshatrapas'),
 ]
-    
-
 
 
 

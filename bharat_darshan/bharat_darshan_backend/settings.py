@@ -58,9 +58,8 @@ DATABASES = {
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "frontend", BASE_DIR / "Data"  # points to your frontend folder
+    BASE_DIR / "static",
 ]
 
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / "media"
