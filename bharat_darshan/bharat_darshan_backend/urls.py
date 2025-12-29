@@ -40,4 +40,10 @@ urlpatterns = [
     path('dynasties/Ancient_history/vakataka/', views.vakataka, name='vakataka'),
     path('dynasties/Ancient_history/southern-kingdoms/', views.southern_kingdoms, name='southern_kingdoms'),
     path('dynasties/Ancient_history/western-kshatrapas/', views.western_kshatrapas, name='western_kshatrapas'),
+
 ]
+    
+
+
+
+
