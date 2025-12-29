@@ -101,3 +101,28 @@ def western_kshatrapas(request):
     return render(request, 'html/western-kshatrapas.html')
 
 
+#Medival Dynasties
+def gurjara(request):
+    return render(request, 'html/gurjara.html')
+def bahmani(request):
+    return render(request, 'html/bahmani.html')
+def chandelachauhan(request):
+    return render(request, 'html/chandelachauhan.html')
+def chola(request):
+    return render(request, 'html/chola.html')
+def delhi_sultanate(request):
+    return render(request, 'html/delhi-sultanate.html')
+def endofmedival(request):
+    return render(request, 'html/endofmedival.html')
+def kakatiya_hoysala(request):
+    return render(request, 'html/kakatiya_hoysala.html')
+def mewar(request):
+    return render(request, 'html/mewar.html')
+def pala(request):
+    return render(request, 'html/pala.html')
+def rajput(request):
+    return render(request, 'html/rajput.html')
+def rashtrakuta(request):
+    return render(request, 'html/rashtrakuta.html')
+def vijaynagar(request):
+    return render(request, 'html/vijaynagar.html')

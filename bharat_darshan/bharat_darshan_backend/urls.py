@@ -40,6 +40,22 @@ urlpatterns = [
     path('vakataka/', views.vakataka, name='vakataka'),
     path('southern-kingdoms/', views.southern_kingdoms, name='southern_kingdoms'),
     path('western-kshatrapas/', views.western_kshatrapas, name='western_kshatrapas'),
+
+
+    #Medival Dynasties
+    path('gurjara/', views.gauda, name='gurjara'),
+    path('bahmani/', views.gupta, name='bahmani'),
+    path('chandelachauhan/', views.gurjara_pratihara, name='chandelachauhan'),
+    path('chola/', views.harsha, name='chola'),
+    path('delhi-sultanate/', views.huna, name='delhi-sultanate'),
+    path('endofmedival/', views.indo_greek, name='endofmedival'),
+    path('kakatiya-hoysala/', views.indo_parthian, name='kakatiya-hoysala'),
+    path('mewar/', views.kanva, name='mewar'),
+    path('pala/', views.kushana, name='pala'),
+    path('rajput/', views.maurya, name='rajput'),
+    path('rashtrakuta/', views.mukharis, name='rashtrakuta'),
+    path('vijaynagar/', views.mukharis, name='vijaynagar'),
+
 ]
 
 
