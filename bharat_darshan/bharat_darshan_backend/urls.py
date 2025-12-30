@@ -56,6 +56,22 @@ urlpatterns = [
     path('rashtrakuta/', views.mukharis, name='rashtrakuta'),
     path('vijaynagar/', views.mukharis, name='vijaynagar'),
 
+    #modern dynasties
+    path('anglo_french/', views.gauda, name='anglo_french'),
+    path('bengal_swadeshi/', views.gupta, name='bengal_swadeshi'),
+    path('british_expansion/', views.gurjara_pratihara, name='british_expansion'),
+    path('buxar/', views.harsha, name='buxar'),
+    path('civil_disobidience/', views.huna, name='civil_disobidience'),
+    path('endofmedival/', views.indo_greek, name='endofmedival'),
+    path('kakatiya-hoysala/', views.indo_parthian, name='kakatiya-hoysala'),
+    path('mewar/', views.kanva, name='mewar'),
+    path('pala/', views.kushana, name='pala'),
+    path('rajput/', views.maurya, name='rajput'),
+    path('rashtrakuta/', views.mukharis, name='rashtrakuta'),
+    path('vijaynagar/', views.mukharis, name='vijaynagar'),
+
+
+
 ]
 
 

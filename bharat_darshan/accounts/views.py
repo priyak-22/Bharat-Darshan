@@ -126,3 +126,43 @@ def rashtrakuta(request):
     return render(request, 'html/rashtrakuta.html')
 def vijaynagar(request):
     return render(request, 'html/vijaynagar.html')
+
+# modern dynasties
+def anglo_french(request):
+    return render(request, 'html/anglo_french.html')
+def bengal_swadeshi(request):
+    return render(request, 'html/bengal_swadeshi.html')
+def british_expansion(request):
+    return render(request, 'html/british_expansion.html')
+def buxar(request):
+    return render(request, 'html/buxar.html')
+def civil_disobidience(request):
+    return render(request, 'html/civil_disobidience.html')
+def danes(request):
+    return render(request, 'html/danes.html')
+def dutch(request):
+    return render(request, 'html/dutch.html')
+def french(request):
+    return render(request, 'html/french.html')
+def home_rule(request):
+    return render(request, 'html/home_rule.html')   
+def india_independence(request):
+    return render(request, 'html/india_independence.html')
+def indian_nc(request):
+    return render(request, 'html/indian_nc.html')
+def jallianwala_bagh(request):
+    return render(request, 'html/jallianwala_bagh.html')
+def mughal_decline(request):
+    return render(request, 'html/mughal_decline.html')
+def non_cooperation(request):
+    return render(request, 'html/non_cooperation.html')
+def plasssey(request):
+    return render(request, 'html/plassey.html')
+def portugese(request):
+    return render(request, 'html/portugese.html')
+def quit_india_movement(request):
+    return render(request, 'html/quit_india_movement.html')
+def revolt_1857(request):
+    return render(request, 'html/revolt_1857.html')
+def social_relegious_movement(request):
+    return render(request, 'html/social_relegious_movement.html')
