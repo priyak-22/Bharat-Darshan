@@ -43,17 +43,17 @@ urlpatterns = [
 
 
     #Medival Dynasties
-    path('pala/', views.pala, name='pala'),                         # c. 750–1174 CE
-    path('rashtrakuta/', views.rashtrakuta, name='rashtrakuta'),     # c. 753–973 CE
-    path('gurjara/', views.gurjara, name='gurjara'),                 # Gurjara-Pratihara
-    path('chola/', views.chola, name='chola'),                       # c. 850–1279 CE
+    path('pala/', views.pala, name='pala'),                        
+    path('rashtrakuta/', views.rashtrakuta, name='rashtrakuta'),     
+    path('gurjara/', views.gurjara, name='gurjara'),                
+    path('chola/', views.chola, name='chola'),                       
     path('chandelachauhan/', views.chandelachauhan, name='chandelachauhan'),
     path('rajput/', views.rajput, name='rajput'),
-    path('kakatiya-hoysala/', views.kakatiya_hoysala, name='kakatiya-hoysala'),
     path('delhi/', views.delhi, name='delhi'),
     path('mewar/', views.mewar, name='mewar'),
     path('vijaynagar/', views.vijaynagar, name='vijaynagar'),
     path('bahmani/', views.bahmani, name='bahmani'),
+    path('kakatiya-hoysala/', views.kakatiya_hoysala, name='kakatiya-hoysala'),
     path('endofmedival/', views.endofmedival, name='endofmedival'),
 
 
@@ -72,7 +72,7 @@ path('home_rule/', views.home_rule, name='home_rule'),
 path('india_independence/', views.india_independence, name='india_independence'),
 path('indian_nc/', views.indian_nc, name='indian_nc'),
 path('jallianwala_bagh/', views.jallianwala_bagh, name='jallianwala_bagh'),
-path('mughal_decline/', views.mughal_decline, name='mughal-decline'),
+path('mughal-decline/', views.mughal_decline, name='mughal_decline'),
 path('non_cooperation/', views.non_cooperation, name='non_cooperation'),
 path('plassey/', views.plassey, name='plassey'),
 path('portugese/', views.portugese, name='portugese'),
