@@ -62,15 +62,21 @@ urlpatterns = [
     path('british_expansion/', views.gurjara_pratihara, name='british_expansion'),
     path('buxar/', views.harsha, name='buxar'),
     path('civil_disobidience/', views.huna, name='civil_disobidience'),
-    path('endofmedival/', views.indo_greek, name='endofmedival'),
-    path('kakatiya-hoysala/', views.indo_parthian, name='kakatiya-hoysala'),
-    path('mewar/', views.kanva, name='mewar'),
-    path('pala/', views.kushana, name='pala'),
-    path('rajput/', views.maurya, name='rajput'),
-    path('rashtrakuta/', views.mukharis, name='rashtrakuta'),
-    path('vijaynagar/', views.mukharis, name='vijaynagar'),
-
-
+    path('danes/', views.indo_greek, name='danes'),
+    path('dutch/', views.indo_parthian, name='dutch'),
+    path('french/', views.kanva, name='french'),
+    path('home_rule/', views.kushana, name='home_rule'),
+    path('india_independence/', views.maurya, name='india_independence'),
+    path('indian_nc/', views.mukharis, name='indian_nc'),
+    path('jallianwala_bagh/', views.mukharis, name='jallianwala_bagh'),
+    path('mughal_decline/', views.kushana, name='mughal_decline'),
+    path('non_cooperation/', views.maurya, name='non_cooperation'),
+    path('plasssey/', views.mukharis, name='plasssey'),
+    path('portugese/', views.mukharis, name='portugese'),
+    path('quit_india_movement/', views.kushana, name='quit_india_movement'),
+    path('revolt_1857/', views.maurya, name='revolt_1857'),
+    path('social_relegious_movement/', views.mukharis, name='social_relegious_movement'),
+   
 
 ]
 
