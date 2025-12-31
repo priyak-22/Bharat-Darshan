@@ -110,8 +110,8 @@ def chandelachauhan(request):
     return render(request, 'html/chandelachauhan.html')
 def chola(request):
     return render(request, 'html/chola.html')
-def delhi_sultanate(request):
-    return render(request, 'html/delhi-sultanate.html')
+def delhi(request):
+    return render(request, 'html/delhi.html')
 def endofmedival(request):
     return render(request, 'html/endofmedival.html')
 def kakatiya_hoysala(request):
