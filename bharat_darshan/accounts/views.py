@@ -193,5 +193,7 @@ def portugese(request):
 def quit_india_movement(request):
     return render(request, 'html/quit_india_movement.html')
 
-def india_independence(request):         # 1947
+def india_independence(request):         
     return render(request, 'html/india_independence.html')
+def civil_disobidience(request):        
+    return render(request, 'html/civil_disobidience.html')
