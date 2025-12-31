@@ -44,17 +44,17 @@ urlpatterns = [
 
 
     #Medival Dynasties
-    path('pala/', views.pala, name='pala'),                         # c. 750–1174 CE
-    path('rashtrakuta/', views.rashtrakuta, name='rashtrakuta'),     # c. 753–973 CE
-    path('gurjara/', views.gurjara, name='gurjara'),                 # Gurjara-Pratihara
-    path('chola/', views.chola, name='chola'),                       # c. 850–1279 CE
+    path('pala/', views.pala, name='pala'),                        
+    path('rashtrakuta/', views.rashtrakuta, name='rashtrakuta'),     
+    path('gurjara/', views.gurjara, name='gurjara'),                
+    path('chola/', views.chola, name='chola'),                       
     path('chandelachauhan/', views.chandelachauhan, name='chandelachauhan'),
     path('rajput/', views.rajput, name='rajput'),
-    path('kakatiya-hoysala/', views.kakatiya_hoysala, name='kakatiya-hoysala'),
     path('delhi/', views.delhi, name='delhi'),
     path('mewar/', views.mewar, name='mewar'),
     path('vijaynagar/', views.vijaynagar, name='vijaynagar'),
     path('bahmani/', views.bahmani, name='bahmani'),
+    path('kakatiya-hoysala/', views.kakatiya_hoysala, name='kakatiya-hoysala'),
     path('endofmedival/', views.endofmedival, name='endofmedival'),
 
 
@@ -80,6 +80,25 @@ urlpatterns = [
     path('quit_india_movement/', views.quit_india_movement, name='quit_india_movement'),
     path('revolt_1857/', views.revolt_1857, name='revolt_1857'),
     path('social_relegious_movement/', views.social_relegious_movement, name='social_relegious_movement'),
+path('anglo_french/', views.anglo_french, name='anglo_french'),
+path('bengal_swadeshi/', views.bengal_swadeshi, name='bengal_swadeshi'),
+path('british/', views.british_expansion, name='british'),
+path('buxar/', views.buxar, name='buxar'),
+path('civil_disobidience/', views.civil_disobidience, name='civil_disobidience'),
+path('danes/', views.danes, name='danes'),
+path('dutch/', views.dutch, name='dutch'),
+path('french/', views.french, name='french'),
+path('home_rule/', views.home_rule, name='home_rule'),
+path('india_independence/', views.india_independence, name='india_independence'),
+path('indian_nc/', views.indian_nc, name='indian_nc'),
+path('jallianwala_bagh/', views.jallianwala_bagh, name='jallianwala_bagh'),
+path('mughal-decline/', views.mughal_decline, name='mughal_decline'),
+path('non_cooperation/', views.non_cooperation, name='non_cooperation'),
+path('plassey/', views.plassey, name='plassey'),
+path('portugese/', views.portugese, name='portugese'),
+path('quit_india_movement/', views.quit_india_movement, name='quit_india_movement'),
+path('revolt_1857/', views.revolt_1857, name='revolt_1857'),
+path('social_relegious_movement/', views.social_relegious_movement, name='social_relegious_movement'),
 
    
 

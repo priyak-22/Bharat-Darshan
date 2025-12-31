@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delhi Sultanate | Digital Atlas of India</title>
-  <link rel="stylesheet" href="delhi.css">
+  <link rel="stylesheet" href="{% static 'css/delhi.css' %}">
 </head>
 
 <body>
@@ -79,9 +80,7 @@
     <button id="backBtn" class="back-button" onclick="window.history.back()">← Back to Atlas</button>
   </main>
 
-  <footer>
-    <p>© 2025 Digital History Atlas of India | Developed by Priya</p>
-  </footer>
+    <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
 
 </html>
