@@ -43,40 +43,46 @@ urlpatterns = [
 
 
     #Medival Dynasties
-    path('gurjara/', views.gurjara, name='gurjara'),
-    path('bahmani/', views.bahmani, name='bahmani'),
+    path('pala/', views.pala, name='pala'),                         # c. 750–1174 CE
+    path('rashtrakuta/', views.rashtrakuta, name='rashtrakuta'),     # c. 753–973 CE
+    path('gurjara/', views.gurjara, name='gurjara'),                 # Gurjara-Pratihara
+    path('chola/', views.chola, name='chola'),                       # c. 850–1279 CE
     path('chandelachauhan/', views.chandelachauhan, name='chandelachauhan'),
-    path('chola/', views.chola, name='chola'),
-    path('delhi-sultanate/', views.delhi-sultanate, name='delhi-sultanate'),
-    path('endofmedival/', views.endofmedival, name='endofmedival'),
-    path('kakatiya-hoysala/', views.kakatiya-hoysala, name='kakatiya-hoysala'),
-    path('mewar/', views.mewar, name='mewar'),
-    path('pala/', views.pala, name='pala'),
     path('rajput/', views.rajput, name='rajput'),
-    path('rashtrakuta/', views.rashtrakuta, name='rashtrakuta'),
+    path('kakatiya-hoysala/', views.kakatiya_hoysala, name='kakatiya-hoysala'),
+    path('delhi-sultanate/', views.delhi_sultanate, name='delhi-sultanate'),
+    path('mewar/', views.mewar, name='mewar'),
     path('vijaynagar/', views.vijaynagar, name='vijaynagar'),
+    path('bahmani/', views.bahmani, name='bahmani'),
+    path('endofmedival/', views.endofmedival, name='endofmedival'),
+
 
     #modern dynasties
-    path('anglo_french/', views.anglo_french, name='anglo_french'),
-    path('bengal_swadeshi/', views.bengal_swadeshi, name='bengal_swadeshi'),
-    path('british_expansion/', views.british_expansion, name='british_expansion'),
-    path('buxar/', views.buxar, name='buxar'),
-    path('civil_disobidience/', views.civil_disobidience, name='civil_disobidience'),
-    path('danes/', views.danes, name='danes'),
-    path('dutch/', views.dutch, name='dutch'),
-    path('french/', views.french, name='french'),
-    path('home_rule/', views.home_rule, name='home_rule'),
-    path('india_independence/', views.india_independence, name='india_independence'),
-    path('indian_nc/', views.indian_nc, name='indian_nc'),
-    path('jallianwala_bagh/', views.jallianwala_bagh, name='jallianwala_bagh'),
-    path('mughal_decline/', views.mughal_decline, name='mughal_decline'),
-    path('non_cooperation/', views.non_cooperation, name='non_cooperation'),
-    path('plasssey/', views.plasssey, name='plasssey'),
-    path('portugese/', views.portugese, name='portugese'),
-    path('quit_india_movement/', views.quit_india_movement, name='quit_india_movement'),
-    path('revolt_1857/', views.revolt_1857, name='revolt_1857'),
-    path('social_relegious_movement/', views.social_relegious_movement, name='social_relegious_movement'),
-    path('british/', views.british, name='british'),
+   path('portugese/', views.portugese, name='portugese'),                 # 1498 onwards
+   path('dutch/', views.dutch, name='dutch'),                             # 17th century
+   path('danes/', views.danes, name='danes'),                             # 17th century
+   path('french/', views.french, name='french'),                         # 17th–18th century
+   path('anglo_french/', views.anglo_french, name='anglo_french'),       # Carnatic Wars
+
+   path('plasssey/', views.plasssey, name='plasssey'),                   # 1757
+   path('buxar/', views.buxar, name='buxar'),                             # 1764
+   path('british_expansion/', views.british_expansion, name='british_expansion'),
+
+   path('mughal_decline/', views.mughal_decline, name='mughal_decline'), # 18th century
+   path('revolt_1857/', views.revolt_1857, name='revolt_1857'),
+
+   path('social_relegious_movement/', views.social_relegious_movement, name='social_relegious_movement'),
+   path('indian_nc/', views.indian_nc, name='indian_nc'),                 # 1885
+
+   path('bengal_swadeshi/', views.bengal_swadeshi, name='bengal_swadeshi'), # 1905
+   path('home_rule/', views.home_rule, name='home_rule'),                 # 1916
+   path('jallianwala_bagh/', views.jallianwala_bagh, name='jallianwala_bagh'), # 1919
+
+   path('non_cooperation/', views.non_cooperation, name='non_cooperation'),
+   path('civil_disobidience/', views.civil_disobidience, name='civil_disobidience'),
+
+   path('quit_india_movement/', views.quit_india_movement, name='quit_india_movement'), # 1942
+   path('india_independence/', views.india_independence, name='india_independence'),   # 1947
 
 ]
 

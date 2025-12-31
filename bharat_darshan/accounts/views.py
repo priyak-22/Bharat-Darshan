@@ -102,67 +102,97 @@ def western_kshatrapas(request):
 
 
 #Medival Dynasties
-def gurjara(request):
-    return render(request, 'html/gurjara.html')
-def bahmani(request):
-    return render(request, 'html/bahmani.html')
-def chandelachauhan(request):
-    return render(request, 'html/chandelachauhan.html')
-def chola(request):
-    return render(request, 'html/chola.html')
-def delhi_sultanate(request):
-    return render(request, 'html/delhi-sultanate.html')
-def endofmedival(request):
-    return render(request, 'html/endofmedival.html')
-def kakatiya_hoysala(request):
-    return render(request, 'html/kakatiya_hoysala.html')
-def mewar(request):
-    return render(request, 'html/mewar.html')
-def pala(request):
+def pala(request):                     # c. 750–1174 CE
     return render(request, 'html/pala.html')
-def rajput(request):
-    return render(request, 'html/rajput.html')
-def rashtrakuta(request):
+
+def rashtrakuta(request):              # c. 753–973 CE
     return render(request, 'html/rashtrakuta.html')
-def vijaynagar(request):
+
+def gurjara(request):                  # Gurjara-Pratihara, c. 750–1036 CE
+    return render(request, 'html/gurjara.html')
+
+def chola(request):                    # c. 850–1279 CE
+    return render(request, 'html/chola.html')
+
+def chandelachauhan(request):          # Chandela & Chauhan, c. 9th–12th CE
+    return render(request, 'html/chandelachauhan.html')
+
+def rajput(request):                   # Rajput kingdoms, c. 7th–15th CE
+    return render(request, 'html/rajput.html')
+
+def kakatiya_hoysala(request):         # c. 11th–14th CE
+    return render(request, 'html/kakatiya_hoysala.html')
+
+def delhi_sultanate(request):          # 1206–1526 CE
+    return render(request, 'html/delhi-sultanate.html')
+
+def mewar(request):                    # c. 13th–16th CE
+    return render(request, 'html/mewar.html')
+
+def vijaynagar(request):               # 1336–1646 CE
     return render(request, 'html/vijaynagar.html')
 
+def bahmani(request):                  # 1347–1527 CE
+    return render(request, 'html/bahmani.html')
+
+def endofmedival(request):             # End of Medieval India
+    return render(request, 'html/endofmedival.html')
+
+
 # modern dynasties
-def anglo_french(request):
-    return render(request, 'html/anglo_french.html')
-def bengal_swadeshi(request):
-    return render(request, 'html/bengal_swadeshi.html')
-def british_expansion(request):
-    return render(request, 'html/british_expansion.html')
-def buxar(request):
-    return render(request, 'html/buxar.html')
-def civil_disobidience(request):
-    return render(request, 'html/civil_disobidience.html')
-def danes(request):
-    return render(request, 'html/danes.html')
-def dutch(request):
-    return render(request, 'html/dutch.html')
-def french(request):
-    return render(request, 'html/french.html')
-def home_rule(request):
-    return render(request, 'html/home_rule.html')   
-def india_independence(request):
-    return render(request, 'html/india_independence.html')
-def indian_nc(request):
-    return render(request, 'html/indian_nc.html')
-def jallianwala_bagh(request):
-    return render(request, 'html/jallianwala_bagh.html')
-def mughal_decline(request):
-    return render(request, 'html/mughal_decline.html')
-def non_cooperation(request):
-    return render(request, 'html/non_cooperation.html')
-def plasssey(request):
-    return render(request, 'html/plassey.html')
-def portugese(request):
+def portugese(request):                 # 1498 onwards
     return render(request, 'html/portugese.html')
-def quit_india_movement(request):
-    return render(request, 'html/quit_india_movement.html')
-def revolt_1857(request):
+
+def dutch(request):                     # Early 17th century
+    return render(request, 'html/dutch.html')
+
+def danes(request):                     # 17th century
+    return render(request, 'html/danes.html')
+
+def french(request):                    # 17th–18th century
+    return render(request, 'html/french.html')
+
+def anglo_french(request):              # Carnatic Wars (1746–1763)
+    return render(request, 'html/anglo_french.html')
+
+def plasssey(request):                  # 1757
+    return render(request, 'html/plassey.html')
+
+def buxar(request):                     # 1764
+    return render(request, 'html/buxar.html')
+
+def british_expansion(request):         # Late 18th–19th century
+    return render(request, 'html/british_expansion.html')
+
+def mughal_decline(request):            # 18th century
+    return render(request, 'html/mughal_decline.html')
+
+def revolt_1857(request):               # 1857
     return render(request, 'html/revolt_1857.html')
-def social_relegious_movement(request):
+
+def social_relegious_movement(request): # 19th century reforms
     return render(request, 'html/social_relegious_movement.html')
+
+def indian_nc(request):                 # 1885
+    return render(request, 'html/indian_nc.html')
+
+def bengal_swadeshi(request):           # 1905
+    return render(request, 'html/bengal_swadeshi.html')
+
+def home_rule(request):                 # 1916
+    return render(request, 'html/home_rule.html')
+
+def jallianwala_bagh(request):           # 1919
+    return render(request, 'html/jallianwala_bagh.html')
+
+def non_cooperation(request):           # 1920–1922
+    return render(request, 'html/non_cooperation.html')
+
+def civil_disobidience(request):         # 1930–1934
+    return render(request, 'html/civil_disobidience.html')
+
+def quit_india_movement(request):        # 1942
+    return render(request, 'html/quit_india_movement.html')
+
+def india_independence(request):         # 1947
+    return render(request, 'html/india_independence.html')
