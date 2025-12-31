@@ -115,7 +115,7 @@ def delhi(request):
 def endofmedival(request):
     return render(request, 'html/endofmedival.html')
 def kakatiya_hoysala(request):
-    return render(request, 'html/kakatiya_hoysala.html')
+    return render(request, 'html/kakatiya-hoysala.html')
 def mewar(request):
     return render(request, 'html/mewar.html')
 def pala(request):
@@ -153,10 +153,10 @@ def indian_nc(request):
 def jallianwala_bagh(request):
     return render(request, 'html/jallianwala_bagh.html')
 def mughal_decline(request):
-    return render(request, 'html/mughal_decline.html')
+    return render(request, 'html/mughal-decline.html')
 def non_cooperation(request):
     return render(request, 'html/non_cooperation.html')
-def plasssey(request):
+def plassey(request):
     return render(request, 'html/plassey.html')
 def portugese(request):
     return render(request, 'html/portugese.html')
