@@ -15,12 +15,12 @@
 <body>
   <!-- HEADER -->
   <header class="page-header">
-  <div class="header-image-container">
-    <img src="https://wallpaperaccess.com/full/4568909.jpg" alt="Historical Header">
-  </div>
-  <h1>Empires & Kingdoms of India</h1>
-  <p class="subheading">Explore the dynasties that defined India's legacy</p>
-</header>
+    <div class="header-image-container">
+      <img src="https://wallpaperaccess.com/full/4568909.jpg" alt="Historical Header">
+    </div>
+    <h1>Empires & Kingdoms of India</h1>
+    <p class="subheading">Explore the dynasties that defined India's legacy</p>
+  </header>
 
 
   <!-- NAVIGATION BAR -->
@@ -244,7 +244,9 @@
 
     </section>
 
-
+<!---------------------------------------
+            Medieval dynasties
+  ---------------------------------------------->
     <section class="grid-container" id="medieval">
 
       <div class="empire-card" onclick="openEmpire('Gurjara-Pratihara Dynasty.html')">
@@ -280,7 +282,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Chandela & Chauhan Dynasties.html')">
-        <a href="{% url 'chandela_chauhan' %}" class="card-link">
+        <a href="{% url 'chandelachauhan' %}" class="card-link">
           <div class="card-content">
             <h2>Chandela & Chauhan Dynasties</h2>
             <p>9th–12th century CE | Central & North India</p>
@@ -290,7 +292,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Rajput Kingdoms.html')">
-        <a href="{% url 'rajput_kingdoms' %}" class="card-link">
+        <a href="{% url 'rajput' %}" class="card-link">
           <div class="card-content">
             <h2>Rajput Kingdoms</h2>
             <p>8th–15th century CE | Northern, Western & Central India</p>
@@ -301,8 +303,8 @@
       </div>
 
 
-      <div class="empire-card" onclick="openEmpire('Delhi Sultanate(5 Dynasties).html')">
-        <a href="{% url 'delhi_sultanate' %}" class="card-link">
+      <div class="empire-card" onclick="openEmpire('delhi.html')">
+        <a href="{% url 'delhi' %}" class="card-link">
           <div class="card-content">
             <h2>Delhi Sultanate</h2>
             <p>1206–1526 CE | Delhi</p>
@@ -312,7 +314,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Vijayanagara Empire.html')">
-        <a href="../dynasties/Medival History Dynasties/Vijayanagara Empire.html" class="card-link">
+        <a href="{% url 'vijaynagar' %}" class="card-link">
           <div class="card-content">
             <h2>Vijayanagara Empire</h2>
             <p>1336–1646 CE | South India</p>
@@ -322,7 +324,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Bahmani Kingdom.html')">
-        <a href="../dynasties/Medival History Dynasties/Bahmani Kingdom.html" class="card-link">
+        <a href="{% url 'bahmani' %}" class="card-link">
           <div class="card-content">
             <h2>Bahmani Kingdom</h2>
             <p>1347–1527 CE | Deccan Region</p>
@@ -332,7 +334,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Mewar(Sisodia Rajputs).html')">
-        <a href="../dynasties/Medival History Dynasties/Mewar (Sisodia Rajputs).html" class="card-link">
+        <a href="{% url 'mewar' %}" class="card-link">
           <div class="card-content">
             <h2>Mewar (Sisodia Rajputs)</h2>
             <p>13th–15th century CE | Rajasthan</p>
@@ -342,7 +344,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Kakatiya & Hoysala Dynasties.html')">
-        <a href="../dynasties/Medival History Dynasties/Kakatiya & Hoysala Dynasties.html" class="card-link">
+        <a href="{% url 'kakatiya-hoysala' %}" class="card-link">
           <div class="card-content">
             <h2>Kakatiya & Hoysala Dynasties</h2>
             <p>12th–14th century CE | Telangana & Karnataka</p>
@@ -352,7 +354,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('End of Medieval Period.html')">
-        <a href="../dynasties/Medival History Dynasties/End of Medieval Period.html" class="card-link">
+        <a href="{% url 'endofmedival' %}" class="card-link">
           <div class="card-content">
             <h2>End of Medieval Period</h2>
             <p>1498 CE | Calicut (Kerala)</p>
@@ -363,8 +365,104 @@
     </section>
     <section class="grid-container" id="modern">
 
+      <div class="empire-card" onclick="openEmpire('portugese.html')">
+        <a href="{% url 'portugese' %}" class="card-link">
+          <div class="card-content">
+            <h2>Advent of the Portuguese</h2>
+            <p>1498 CE</p>
+            <p>Arrival of Vasco da Gama at Calicut marked the beginning of European colonial presence in India.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('dutch.html')">
+        <a href="{% url 'dutch' %}" class="card-link">
+          <div class="card-content">
+            <h2>Advent of the Dutch</h2>
+            <p>1605 CE</p>
+            <p>The Dutch East India Company established trading centers in India, mainly along the Coromandel Coast.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('british.html')">
+        <a href="{% url 'british' %}" class="card-link">
+          <div class="card-content">
+            <h2>Advent of the British</h2>
+            <p>1608 CE</p>
+            <p>The British East India Company arrived in India and later established political and economic control.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('french.html')">
+        <a href="{% url 'french' %}" class="card-link">
+          <div class="card-content">
+            <h2>Advent of the French</h2>
+            <p>1664 CE</p>
+            <p>The French East India Company established trading centers like Pondicherry and played a key role in
+              Carnatic politics.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('danes.html')">
+        <a href="{% url 'danes' %}" class="card-link">
+          <div class="card-content">
+            <h2>Advent of the Danes</h2>
+            <p>1616 CE</p>
+            <p>The Danish East India Company established trading settlements at Tranquebar and Serampore.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('mughal-decline.html')">
+        <a href="{% url 'mughal-decline' %}" class="card-link">
+          <div class="card-content">
+            <h2>Mughal Empire</h2>
+            <p>1526–1857 CE</p>
+            <p>Founded by Babur, the Mughal Empire shaped India’s politics, culture, and administration for over three
+              centuries.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('anglo-french.html')">
+        <a href="{% url 'anglo_french' %}" class="card-link">
+          <div class="card-content">
+            <h2>Anglo-French Wars in India</h2>
+            <p>1744–1763 CE</p>
+            <p>A series of conflicts between the British and French for dominance in India, mainly fought during the
+              Carnatic Wars.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('plassey.html')">
+        <a href="{% url 'plassey' %}" class="card-link">
+          <div class="card-content">
+            <h2>Battle of Plassey</h2>
+            <p>1757 CE</p>
+            <p>A decisive battle where the British East India Company defeated Nawab Siraj-ud-Daulah, marking the start
+              of British political control in India.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empire-card" onclick="openEmpire('buxar.html')">
+        <a href="{% url 'buxar' %}" class="card-link">
+          <div class="card-content">
+            <h2>Battle of Buxar</h2>
+            <p>1764 CE</p>
+            <p>The British East India Company defeated the combined forces of Mir Qasim, Shuja-ud-Daula, and Shah Alam
+              II, confirming British dominance in India.</p>
+          </div>
+        </a>
+      </div>
+
+
       <div class="empire-card" onclick="openEmpire('Social & Religious Reform Movements.html')">
-        <a href="../dynasties/Modern history/social-relegious-movement.html" class="card-link">
+        <a href="{% url 'social_relegious_movement' %}" class="card-link">
           <div class="card-content">
             <h2>Social & Religious Reform Movements</h2>
             <p>19th century</p>
@@ -373,8 +471,9 @@
         </a>
       </div>
 
+
       <div class="empire-card" onclick="openEmpire('Revolt of 1857.html')">
-        <a href="../dynasties/Modern history/Revolt-1857.html" class="card-link">
+        <a href="{% url 'revolt_1857' %}" class="card-link">
           <div class="card-content">
             <h2>Revolt of 1857</h2>
             <p>1857 CE</p>
@@ -384,7 +483,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Formation of Indian National Congress.html')">
-        <a href="../dynasties/Modern history/Indian-NC.html" class="card-link">
+        <a href="{% url 'indian_nc' %}" class="card-link">
           <div class="card-content">
             <h2>Formation of Indian National Congress</h2>
             <p>1885 CE</p>
@@ -394,7 +493,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Partition of Bengal & Swadeshi Movement.html')">
-        <a href="../dynasties/Modern history/Bengal-Swadeshi.html" class="card-link">
+        <a href="{% url 'bengal_swadeshi' %}" class="card-link">
           <div class="card-content">
             <h2>Partition of Bengal & Swadeshi Movement</h2>
             <p>1905–1911 CE</p>
@@ -404,7 +503,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Home Rule Movement.html')">
-        <a href="../dynasties/Modern history/Home-rule.html" class="card-link">
+        <a href="{% url 'home_rule' %}" class="card-link">
           <div class="card-content">
             <h2>Home Rule Movement</h2>
             <p>1916–1918 CE</p>
@@ -414,7 +513,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Jallianwala Bagh Massacre.html')">
-        <a href="../dynasties/Modern history/Jallianwala-bagh.html" class="card-link">
+        <a href="{% url 'jallianwala_bagh' %}" class="card-link">
           <div class="card-content">
             <h2>Jallianwala Bagh Massacre</h2>
             <p>1919 CE</p>
@@ -424,7 +523,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Non-Cooperation Movement.html')">
-        <a href="../dynasties/Modern history/Non-Cooperation.html" class="card-link">
+        <a href="{% url 'non_cooperation' %}" class="card-link">
           <div class="card-content">
             <h2>Non-Cooperation Movement</h2>
             <p>1920–1922 CE</p>
@@ -434,7 +533,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Civil Disobedience Movement.html')">
-        <a href="../dynasties/Modern history/Civil-Disobidience.html" class="card-link">
+        <a href="{% url 'civil_disobidience' %}" class="card-link">
           <div class="card-content">
             <h2>Civil Disobedience Movement</h2>
             <p>1930–1934 CE</p>
@@ -444,7 +543,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Quit India Movement.html')">
-        <a href="../dynasties/Modern history/Quit-India-movement.html" class="card-link">
+        <a href="{% url 'quit_india_movement' %}" class="card-link">
           <div class="card-content">
             <h2>Quit India Movement</h2>
             <p>1942 CE</p>
@@ -454,7 +553,7 @@
       </div>
 
       <div class="empire-card" onclick="openEmpire('Independence of India.html')">
-        <a href="../dynasties/Modern history/India-Independence.html" class="card-link">
+        <a href="{% url 'india_independence' %}" class="card-link">
           <div class="card-content">
             <h2>Independence of India</h2>
             <p>15 August 1947 CE</p>

@@ -116,17 +116,15 @@ def chola(request):                    # c. 850–1279 CE
 
 def chandelachauhan(request):          # Chandela & Chauhan, c. 9th–12th CE
     return render(request, 'html/chandelachauhan.html')
-
-def rajput(request):                   # Rajput kingdoms, c. 7th–15th CE
-    return render(request, 'html/rajput.html')
-
-def kakatiya_hoysala(request):         # c. 11th–14th CE
-    return render(request, 'html/kakatiya_hoysala.html')
-
-def delhi_sultanate(request):          # 1206–1526 CE
+def chola(request):
+    return render(request, 'html/chola.html')
+def delhi_sultanate(request):
     return render(request, 'html/delhi-sultanate.html')
-
-def mewar(request):                    # c. 13th–16th CE
+def endofmedival(request):
+    return render(request, 'html/endofmedival.html')
+def kakatiya_hoysala(request):
+    return render(request, 'html/kakatiya_hoysala.html')
+def mewar(request):
     return render(request, 'html/mewar.html')
 
 def vijaynagar(request):               # 1336–1646 CE
@@ -184,14 +182,15 @@ def home_rule(request):                 # 1916
 
 def jallianwala_bagh(request):           # 1919
     return render(request, 'html/jallianwala_bagh.html')
-
-def non_cooperation(request):           # 1920–1922
+def mughal_decline(request):
+    return render(request, 'html/mughal_decline.html')
+def non_cooperation(request):
     return render(request, 'html/non_cooperation.html')
-
-def civil_disobidience(request):         # 1930–1934
-    return render(request, 'html/civil_disobidience.html')
-
-def quit_india_movement(request):        # 1942
+def plasssey(request):
+    return render(request, 'html/plassey.html')
+def portugese(request):
+    return render(request, 'html/portugese.html')
+def quit_india_movement(request):
     return render(request, 'html/quit_india_movement.html')
 
 def india_independence(request):         # 1947
