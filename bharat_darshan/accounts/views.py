@@ -120,8 +120,8 @@ def chola(request):
     return render(request, 'html/chola.html')
 def delhi_sultanate(request):
     return render(request, 'html/delhi-sultanate.html')
-def endofmedival(request):
-    return render(request, 'html/endofmedival.html')
+def rajput(request):
+    return render(request, 'html/rajput.html')
 def kakatiya_hoysala(request):
     return render(request, 'html/kakatiya_hoysala.html')
 def mewar(request):
