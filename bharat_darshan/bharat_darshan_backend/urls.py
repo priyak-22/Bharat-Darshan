@@ -47,14 +47,14 @@ urlpatterns = [
     path('bahmani/', views.gupta, name='bahmani'),
     path('chandelachauhan/', views.gurjara_pratihara, name='chandelachauhan'),
     path('chola/', views.harsha, name='chola'),
-    path('delhi/', views.huna, name='delhi'),
+    path('delhi-sultanate/', views.huna, name='delhi-sultanate'),
     path('endofmedival/', views.indo_greek, name='endofmedival'),
     path('kakatiya-hoysala/', views.indo_parthian, name='kakatiya-hoysala'),
     path('mewar/', views.kanva, name='mewar'),
     path('pala/', views.kushana, name='pala'),
     path('rajput/', views.maurya, name='rajput'),
     path('rashtrakuta/', views.mukharis, name='rashtrakuta'),
-    path('vijaynagar/', views.vijaynagar, name='vijaynagar'),
+    path('vijaynagar/', views.mukharis, name='vijaynagar'),
 
     #modern dynasties
     path('anglo_french/', views.gauda, name='anglo_french'),
@@ -76,7 +76,7 @@ urlpatterns = [
     path('quit_india_movement/', views.kushana, name='quit_india_movement'),
     path('revolt_1857/', views.maurya, name='revolt_1857'),
     path('social_relegious_movement/', views.mukharis, name='social_relegious_movement'),
-    
+   
 
 ]
 
