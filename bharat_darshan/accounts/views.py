@@ -118,8 +118,8 @@ def chandelachauhan(request):          # Chandela & Chauhan, c. 9th–12th CE
     return render(request, 'html/chandelachauhan.html')
 def chola(request):
     return render(request, 'html/chola.html')
-def delhi_sultanate(request):
-    return render(request, 'html/delhi-sultanate.html')
+def delhi(request):
+    return render(request, 'html/delhi.html')
 def rajput(request):
     return render(request, 'html/rajput.html')
 def kakatiya_hoysala(request):
@@ -163,7 +163,7 @@ def british_expansion(request):         # Late 18th–19th century
     return render(request, 'html/british_expansion.html')
 
 def mughal_decline(request):            # 18th century
-    return render(request, 'html/mughal_decline.html')
+    return render(request, 'html/mughal-decline.html')
 
 def revolt_1857(request):               # 1857
     return render(request, 'html/revolt_1857.html')
@@ -186,7 +186,7 @@ def mughal_decline(request):
     return render(request, 'html/mughal_decline.html')
 def non_cooperation(request):
     return render(request, 'html/non_cooperation.html')
-def plasssey(request):
+def plassey(request):
     return render(request, 'html/plassey.html')
 def portugese(request):
     return render(request, 'html/portugese.html')
