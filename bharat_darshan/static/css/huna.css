@@ -173,25 +173,8 @@ body {
   border: 3px solid #9b6010;
 }
 
-/* ======== Back Button ======== */
-.back-button {
-  display: block;
-  margin: 2.5rem auto;
-  background-color: #7a3b1d;
-  color: #fdf5e6;
-  border: none;
-  padding: 0.8rem 1.8rem;
-  font-size: 1.05rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Cinzel Decorative', serif;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
 
-.back-button:hover {
-  background-color: #4b1a13;
-  transform: translateY(-2px);
-}
+
 
 /* ======== Footer (optional) ======== */
 footer {
@@ -215,4 +198,8 @@ a {
 a:hover {
   color: #b97b1a;
   text-shadow: 0 0 6px rgba(185, 123, 26, 0.5);
+}
+
+.content a:not(.back-button) {
+  color: #9b6010;
 }

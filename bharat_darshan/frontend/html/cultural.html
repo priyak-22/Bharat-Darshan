@@ -13,19 +13,19 @@
 
 <body>
  
-
- <nav class="navbar">
+<nav class="navbar">
       <div class="logo">Bharat Darshan</div>
       <ul>
-        <li><a href="atlas.html">Home</a></li>
-        <li><a href="AncientIndia.html">Ancient India</a></li>
-        <li><a href="MedievalIndia.html">Medieval India</a></li>
-        <li><a href="ModernIndia.html">Modern India</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'empires' %}">Empires and Kingdoms</a></li>
+        <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
+        <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
+        <li><a href="{% url 'freedom_movement' %}">Freedom Struggle</a></li>
         <li><a href="#">Quiz</a></li>
         <li><a href="#">About</a></li>
       </ul>
 
-      <button class="login">Login</button>
+      <button class="login"><a href="{% url 'login' %}">Login</a></button>
     </nav>
 
   <section class="page-header">
@@ -66,7 +66,6 @@
 
   </section>
 
-  <button id="backBtn" class="back-button">← Back to Atlas</button>
 </main>
 
 

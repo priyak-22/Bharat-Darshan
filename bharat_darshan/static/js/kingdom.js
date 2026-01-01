@@ -1,4 +1,4 @@
-// dynasty.js
+
 
 // Function used by other buttons (like opening a dynasty page)
 function openKingdom(page) {
@@ -6,14 +6,6 @@ function openKingdom(page) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Handle Back Button
-  const backBtn = document.getElementById("backBtn");
-  if (backBtn) {
-    backBtn.addEventListener("click", () => {
-      // ✅ Correct path to atlas.html (since it's in /html/)
-      window.location.href = "../../html/empires.html";
-    });
-  }
 
   // Smooth scroll to top on page load
   window.scrollTo({ top: 0, behavior: "smooth" });

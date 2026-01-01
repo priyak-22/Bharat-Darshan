@@ -2,8 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login , logout
 from django.shortcuts import render
 
-def home(request):
-    return render(request, "atlas.html")
+
 
 def login_view(request):
     if request.method == "POST":
@@ -23,9 +22,12 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('html/login')
+    return redirect('login')
 
 def home(request):
+    return render(request, "html/atlas.html")
+
+def atlas(request):
     return render(request, "html/atlas.html")
 
 def main(request):
@@ -53,7 +55,7 @@ def battles(request):
     return render(request, 'html/battles.html')
 
 def cultural_heritage(request):
-    return render(request, 'html/cultural_heritage.html')
+    return render(request, 'html/cultural.html')
 
 def freedom_movement(request):
     return render(request, 'html/freedom.html')
@@ -64,7 +66,7 @@ def gauda(request):
 def gupta(request):
     return render(request, 'html/gupta.html')
 def  gurjara_pratihara(request):
-    return render(request, 'html/gujara-pratihara.html')
+    return render(request, 'html/gurjara-pratihara.html')
 def harsha(request):
     return render(request, 'html/harsha.html')
 def huna(request):
@@ -89,8 +91,8 @@ def pala(request):
     return render(request, 'html/pala.html')
 def saka(request):
     return render(request, 'html/saka.html')
-def sathavahana(request):
-    return render(request, 'html/satavahana.html')
+def satvahana(request):
+    return render(request, 'html/satvahana.html')
 def shunga(request):
     return render(request, 'html/shunga.html')
 def southern_kingdoms(request):

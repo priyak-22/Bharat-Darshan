@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Western Kshatrapas | Digital Atlas of India</title>
-  <link rel="stylesheet" href="WesternKshatrapas.css">
+  <link rel="stylesheet" href="{% static 'css/western-kshatrapas.css' %}">
 </head>
 <body>
   <header class="page-header">
@@ -52,9 +53,9 @@
       <img src="images/western-kshatrapas-map.jpg" alt="Map of Western Kshatrapas region">
     </section>
 
-    <button id="backBtn" class="back-button">← Back to Atlas</button>
+
   </main>
 
-  <script src="../kingdom.js"></script>
+  <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
 </html>
