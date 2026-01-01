@@ -55,7 +55,7 @@ def battles(request):
     return render(request, 'html/battles.html')
 
 def cultural_heritage(request):
-    return render(request, 'html/cultural_heritage.html')
+    return render(request, 'html/cultural.html')
 
 def freedom_movement(request):
     return render(request, 'html/freedom.html')
