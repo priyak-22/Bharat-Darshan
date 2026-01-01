@@ -2,48 +2,218 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Palm Leaf Scroll Timeline - From Image</title>
+<title>Medieval Indian Circular Timeline</title>
 
-<link rel="stylesheet"  href="{% static 'css/MedivalTimeline.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  background: linear-gradient(90deg,#efe4cf 35%,#e5cfaa 65%);
+  font-family:'EB Garamond', serif;
+  color:#4a2d12;
+  overflow:hidden;
+}
+
+.wrapper{
+  display:flex;
+  height:100%;
+}
+
+/* LEFT PANEL */
+.info{
+  width:35%;
+  padding:70px 50px;
+  border-right:5px solid #8a5a2b;
+}
+
+.info h1{
+  font-family:'Cinzel', serif;
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.info h3{
+  font-size:18px;
+  margin-bottom:20px;
+}
+
+.info p{
+  font-size:17px;
+  line-height:1.6;
+}
+
+/* RIGHT SIDE */
+.circle-area{
+  width:65%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.circle-wrapper{
+  width:min(68vh,68vw);
+  height:min(68vh,68vw);
+  position:relative;
+}
+
+.circle{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  border:3px dashed #8a5a2b;
+  background:#f3e6cf;
+  position:relative;
+  transition:transform 0.8s ease;
+}
+
+.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.center-label h2 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6a4a2b;
+}
+
+.circle-message {
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: #6a4a2b;
+  letter-spacing: 1px;
+}
+
+/* DYNASTY CIRCLES */
+.era{
+  position:absolute;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#f0e0c2;
+  border:3px solid #8a5a2b;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.era:hover{
+  transform:translate(-50%,-50%) scale(1.15);
+}
+
+.era.active{
+  border-color:#c79a3a;
+  box-shadow:0 0 14px rgba(199,154,58,0.9);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .wrapper{
+    flex-direction:column;
+  }
+  .info{
+    width:100%;
+    border-right:none;
+    border-bottom:5px solid #8a5a2b;
+    padding:40px;
+  }
+  .circle-area{
+    width:100%;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<h1>Medival India Timeline</h1>
+<div class="wrapper">
 
-<div class="scroll-container">
-  
-  <div class="rod-left"></div>
-
-  <div class="scroll">
-
-    <!-- Order based on the provided image's periods -->
-    <div class="card" onclick="showDetails('pratihara')"><b>Gurjara-Pratihara</b><br>8th–11th CE</div>
-    <div class="card" onclick="showDetails('rashtrakuta')"><b>Rashtrakuta</b><br>8th–10th CE</div>
-    <div class="card" onclick="showDetails('chola')"><b>Chola</b><br>9th–13th CE</div>
-    <div class="card" onclick="showDetails('chandela_chauhan')"><b>Chandela & Chauhan</b><br>9th–12th CE</div>
-    <div class="card" onclick="showDetails('rajput')"><b>Rajput Kingdoms</b><br>8th–15th CE</div>
-    <div class="card" onclick="showDetails('mewar')"><b>Mewar (Sisodia)</b><br>13th–15th CE</div>
-    <div class="card" onclick="showDetails('kakatiya_hoysala')"><b>Kakatiya & Hoysala</b><br>12th–14th CE</div>
-    <div class="card" onclick="showDetails('delhi_sultanate')"><b>Delhi Sultanate</b><br>1206–1526 CE</div>
-    <div class="card" onclick="showDetails('vijayanagara')"><b>Vijayanagara Empire</b><br>1336–1646 CE</div>
-    <div class="card" onclick="showDetails('bahmani')"><b>Bahmani Kingdom</b><br>1347–1527 CE</div>
-    <div class="card" onclick="showDetails('end_medieval')"><b>End of Medieval Period</b><br>1498 CE</div>
-
+  <!-- LEFT INFO -->
+  <div class="info">
+    <h1 id="dynasty">Pala Dynasty</h1>
+    <h3 id="period">750–1174 CE</h3>
+    <p id="desc">
+      Major medieval Indian dynasties that influenced politics, culture, and architecture.
+    </p>
   </div>
 
-  <div class="rod-right"></div>
+  <!-- RIGHT CIRCLE -->
+  <div class="circle-area">
+    <div class="circle-wrapper">
+       <div class="circle-message">
+          Click a dynasty to explore
+      </div>
+      <div class="circle" id="circle">
+
+        <!-- MEDIEVAL DYNASTIES FROM PATHS -->
+        <div class="era" data-name="Pala Dynasty"></div>
+        <div class="era" data-name="Rashtrakuta Dynasty"></div>
+        <div class="era" data-name="Gurjara-Pratihara"></div>
+        <div class="era" data-name="Chola Dynasty"></div>
+        <div class="era" data-name="Chandela-Chauhan"></div>
+        <div class="era" data-name="Rajput Kingdoms"></div>
+        <div class="era" data-name="Delhi Sultanate"></div>
+        <div class="era" data-name="Mewar Kingdom"></div>
+        <div class="era" data-name="Vijayanagar Empire"></div>
+        <div class="era" data-name="Bahmani Sultanate"></div>
+        <div class="era" data-name="Kakatiya-Hoysala"></div>
+        <div class="era" data-name="End of Medieval Era"></div>
+
+      </div>
+      <div class="center-label">
+        <h2>Medieval India</h2>
+      </div>
+    </div>
+  </div>
 
 </div>
 
-<!-- DETAILS SECTION -->
-<div id="details-box">
-  <h2 id="title"></h2>
-  <p id="info"></p>
-</div>
+<script>
+const eras = document.querySelectorAll('.era');
+const circle = document.getElementById('circle');
+const dynasty = document.getElementById('dynasty');
 
-<script src="{% static 'js/MeT.js' %}"></script>
+function positionEras(){
+  const size = circle.offsetWidth;
+  const center = size / 2;
+  const radius = center - 40;
+  const total = eras.length;
+
+  eras.forEach((era,i)=>{
+    const angle = (i/total) * 2 * Math.PI - Math.PI/2;
+    era.style.left = center + radius * Math.cos(angle) + "px";
+    era.style.top  = center + radius * Math.sin(angle) + "px";
+
+    era.onclick = ()=>{
+      eras.forEach(e=>e.classList.remove("active"));
+      era.classList.add("active");
+      dynasty.textContent = era.dataset.name;
+      circle.style.transform = `rotate(${-i*(360/total)}deg)`;
+    };
+  });
+}
+
+window.onload = positionEras;
+window.onresize = positionEras;
+</script>
 
 </body>
 </html>
