@@ -86,7 +86,27 @@ body {
   font-size: 1.1rem;
 }
 
+/* Button */
+.enter-btn {
+  padding: 10px 25px;
+  background: rgba(255, 248, 231, 0);
+  /* bronze */
+  color: #100b00;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 2px solid #342102;
+  ;
+  /* gold border */
+  transition: 0.3s;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
 
+.enter-btn:hover {
+  background: #d4af37;
+  color: #2a1f16;
+  transform: scale(1.05);
+}
 
 /* Remove link underline globally */
 a {
