@@ -1,88 +1,133 @@
 
-body {
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  background: linear-gradient(90deg,#efe4cf 35%,#e5cfaa 65%);
+  font-family:'EB Garamond', serif;
+  color:#4a2d12;
+  overflow:hidden;
+}
+
+.wrapper{
+  display:flex;
+  height:100%;
+}
+
+/* LEFT PANEL */
+.info{
+  width:35%;
+  padding:70px 50px;
+  border-right:5px solid #8a5a2b;
+}
+
+.info h1{
+  font-family:'Cinzel', serif;
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.info h3{
+  font-size:18px;
+  margin-bottom:20px;
+}
+
+.info p{
+  font-size:17px;
+  line-height:1.6;
+}
+
+/* RIGHT SIDE */
+.circle-area{
+  width:65%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.circle-wrapper{
+  width:min(68vh,68vw);
+  height:min(68vh,68vw);
+  position:relative;
+}
+
+.circle{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  border:3px dashed #8a5a2b;
+  background:#f3e6cf;
+  position:relative;
+  transition:transform 0.8s ease;
+}
+
+.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.center-label h2 {
   margin: 0;
-  padding: 20px;
-  background: #f2e5c4;
-  font-family: Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6a4a2b;
 }
 
-/* Heading */
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* Scroll container */
-.scroll-container {
+.circle-message {
+  position: absolute;
+  top: -60px;       /* above the circle */
   width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 20px;
-}
-
-/* Scroll background */
-.scroll {
-  display: inline-block;
-  padding: 30px 0;
-  background: #e8d7a8;
-  border: 5px solid #b39458;
-  border-radius: 10px;
-  background-size: cover;
-}
-
-/* Wooden rods */
-.rod-left,
-.rod-right {
-  width: 40px;
-  height: 100%;
-  background: #8c5a27;
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Dynasty cards (Default Width) */
-.card {
-  display: inline-block;
-  vertical-align: top;
-  width: 180px; /* Default width for most cards */
-  margin: 0 20px;
-  padding: 15px;
-  background: #f5e7c4;
-  border: 2px solid #a48445;
-  border-radius: 6px;
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   text-align: center;
-  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: #6a4a2b;
+  letter-spacing: 1px;
 }
 
-.card b {
-  font-size: 17px;
+/* DYNASTY CIRCLES */
+.era{
+  position:absolute;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#f0e0c2;
+  border:3px solid #8a5a2b;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  transition:0.3s;
 }
 
-/* Specific style for the last card to fit text */
-.card-fitted {
-    width: 220px; 
+.era:hover{
+  transform:translate(-50%,-50%) scale(1.15);
 }
 
-
-/* Details Box */
-#details-box {
-  width: 90%;
-  margin: 30px auto;
-  padding: 20px;
-  background: #fff4d6;
-  border: 3px solid #b39458;
-  border-radius: 10px;
-  display: none;
-  animation: fadeIn 0.4s ease;
+.era.active{
+  border-color:#c79a3a;
+  box-shadow:0 0 14px rgba(199,154,58,0.9);
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-#details-box h2 {
-  margin-top: 0;
-  color: #6b4b1f;
+/* RESPONSIVE */
+@media(max-width:900px){
+  .wrapper{
+    flex-direction:column;
+  }
+  .info{
+    width:100%;
+    border-right:none;
+    border-bottom:5px solid #8a5a2b;
+    padding:40px;
+  }
+  .circle-area{
+    width:100%;
+  }
 }

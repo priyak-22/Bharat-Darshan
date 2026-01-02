@@ -101,6 +101,10 @@ path('revolt_1857/', views.revolt_1857, name='revolt_1857'),
 path('social_relegious_movement/', views.social_relegious_movement, name='social_relegious_movement'),
 
    
+#timeline
+path('ancient_timeline/', views.ancient_timeline, name="ancient_timeline"),
+path('medival_timeline/', views.medival_timeline, name="medival_timeline"),
+path('modern_timeline/', views.modern_timeline, name="modern_timeline"),
 
 
 ]

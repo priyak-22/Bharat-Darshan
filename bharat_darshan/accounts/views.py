@@ -104,16 +104,16 @@ def western_kshatrapas(request):
 
 
 #Medival Dynasties
-def pala(request):                     # c. 750–1174 CE
+def pala(request):                     
     return render(request, 'html/pala.html')
 
-def rashtrakuta(request):              # c. 753–973 CE
+def rashtrakuta(request):          
     return render(request, 'html/rashtrakuta.html')
 
-def gurjara(request):                  # Gurjara-Pratihara, c. 750–1036 CE
+def gurjara(request):                  
     return render(request, 'html/gurjara.html')
 
-def chola(request):                    # c. 850–1279 CE
+def chola(request):                  
     return render(request, 'html/chola.html')
 
 def chandelachauhan(request):         
@@ -196,3 +196,12 @@ def india_independence(request):
     return render(request, 'html/india_independence.html')
 def civil_disobidience(request):        
     return render(request, 'html/civil_disobidience.html')
+
+
+# Timeline
+def ancient_timeline(request):
+    return render(request, 'html/ancient-timeline.html')
+def medival_timeline(request):
+    return render(request, 'html/medival-timeline.html')
+def modern_timeline(request):
+    return render(request, 'html/modern-timeline.html')
