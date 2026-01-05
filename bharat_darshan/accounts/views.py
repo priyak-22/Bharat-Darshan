@@ -150,9 +150,9 @@ def french(request):
     return render(request, 'html/french.html')
 
 def anglo_french(request):              
-    return render(request, 'html/anglo_french.html')
+    return render(request, 'html/anglo-french.html')
 
-def plasssey(request):                  
+def plassey(request):                  
     return render(request, 'html/plassey.html')
 
 def buxar(request):                     
@@ -165,37 +165,36 @@ def mughal_decline(request):
     return render(request, 'html/mughal-decline.html')
 
 def revolt_1857(request):               
-    return render(request, 'html/revolt_1857.html')
+    return render(request, 'html/revolt-1857.html')
 
 def social_relegious_movement(request): 
-    return render(request, 'html/social_relegious_movement.html')
+    return render(request, 'html/social-religious-movement.html')
 
 def indian_nc(request):                 
-    return render(request, 'html/indian_nc.html')
+    return render(request, 'html/indian-nc.html')
 
 def bengal_swadeshi(request):          
-    return render(request, 'html/bengal_swadeshi.html')
+    return render(request, 'html/bengal-swadeshi.html')
 
 def home_rule(request):                
-    return render(request, 'html/home_rule.html')
+    return render(request, 'html/home-rule.html')
 
 def jallianwala_bagh(request):           
-    return render(request, 'html/jallianwala_bagh.html')
-def mughal_decline(request):
-    return render(request, 'html/mughal_decline.html')
+    return render(request, 'html/jallianwala-bagh.html')
+
 def non_cooperation(request):
-    return render(request, 'html/non_cooperation.html')
+    return render(request, 'html/non-cooperation.html')
 def plassey(request):
     return render(request, 'html/plassey.html')
 def portugese(request):
     return render(request, 'html/portugese.html')
 def quit_india_movement(request):
-    return render(request, 'html/quit_india_movement.html')
+    return render(request, 'html/quit-india-movement.html')
 
 def india_independence(request):         
-    return render(request, 'html/india_independence.html')
+    return render(request, 'html/india-independence.html')
 def civil_disobidience(request):        
-    return render(request, 'html/civil_disobidience.html')
+    return render(request, 'html/civil-disobidience.html')
 
 
 # Timeline
