@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Battle of Buxar | Digital Atlas of India</title>
-  <link rel="stylesheet" href="buxar.css">
+  <link rel="stylesheet" href="{% static 'css/buxar.css' %}">
 </head>
 <body>
   <header class="page-header">
@@ -15,7 +16,12 @@
   <main class="content">
     <section class="info-card">
       <h2>Background</h2>
-      <p>The Battle of Buxar was fought on 22 October 1764 between the British East India Company and the combined forces of Mir Qasim (Nawab of Bengal), Shuja-ud-Daula (Nawab of Awadh), and Mughal Emperor Shah Alam II. It was a decisive victory for the British and consolidated their control over Bengal and adjoining regions.</p>
+      <p>
+        The Battle of Buxar was fought on 22 October 1764 between the British East India Company
+        and the combined forces of Mir Qasim (Nawab of Bengal), Shuja-ud-Daula (Nawab of Awadh),
+        and Mughal Emperor Shah Alam II. It was a decisive victory for the British and
+        consolidated their control over Bengal and adjoining regions.
+      </p>
     </section>
 
     <section class="info-card">
@@ -29,19 +35,50 @@
 
     <section class="info-card">
       <h2>Main Events</h2>
-      <p>The British army under Major Hector Munro defeated the combined Indian forces near Buxar. Despite numerical superiority, the allied forces suffered from poor coordination, while the British displayed disciplined artillery and strategic tactics.</p>
+      <p>
+        The British army under Major Hector Munro defeated the combined Indian forces near Buxar.
+        Despite numerical superiority, the allied forces suffered from poor coordination,
+        while the British displayed disciplined artillery and superior military strategy.
+      </p>
     </section>
 
     <section class="info-card">
       <h2>Notable Figures</h2>
       <ul>
         <li><strong>Major Hector Munro:</strong> British commander who led the East India Company’s troops to victory.</li>
-        <li><strong>Mir Qasim:</strong> Nawab of Bengal who sought to resist British control after being replaced by Mir Jafar.</li>
-        <li><strong>Shuja-ud-Daula:</strong> Nawab of Awadh who supported Mir Qasim’s anti-British alliance.</li>
-        <li><strong>Shah Alam II:</strong> Mughal Emperor who allied with regional rulers against the British.</li>
+        <li><strong>Mir Qasim:</strong> Nawab of Bengal who attempted to resist British control.</li>
+        <li><strong>Shuja-ud-Daula:</strong> Nawab of Awadh and key ally in the anti-British coalition.</li>
+        <li><strong>Shah Alam II:</strong> Mughal Emperor whose defeat weakened imperial authority further.</li>
       </ul>
     </section>
 
     <section class="info-card">
       <h2>Outcome</h2>
-      <p>The British victory
+      <p>
+        The British victory at Buxar confirmed their political dominance in eastern India.
+        Shah Alam II was forced to grant the Diwani rights of Bengal, Bihar, and Orissa to
+        the British East India Company through the Treaty of Allahabad (1765).
+      </p>
+    </section>
+
+    <section class="info-card">
+      <h2>Impact and Significance</h2>
+      <ul>
+        <li>Marked the beginning of British political rule in India.</li>
+        <li>Made the East India Company a major territorial power.</li>
+        <li>Reduced the Mughal Emperor to a symbolic ruler.</li>
+        <li>Strengthened British control over revenue and administration.</li>
+      </ul>
+    </section>
+
+    <section class="map-section">
+      <h2>Battle Location</h2>
+      <img src="images/buxar-map.jpg" alt="Map showing location of the Battle of Buxar">
+    </section>
+
+    <button id="backBtn" class="back-button">← Back to Atlas</button>
+  </main>
+
+  <script src="{% static 'js/kingdom.js' %}"></script>
+</body>
+</html>
