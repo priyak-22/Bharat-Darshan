@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pala Empire | Digital Atlas of India</title>
+  <link rel="stylesheet" href="{% static 'css/mughal.css' %}">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Mughal </h1>
+    <p class="subheading">Region: Bengal and Bihar | Capital: Pataliputra, later Vikramashila and Nalanda</p>
+  </header>
+
+  <main class="content">
+    <section class="info-card">
+      <h2>Capital</h2>
+      <p>Pataliputra, Vikramashila, and Nalanda</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Notable Rulers</h2>
+      <ul>
+        <li>Gopala (Founder)</li>
+        <li>Dharmapala</li>
+        <li>Devapala</li>
+        <li>Mahipala I</li>
+      </ul>
+    </section>
+
+    <section class="info-card">
+      <h2>Religion</h2>
+      <p>Buddhism (Mahayana and Vajrayana); also supported Hinduism.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Administration</h2>
+      <p>The Pala Empire had a centralized administration led by kings with a strong military and regional governors. They emphasized education and diplomacy, maintaining ties with Southeast Asia and Tibet.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Restored political unity in eastern India after a period of anarchy</li>
+        <li>Established major Buddhist universities—Nalanda, Vikramashila, and Odantapuri</li>
+        <li>Encouraged trade and art across Bengal and Bihar</li>
+        <li>Spread Indian culture and Buddhism to Southeast Asia and Tibet</li>
+      </ul>
+    </section>
+
+    <section class="map-section">
+      <h2>Region Map</h2>
+      <img src="images/pala-map.jpg" alt="Map of Pala Empire region">
+    </section>
+
+    <button id="backBtn" class="back-button">← Back to Atlas</button>
+  </main>
+
+  <script src="{% static 'js/kingdoms.js' %}"></script>
+</body>
+</html>

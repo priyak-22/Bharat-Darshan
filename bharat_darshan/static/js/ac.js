@@ -1,12 +1,10 @@
-function openPeriod(periodId) {
-    document.querySelectorAll('.period').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+const cards = document.querySelectorAll(".card");
 
-    document.getElementById(periodId).classList.add('active');
-    event.target.classList.add('active');
-  }
-
-  function toggleDynasty(header) {
-    const content = header.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  }
+window.addEventListener("scroll", () => {
+  const index = Math.floor(window.scrollY / window.innerHeight);
+  cards.forEach((card,i)=>{
+    card.classList.remove("active","previous");
+    if(i === index) card.classList.add("active");
+    else if(i < index) card.classList.add("previous");
+  });
+});

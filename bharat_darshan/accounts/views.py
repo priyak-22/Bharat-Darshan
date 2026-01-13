@@ -134,9 +134,42 @@ def bahmani(request):
     return render(request, 'html/bahmani.html')
 def endofmedival(request):             
     return render(request, 'html/endofmedival.html')
+def mahmud_of_gazhni(request):             
+    return render(request, 'html/mahmud-of-gazhni.html')
+def ghurid_dynasty(request):
+    return render(request, 'html/ghurid-dynasty.html')
+def khilji(request):                  
+    return render(request, 'html/khilji.html')
+def tughlaq(request):             
+    return render(request, 'html/tughlaq.html')
+def sayyid(request):             
+    return render(request, 'html/sayyid.html')
+def lodi(request):
+    return render(request, 'html/lodi.html')
+def bijapur(request):
+    return render(request, 'html/bijapur.html')
+def barid_shahid_of_bidar(request):
+    return render(request, 'html/barid-shahid-of-bidar.html')     
+def nizam_shahi_of_ahmadnagar(request):
+    return render(request, 'html/nizam-shahi-of-ahmadnagar.html')
+def qutb_shahi_of_golconda(request):                  
+    return render(request, 'html/qutb-shahi-of-golconda.html')
+def mughal(request):             
+    return render(request, 'html/mughal.html')
+def shershah(request):             
+    return render(request, 'html/shershah.html')
+def talikota(request):
+    return render(request, 'html/talikota.html')
+def marathas(request):
+    return render(request, 'html/marathas.html')
+def bhakti(request):
+    return render(request, 'html/bhakti.html')     
+def sikh(request):
+    return render(request, 'html/sikh.html')
 
 
-# modern dynasties
+
+ # modern dynasties
 def portugese(request):               
     return render(request, 'html/portugese.html')
 
@@ -205,3 +238,11 @@ def medival_timeline(request):
     return render(request, 'html/medival-timeline.html')
 def modern_timeline(request):
     return render(request, 'html/modern-timeline.html')
+
+    # culture
+def ancient_culture(request):
+    return render(request, 'html/ancient-culture.html')
+def medival_culture(request):
+    return render(request, 'html/medival-culture.html')
+def modern_culture(request):
+    return render(request, 'html/modern-culture.html')

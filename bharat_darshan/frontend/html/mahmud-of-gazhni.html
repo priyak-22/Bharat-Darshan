@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmud-of-Gazhni | Digital Atlas of India</title>
+  <link rel="stylesheet" href="{% static 'css/mahmud-of-gazhni.css' %}">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Mahmud-of-Gazhni (c. 971 – 1030 CE)</h1>
+    <p class="subheading">Region: Southern India, centered around the Kaveri Delta (Tamil Nadu)</p>
+  </header>
+
+  <main class="content">
+    <section class="info-card">
+      <h2>Capital</h2>
+      <p>Thanjavur and later Gangaikonda Cholapuram (Tamil Nadu)</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Notable Rulers</h2>
+      <p>Vijayalaya Chola, Rajaraja Chola I, Rajendra Chola I, Kulottunga Chola I</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Religion</h2>
+      <p>Hinduism (especially Shaivism), with tolerance for Buddhism and Jainism</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Administration</h2>
+      <p>The Cholas had a highly organized administrative system divided into provinces called *Mandalam*. Local self-government through village assemblies (*Sabhas*) was a key feature. They maintained a strong navy for overseas expansion and trade.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Expanded their empire across South India, Sri Lanka, and parts of Southeast Asia.</li>
+        <li>Built architectural marvels like the Brihadeeswarar Temple at Thanjavur.</li>
+        <li>Developed an efficient naval force and promoted maritime trade.</li>
+        <li>Encouraged Tamil literature, art, and bronze sculpture.</li>
+      </ul>
+    </section>
+
+    <section class="map-section">
+      <h2>Region Map</h2>
+      <img src="images/chola-map.jpg" alt="Map of Chola Empire region">
+    </section>
+
+    <button id="backBtn" class="back-button">← Back to Atlas</button>
+  </main>
+
+  <script src="{% static 'js/kingdom.js' %}"></script>
+</body>
+</html>

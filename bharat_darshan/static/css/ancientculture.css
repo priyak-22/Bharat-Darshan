@@ -1,103 +1,116 @@
 
-  body {
-    font-family: Georgia, serif;
-    background: #f6f1e7;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-  }
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  h1 {
-    text-align: center;
-    margin-bottom: 5px;
-  }
+/* Body */
+body{
+  font-family: "Georgia", "Garamond", serif;
+  background:#fdf3e7 url("https://www.transparenttextures.com/patterns/papyrus.png");
+  color:#3e2f1c;
+  line-height:1.6;
+  height:1500vh; /* long scroll for all dynasties */
+}
 
-  .intro {
-    text-align: center;
-    margin-bottom: 30px;
-  }
+/* Container for stacked cards */
+.container{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:78%;
+  height:70vh;
+  overflow:hidden;
+}
 
-  /* Tabs */
-  .tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
+/* Card style */
+.card{
+  position:absolute;
+  inset:0;
+  padding:40px;
+  background:rgba(245, 240, 225, 0.95); /* parchment effect */
+  border-radius:20px;
+  border:2px solid #c9a66b;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  opacity:0;
+  transform:translateY(70px) scale(0.9);
+  transition:all 0.9s ease;
+}
 
-  .tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 1px solid #bda88a;
-    background: #e8ddc8;
-    margin: 0 5px;
-    border-radius: 5px;
-  }
+/* Active and previous cards */
+.card.active{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  z-index:10;
+}
+.card.previous{
+  opacity:0.25;
+  transform:translateY(-35px) scale(0.95);
+  z-index:1;
+}
 
-  .tab.active {
-    background: #6b3e26;
-    color: #fff;
-  }
+/* Headings */
+h2{
+  color:#8b4513; /* dark brown */
+  border-bottom:2px solid #c9a66b;
+  display:inline-block;
+  padding-bottom:4px;
+  margin-bottom:10px;
+}
 
-  /* Period Sections */
-  .period {
-    display: none;
-    max-width: 1000px;
-    margin: auto;
-  }
+.period{
+  font-style:italic;
+  color:#a0522d;
+  margin-bottom:20px;
+}
 
-  .period.active {
-    display: block;
-  }
+/* Grid for tangible/intangible */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
 
-  /* Accordion */
-  .dynasty {
-    background: #fffaf0;
-    border: 1px solid #d8cfc0;
-    border-radius: 6px;
-    margin-bottom: 15px;
-  }
+/* Boxes */
+.box{
+  background:rgba(210,180,140,0.15);
+  padding:18px;
+  border-left:4px solid #c9a66b;
+  border-radius:10px;
+}
 
-  .dynasty-header {
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    background: #efe3cf;
-  }
+.box h3{
+  color:#a0522d;
+  margin-bottom:8px;
+  font-size:1.1em;
+}
 
-  .dynasty-content {
-    display: none;
-    padding: 15px;
-  }
+ul{
+  padding-left:18px;
+}
 
-  .heritage-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
+li{
+  margin-bottom:6px;
+}
 
-  .box {
-    background: #fdf7ec;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #e0d6c5;
-  }
+li a{
+  color:#3e2f1c;
+  text-decoration:none;
+  transition:all 0.3s;
+  position:relative;
+}
 
-  h3 {
-    margin-top: 0;
-    color: #4a2c1a;
-  }
+li a:hover{
+  color:#8b0000;
+  text-decoration:underline;
+  font-weight:bold;
+}
 
-  ul {
-    padding-left: 18px;
-    margin: 0;
-  }
-
-  li {
-    margin-bottom: 6px;
-  }
-
-  @media (max-width: 768px) {
-    .heritage-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+/* Optional: subtle animation for cards */
+@keyframes fadeSlide{
+  0%{opacity:0; transform:translateY(70px) scale(0.9);}
+  100%{opacity:1; transform:translateY(0) scale(1);}
+}

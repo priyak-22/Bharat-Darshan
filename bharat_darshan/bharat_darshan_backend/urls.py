@@ -56,11 +56,24 @@ urlpatterns = [
     path('bahmani/', views.bahmani, name='bahmani'),
     path('kakatiya-hoysala/', views.kakatiya_hoysala, name='kakatiya-hoysala'),
     path('endofmedival/', views.endofmedival, name='endofmedival'),
+    path('mahmud-of-gazhni/', views.mahmud_of_gazhni, name='mahmud-of-gazhni'),
+    path('ghurid-dynasty/', views.ghurid_dynasty, name='ghurid-dynasty'),
+    path('khilji/', views.khilji, name='khilji'),
+    path('tughlaq/', views.tughlaq, name='tughlaq'),
+    path('sayyid/', views.sayyid, name='sayyid'),
+    path('lodi/', views.lodi, name='lodi'),
+    path('bijapur/', views.bijapur, name='bijapur'),
+    path('barid-shahid-of-bidar/', views.barid_shahid_of_bidar, name='barid-shahid-of-bidar'),
+    path('nizam-shahi-of-ahmadnagar/', views.nizam_shahi_of_ahmadnagar, name='nizam-shahi-of-ahmadnagar'),
+    path('qutb-shahi-of-golconda/', views.qutb_shahi_of_golconda, name='qutb-shahi-of-golconda'),
+    path('mughal/', views.mughal, name='mughal'),
+    path('shershah/', views.shershah, name='shershah'),
+    path('talikota/', views.talikota, name='talikota'),
+    path('marathas/', views.marathas, name='marathas'),
+    path('bhakti/', views.bhakti, name='bhakti'),
+    path('sikh/', views.sikh, name='sikh'),
 
-
-    
-
-   # Modern Dynasties / Events
+   # Modern Dynasties 
     path('anglo_french/', views.anglo_french, name='anglo_french'),
     path('bengal_swadeshi/', views.bengal_swadeshi, name='bengal_swadeshi'),
     path('british/', views.british_expansion, name='british'),
@@ -105,6 +118,11 @@ path('social_relegious_movement/', views.social_relegious_movement, name='social
 path('ancient_timeline/', views.ancient_timeline, name="ancient_timeline"),
 path('medival_timeline/', views.medival_timeline, name="medival_timeline"),
 path('modern_timeline/', views.modern_timeline, name="modern_timeline"),
+
+#culture
+path('ancient_culture/', views.ancient_culture, name="ancient_culture"),
+path('medival_culture/', views.medival_culture, name="medival_culture"),
+path('modern_culture/', views.modern_culture, name="modern_culture"),
 
 
 ]
