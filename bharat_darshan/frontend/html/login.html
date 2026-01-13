@@ -19,6 +19,7 @@
 
       <form method="POST">
         {% csrf_token %}
+
         <label for="email">Email / Student ID</label>
         <input type="text" id="email" name="email" placeholder="Enter your email" required>
 
@@ -31,6 +32,14 @@
           <p style="color:#8b0000; margin-top:10px;">{{ error }}</p>
         {% endif %}
       </form>
+
+      <!-- NEW USER REDIRECT -->
+      <p class="note" style="margin-top:15px;">
+        New here?
+        <a href="{% url 'signup' %}" style="color:#8b0000; font-weight:600; text-decoration:none;">
+          Create an account
+        </a>
+      </p>
 
       <p class="note">
         Access restricted to registered learners

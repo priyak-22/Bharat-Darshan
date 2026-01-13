@@ -11,6 +11,8 @@ urlpatterns = [
     path('atlas/',views.atlas, name='atlas'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
+    path('signup/', views.signup, name='signup'),
+
 
     path('ancient/', views.ancient, name='ancient'),
     path('medieval/', views.medieval, name='medieval'),

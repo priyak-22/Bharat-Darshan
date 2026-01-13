@@ -123,3 +123,18 @@ button:hover {
   font-size: 0.8rem;
   color: #6a5a3a;
 }
+.note {
+  position: relative;
+  z-index: 10;
+}
+
+.note a {
+  color: #8b0000;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.note a:hover {
+  text-decoration: underline;
+}

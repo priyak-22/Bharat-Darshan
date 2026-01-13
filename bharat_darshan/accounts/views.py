@@ -26,6 +26,8 @@ def logout_view(request):
 
 def home(request):
     return render(request, "html/atlas.html")
+def signup(request):
+    return render(request, "html/signup.html")
 
 def atlas(request):
     return render(request, "html/atlas.html")
