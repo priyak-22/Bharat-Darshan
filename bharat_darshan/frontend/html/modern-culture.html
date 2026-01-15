@@ -3,152 +3,398 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cultural Heritage of India</title>
+<title>Modern & Colonial History of India</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="{% static 'css/ModernCulture.css' %}">
-
+<link rel="stylesheet" href="{% static 'css/modernculture.css' %}">
 </head>
 
 <body>
 
-<h1>Cultural Heritage of India</h1>
-<p class="intro">Dynasty-wise cultural heritage from 300 BCE to 1947 CE</p>
+<div class="container">
 
-<!-- Tabs -->
-<div class="tabs">
-  <div class="tab active" onclick="openPeriod('ancient')">Ancient</div>
-  <div class="tab" onclick="openPeriod('medieval')">Medieval</div>
-  <div class="tab" onclick="openPeriod('modern')">Modern</div>
-</div>
-<!-- MODERN -->
-<div id="modern" class="period">
-
-  <!-- MARATHA EMPIRE -->
-  <div class="dynasty">
-    <div class="dynasty-header" onclick="toggleDynasty(this)">
-      Maratha Empire (1674 CE – 1818 CE)
+<!-- ANGLO-FRENCH -->
+<div class="card active">
+  <h2>Anglo-French Conflicts</h2>
+  <p class="period">18th Century</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'anglo_french' %}">Battle sites and forts</a></li>
+      </ul>
     </div>
-    <div class="dynasty-content">
-      <div class="heritage-grid">
-        <div class="box">
-          <h3>Tangible Heritage</h3>
-          <ul>
-            <li>Forts like Raigad, Pratapgad, Sinhagad</li>
-            <li>Administrative records and seals</li>
-            <li>Temple restorations</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>Intangible Heritage</h3>
-          <ul>
-            <li>Swarajya ideology of Chhatrapati Shivaji Maharaj</li>
-            <li>Military administration and revenue system</li>
-            <li>Marathi literature and bhakti tradition</li>
-          </ul>
-        </div>
-      </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'anglo_french' %}">Military strategies and treaties</a></li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <!-- MUGHAL LATE PERIOD -->
-  <div class="dynasty">
-    <div class="dynasty-header" onclick="toggleDynasty(this)">
-      Late Mughal Period (1707 CE – 1857 CE)
+<!-- BENGAL SWADESHI MOVEMENT -->
+<div class="card">
+  <h2>Bengal Swadeshi Movement</h2>
+  <p class="period">1905 – 1911</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'bengal_swadeshi' %}">Printed material and boycott goods</a></li>
+      </ul>
     </div>
-    <div class="dynasty-content">
-      <div class="heritage-grid">
-        <div class="box">
-          <h3>Tangible Heritage</h3>
-          <ul>
-            <li>Red Fort, Jama Masjid, miniature paintings</li>
-            <li>Persian manuscripts</li>
-            <li>Mughal gardens</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>Intangible Heritage</h3>
-          <ul>
-            <li>Persian-influenced court culture</li>
-            <li>Urdu literature and poetry</li>
-            <li>Music traditions like Khayal</li>
-          </ul>
-        </div>
-      </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'bengal_swadeshi' %}">Nationalist sentiment & local enterprise</a></li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <!-- BRITISH RULE -->
-  <div class="dynasty">
-    <div class="dynasty-header" onclick="toggleDynasty(this)">
-      British Rule (1757 CE – 1947 CE)
+<!-- BRITISH EXPANSION -->
+<div class="card">
+  <h2>British Expansion in India</h2>
+  <p class="period">1757 – 1857</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'british' %}">British forts and cantonments</a></li>
+        <li><a href="{% url 'british' %}">Railways and infrastructure</a></li>
+      </ul>
     </div>
-    <div class="dynasty-content">
-      <div class="heritage-grid">
-        <div class="box">
-          <h3>Tangible Heritage</h3>
-          <ul>
-            <li>Colonial architecture: Victoria Memorial, Gateway of India</li>
-            <li>Railways, courts, colleges</li>
-            <li>Printed books, newspapers</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>Intangible Heritage</h3>
-          <ul>
-            <li>Modern education system</li>
-            <li>Indian freedom movement</li>
-            <li>Social reform movements</li>
-          </ul>
-        </div>
-      </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'british' %}">Colonial administration & laws</a></li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <!-- FREEDOM STRUGGLE -->
-  <div class="dynasty">
-    <div class="dynasty-header" onclick="toggleDynasty(this)">
-      Indian National Movement (1857 CE – 1947 CE)
+<!-- BUXAR -->
+<div class="card">
+  <h2>Battle of Buxar</h2>
+  <p class="period">1764</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'buxar' %}">Battle site and memorials</a></li>
+      </ul>
     </div>
-    <div class="dynasty-content">
-      <div class="heritage-grid">
-        <div class="box">
-          <h3>Tangible Heritage</h3>
-          <ul>
-            <li>Historical documents and resolutions</li>
-            <li>Photographs and memorials</li>
-            <li>National symbols</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>Intangible Heritage</h3>
-          <ul>
-            <li>Ideals of nationalism and unity</li>
-            <li>Non-violence and civil disobedience</li>
-            <li>Constitutional values</li>
-          </ul>
-        </div>
-      </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'buxar' %}">East India Company dominance</a></li>
+      </ul>
     </div>
   </div>
+</div>
+
+<!-- CIVIL DISOBEDIENCE -->
+<div class="card">
+  <h2>Civil Disobedience Movement</h2>
+  <p class="period">1930 – 1934</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'civil_disobidience' %}">Salt March sites</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'civil_disobidience' %}">Non-violent protest ideology</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- DANES -->
+<div class="card">
+  <h2>Danish Colonies</h2>
+  <p class="period">17th – 19th Century</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'danes' %}">Fort Dansborg</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'danes' %}">Colonial administration practices</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- DUTCH -->
+<div class="card">
+  <h2>Dutch Influence</h2>
+  <p class="period">17th – 18th Century</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'dutch' %}">Dutch forts and trading posts</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'dutch' %}">Trade networks & merchant culture</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FRENCH -->
+<div class="card">
+  <h2>French Influence in India</h2>
+  <p class="period">17th – 18th Century</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'french' %}">French forts like Pondicherry</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'french' %}">French administration & culture</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- HOME RULE -->
+<div class="card">
+  <h2>Home Rule Movement</h2>
+  <p class="period">1916 – 1918</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'home_rule' %}">Pamphlets and meetings</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'home_rule' %}">Political awakening & leadership</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- INDIA INDEPENDENCE -->
+<div class="card">
+  <h2>India Independence Movement</h2>
+  <p class="period">1857 – 1947</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'india_independence' %}">Protest sites and memorials</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'india_independence' %}">Nationalist ideology</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- INDIAN NATIONAL CONGRESS -->
+<div class="card">
+  <h2>Indian National Congress</h2>
+  <p class="period">1885 onwards</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'indian_nc' %}">Constituency meetings</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'indian_nc' %}">Political organization & nationalism</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- JALLIANWALA BAGH -->
+<div class="card">
+  <h2>Jallianwala Bagh Massacre</h2>
+  <p class="period">1919</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'jallianwala_bagh' %}">Memorial and site</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'jallianwala_bagh' %}">Public outrage & nationalist sentiment</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- MUGHAL DECLINE -->
+<div class="card">
+  <h2>Mughal Decline</h2>
+  <p class="period">18th Century</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'mughal_decline' %}">Palaces and forts in disrepair</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'mughal_decline' %}">Fragmentation of authority</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- NON-COOPERATION -->
+<div class="card">
+  <h2>Non-Cooperation Movement</h2>
+  <p class="period">1920 – 1922</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'non_cooperation' %}">Boycott of British institutions</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'non_cooperation' %}">Gandhian ideology</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PLASSEY -->
+<div class="card">
+  <h2>Battle of Plassey</h2>
+  <p class="period">1757</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'plassey' %}">Battle site and fortifications</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'plassey' %}">Start of British dominance in Bengal</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PORTUGUESE -->
+<div class="card">
+  <h2>Portuguese in India</h2>
+  <p class="period">16th – 17th Century</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'portugese' %}">Churches and forts like Goa</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'portugese' %}">Christian missionary influence</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- QUIT INDIA MOVEMENT -->
+<div class="card">
+  <h2>Quit India Movement</h2>
+  <p class="period">1942</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'quit_india_movement' %}">Protest sites and imprisonment locations</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'quit_india_movement' %}">Mass mobilization & nationalism</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- REVOLT OF 1857 -->
+<div class="card">
+  <h2>Revolt of 1857</h2>
+  <p class="period">1857</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'revolt_1857' %}">Battlefields and monuments</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'revolt_1857' %}">Rebellion against British authority</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SOCIAL RELIGIOUS MOVEMENTS -->
+<div class="card">
+  <h2>Social & Religious Movements</h2>
+  <p class="period">19th – 20th Century</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'social_relegious_movement' %}">Temples, educational institutions</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'social_relegious_movement' %}">Reform movements & cultural revival</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 </div>
 
-
-
-</div>
-
-<!-- ancient -->
-<div id="ancient" class="period">
-  <p style="text-align:center;">Ancient dynasties content goes here.</p>
-</div>
-
-
-<!-- Medieval -->
-<div id="medieval" class="period">
-  <p style="text-align:center;">Modern period cultural heritage goes here.</p>
-</div>
-<script src="{% static 'js/MoC.js' %}"></script>
- 
-
+<script src="{% static 'js/moc.js' %}"></script>
 </body>
 </html>

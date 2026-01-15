@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>Ancient & Early Medieval Cultural Heritage of India</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style rel="stylesheet" href="{% static 'css/ancientculture.css' %}"></style>
+<link rel="stylesheet" href="{% static 'css/ancientculture.css' %}">
 
 </head>
 
@@ -15,182 +15,420 @@
 
 <!-- NANDA -->
 <div class="card active">
-<h2>Nanda Dynasty</h2>
-<p class="period">c. 345 – 321 BCE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="nanda-pataliputra.html">Fortified city of Pataliputra</a></li>
-<li><a href="nanda-coins.html">Punch-marked silver coins</a></li>
-<li><a href="nanda-treasury.html">Royal treasuries</a></li>
-</ul>
-</div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="nanda-administration.html">Highly centralized administration</a></li>
-<li><a href="nanda-taxation.html">Strong taxation system</a></li>
-<li><a href="nanda-army.html">Large standing army</a></li>
-</ul>
-</div>
-</div>
+  <h2>Nanda Dynasty</h2>
+  <p class="period">c. 345 – 321 BCE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'nanda' %}">Fortified city of Pataliputra</a></li>
+        <li><a href="{% url 'nanda' %}">Punch-marked silver coins</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'nanda' %}">Highly centralized administration</a></li>
+        <li><a href="{% url 'nanda' %}">Strong taxation system</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- MAURYA -->
 <div class="card">
-<h2>Maurya Empire</h2>
-<p class="period">321 – 185 BCE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="maurya-pillars.html">Ashokan pillars and edicts</a></li>
-<li><a href="maurya-stupas.html">Sanchi and Bharhut stupas</a></li>
-<li><a href="maurya-palaces.html">Palace architecture</a></li>
-</ul>
-</div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="maurya-dhamma.html">Dhamma ideology</a></li>
-<li><a href="maurya-buddhism.html">Spread of Buddhism</a></li>
-<li><a href="maurya-welfare.html">Welfare-based governance</a></li>
-</ul>
-</div>
-</div>
+  <h2>Maurya Empire</h2>
+  <p class="period">321 – 185 BCE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'maurya' %}">Ashokan pillars and edicts</a></li>
+        <li><a href="{% url 'maurya' %}">Sanchi and Bharhut stupas</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'maurya' %}">Dhamma ideology</a></li>
+        <li><a href="{% url 'maurya' %}">Welfare-based governance</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- SHUNGA -->
 <div class="card">
-<h2>Shunga Dynasty</h2>
-<p class="period">185 – 73 BCE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="shunga-bharhut.html">Bharhut stupa railings</a></li>
-<li><a href="shunga-sculpture.html">Early stone sculptures</a></li>
-</ul>
-</div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="shunga-brahmanical.html">Brahmanical revival</a></li>
-<li><a href="shunga-rituals.html">Vedic ritual traditions</a></li>
-</ul>
-</div>
-</div>
+  <h2>Shunga Dynasty</h2>
+  <p class="period">185 – 73 BCE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'shunga' %}">Bharhut stupa railings</a></li>
+        <li><a href="{% url 'shunga' %}">Early stone sculptures</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'shunga' %}">Brahmanical revival</a></li>
+        <li><a href="{% url 'shunga' %}">Vedic ritual traditions</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- KANVA -->
 <div class="card">
-<h2>Kanva Dynasty</h2>
-<p class="period">73 – 28 BCE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="kanva-art.html">Continuation of Shunga art</a></li>
-</ul>
-</div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="kanva-politics.html">Political continuity</a></li>
-<li><a href="kanva-court.html">Court traditions</a></li>
-</ul>
-</div>
-</div>
+  <h2>Kanva Dynasty</h2>
+  <p class="period">73 – 28 BCE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'kanva' %}">Continuation of Shunga art</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'kanva' %}">Political continuity</a></li>
+        <li><a href="{% url 'kanva' %}">Court traditions</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- INDO-GREEK -->
 <div class="card">
-<h2>Indo-Greek Kingdom</h2>
-<p class="period">2nd – 1st Century BCE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="indo-greek-coins.html">Greek-style coins</a></li>
-<li><a href="indo-greek-gandhara.html">Gandhara sculptures</a></li>
-</ul>
-</div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="indo-greek-fusion.html">Hellenistic–Indian cultural fusion</a></li>
-<li><a href="indo-greek-art.html">Realistic art tradition</a></li>
-</ul>
-</div>
-</div>
+  <h2>Indo-Greek Kingdom</h2>
+  <p class="period">2nd – 1st Century BCE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'indo_greek' %}">Greek-style coins</a></li>
+        <li><a href="{% url 'indo_greek' %}">Gandhara sculptures</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'indo_greek' %}">Hellenistic–Indian cultural fusion</a></li>
+        <li><a href="{% url 'indo_greek' %}">Realistic art tradition</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<!-- INDO-PARTHIAN -->
+<!-- INDO-PARTHIANS -->
 <div class="card">
-<h2>Indo-Parthians</h2>
-<p class="period">1st BCE – 1st CE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="indo-parthian-coins.html">Coins and inscriptions</a></li>
-</ul>
+  <h2>Indo-Parthians</h2>
+  <p class="period">1st BCE – 1st CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'indo_parthian' %}">Coins and inscriptions</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'indo_parthian' %}">Trade administration</a></li>
+        <li><a href="{% url 'indo_parthian' %}">Cross-cultural governance</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="indo-parthian-trade.html">Cross-cultural governance</a></li>
-<li><a href="indo-parthian-administration.html">Trade administration</a></li>
-</ul>
+
+<!-- SAKA -->
+<div class="card">
+  <h2>Saka (Scythians)</h2>
+  <p class="period">1st BCE – 4th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'saka' %}">Kshatrapa coinage</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'saka' %}">Satrap system</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-</div>
+
+<!-- WESTERN KSHATRAPAS -->
+<div class="card">
+  <h2>Western Kshatrapas</h2>
+  <p class="period">1st – 4th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'western_kshatrapas' %}">Junagadh inscription</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'western_kshatrapas' %}">Provincial administration</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- SATAVAHANA -->
 <div class="card">
-<h2>Satavahana Dynasty</h2>
-<p class="period">1st BCE – 3rd CE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="satavahana-amaravati.html">Amaravati stupa</a></li>
-<li><a href="satavahana-caves.html">Nasik and Karle caves</a></li>
-</ul>
+  <h2>Satavahana Dynasty</h2>
+  <p class="period">1st BCE – 3rd CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'satvahana' %}">Amaravati stupa</a></li>
+        <li><a href="{% url 'satvahana' %}">Nasik and Karle caves</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'satvahana' %}">Prakrit language</a></li>
+        <li><a href="{% url 'satvahana' %}">Maritime trade culture</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="satavahana-prakrit.html">Prakrit language</a></li>
-<li><a href="satavahana-maritime.html">Maritime trade culture</a></li>
-</ul>
-</div>
-</div>
+
+<!-- KUSHAN -->
+<div class="card">
+  <h2>Kushan Empire</h2>
+  <p class="period">1st – 3rd Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'kushana' %}">Mathura and Gandhara art</a></li>
+        <li><a href="{% url 'kushana' %}">Gold coins</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'kushana' %}">Silk Route trade culture</a></li>
+        <li><a href="{% url 'kushana' %}">Buddhist spread</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- VAKATAKA -->
 <div class="card">
-<h2>Vakataka Dynasty</h2>
-<p class="period">3rd – 5th Century CE</p>
-<div class="grid">
-<div class="box">
-<h3>Tangible Heritage</h3>
-<ul>
-<li><a href="vakataka-ajanta.html">Ajanta cave paintings</a></li>
-</ul>
-</div>
-<div class="box">
-<h3>Intangible Heritage</h3>
-<ul>
-<li><a href="vakataka-patronage.html">Royal patronage of arts</a></li>
-<li><a href="vakataka-culture.html">Cultural continuity</a></li>
-</ul>
-</div>
-</div>
+  <h2>Vakataka Dynasty</h2>
+  <p class="period">3rd – 5th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'vakataka' %}">Ajanta cave paintings</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'vakataka' %}">Royal patronage of arts</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<!-- Add remaining dynasties (Kushan, Saka, Huna, Gupta, Maitraka, Mukharis, Harsha, Gauda, Pala, Gurjara-Pratihara, Southern Kingdoms, Western Kshatrapas) using same style -->
+<!-- GUPTA -->
+<div class="card">
+  <h2>Gupta Empire</h2>
+  <p class="period">4th – 6th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'gupta' %}">Temple architecture</a></li>
+        <li><a href="{% url 'gupta' %}">Gold coinage</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'gupta' %}">Science & literature</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- HUNA -->
+<div class="card">
+  <h2>Huna (Huns)</h2>
+  <p class="period">5th – 6th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'huna' %}">Toramana coins</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'huna' %}">Military traditions</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- MAITRAKA -->
+<div class="card">
+  <h2>Maitraka Dynasty</h2>
+  <p class="period">5th – 8th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'maitraka' %}">Valabhi ruins</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'maitraka' %}">Education & culture</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- MUKHARIS -->
+<div class="card">
+  <h2>Mukharis</h2>
+  <p class="period">6th – 7th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'mukharis' %}">Inscriptions</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'mukharis' %}">Gupta political legacy</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- HARSHA -->
+<div class="card">
+  <h2>Harsha Empire</h2>
+  <p class="period">606 – 647 CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'harsha' %}">Monastic buildings</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'harsha' %}">Sanskrit literature</a></li>
+        <li><a href="{% url 'harsha' %}">Buddhist patronage</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- GAUDA -->
+<div class="card">
+  <h2>Gauda Kingdom</h2>
+  <p class="period">7th – 8th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'gauda' %}">Temple remains</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'gauda' %}">Regional kingship</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- GURJARA-PRATIHARA -->
+<div class="card">
+  <h2>Gurjara-Pratihara</h2>
+  <p class="period">8th – 11th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'gurjara_pratihara' %}">Temple architecture</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'gurjara_pratihara' %}">Feudal polity</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PALA -->
+<div class="card">
+  <h2>Pala Empire</h2>
+  <p class="period">8th – 12th Century CE</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'pala' %}">Nalanda and Vikramshila</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'pala' %}">Buddhist education & culture</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SOUTHERN KINGDOMS -->
+<div class="card">
+  <h2>Southern Kingdoms</h2>
+  <p class="period">Early Historic – Medieval</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Tangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'southern_kingdoms' %}">Rock-cut and temple architecture</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Intangible Heritage</h3>
+      <ul>
+        <li><a href="{% url 'southern_kingdoms' %}">Bhakti movement & maritime trade</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
 </div>
 

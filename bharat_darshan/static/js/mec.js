@@ -1,4 +1,4 @@
-function openPeriod(periodId) {
+ function openPeriod(periodId) {
     document.querySelectorAll('.period').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
 
