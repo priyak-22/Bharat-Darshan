@@ -208,3 +208,59 @@ a {
   background: #d4af37;
   color: #2a1f16;
 }
+
+
+/* =======================
+   NAVBAR DROPDOWN
+======================= */
+
+/* Parent dropdown li */
+.navbar ul li.dropdown {
+  position: relative; /* required for positioning submenu */
+}
+
+/* Dropdown content container */
+.navbar ul li .dropdown-content {
+  display: none; /* hidden by default */
+  position: absolute;
+  top: 100%; /* below the parent li */
+  left: 0;
+  min-width: 180px;
+  background-color: #f3e6cf;
+  border: 2px solid #8a5a2b;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  flex-direction: column;
+  z-index: 10;
+}
+
+/* Individual links inside dropdown */
+.navbar ul li .dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #4a2d12;
+  font-weight: 400;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li .dropdown-content li a:hover {
+  background-color: #8a5a2b;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Show dropdown on hover */
+.navbar ul li.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Optional: Responsive adjustment for small screens */
+@media (max-width: 900px) {
+  .navbar ul li .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}

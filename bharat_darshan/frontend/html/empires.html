@@ -13,20 +13,19 @@
 </head>
 
 <body>
-  
+
   <nav class="navbar">
     <div class="logo">Bharat Darshan</div>
     <ul>
       <li><a href="{% url 'home' %}">Home</a></li>
-     <li class="dropdown">
-  <li class="dropdown">
-  <a href="{% url 'empires' %}" class="dropbtn">Empires and Kingdoms</a>
-  <ul class="dropdown-content">
-    <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
-    <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
-    <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
-  </ul>
-</li>
+      <li class="dropdown">
+        <a href="{% url 'empires' %}" class="dropbtn">Empires and Kingdoms</a>
+        <ul class="dropdown-content">
+          <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
+          <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
+          <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
+        </ul>
+      </li>
 
 
       <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
@@ -38,7 +37,7 @@
 
     <button class="login"><a href="{% url 'login' %}">Login</a></button>
   </nav>
-  
+
   <!-- HEADER -->
   <header class="page-header">
     <div class="header-image-container">
@@ -233,7 +232,7 @@
           </div>
         </a>
       </div>
-        
+
       <!--Gurjara-Pratihara Empire-->
       <div class="empire-card" onclick="openEmpire('GurjaraPratihara.html')">
         <a href="{% url 'gurjara_pratihara' %}" clas="card-link">
@@ -255,7 +254,7 @@
       </div>
 
 
-    
+
       <!--Southern Kingdoms (Chera, Pandya, Pallava, Chalukya, Chola)-->
       <div class="empire-card" onclick="openEmpire('SouthernKingdoms.html')">
         <a href="{% url 'southern-kingdoms' %}" clas="card-link">
@@ -270,11 +269,11 @@
 
     </section>
 
-<!---------------------------------------
+    <!---------------------------------------
             Medieval dynasties
   ---------------------------------------------->
     <section class="grid-container" id="medieval">
-      
+
       <div class="empire-card" onclick="openEmpire('gurjara.html')">
         <a href="{% url 'gurjara' %}" class="card-link">
           <div class="card-content">
@@ -346,9 +345,9 @@
             <p>Known for Muhammad Ghori's conquests and the establishment of Muslim rule in India.</p>
           </div>
         </a>
-              
-          </div>
-        </a>
+
+      </div>
+      </a>
       </div>
 
 
@@ -361,7 +360,7 @@
           </div>
         </a>
       </div>
-       <div class="empire-card" onclick="openEmpire('khilji.html')">
+      <div class="empire-card" onclick="openEmpire('khilji.html')">
         <a href="{% url 'khilji' %}" class="card-link">
           <div class="card-content">
             <h2>Khilji Dynasty</h2>
@@ -370,9 +369,9 @@
           </div>
         </a>
       </div>
-            
-          </div>
-        </a>
+
+      </div>
+      </a>
       </div>
 
       <div class="empire-card" onclick="openEmpire('tughlaq.html')">
@@ -383,9 +382,9 @@
             <p>Known for Ghiyasuddin Tughlaq's expansion and administrative reforms.</p>
           </div>
         </a>
-              
-          </div>
-        </a>
+
+      </div>
+      </a>
       </div>
 
 
@@ -484,52 +483,52 @@
           </div>
         </a>
       </div>
-       <div class="empire-card" onclick="openEmpire('mughal.html')">
+      <div class="empire-card" onclick="openEmpire('mughal.html')">
         <a href="{% url 'mughal' %}" class="card-link">
           <div class="card-content">
-            <h2>Mughal Empire	</h2>
+            <h2>Mughal Empire </h2>
             <p>1526 – 1857 CE</p>
             <p>Promoted art, architecture, and trade.</p>
           </div>
         </a>
       </div>
-       
+
       <div class="empire-card" onclick="openEmpire('shershah.html')">
         <a href="{% url 'shershah' %}" class="card-link">
           <div class="card-content">
-            <h2>Sher Shah Suri (Sur Empire)	1540 – 1545 CE	</h2>
-            <p>1540 – 1545 CE</p>
-            <p>Promoted art, architecture, and trade.</p>
-          </div>
-        </a>
-      </div>
-      
-      <div class="empire-card" onclick="openEmpire('talikota.html')">
-        <a href="{% url 'talikota' %}" class="card-link">
-          <div class="card-content">
-            <h2>Battle of Talikota	1565 CE	</h2>
+            <h2>Sher Shah Suri (Sur Empire) 1540 – 1545 CE </h2>
             <p>1540 – 1545 CE</p>
             <p>Promoted art, architecture, and trade.</p>
           </div>
         </a>
       </div>
 
-     
+      <div class="empire-card" onclick="openEmpire('talikota.html')">
+        <a href="{% url 'talikota' %}" class="card-link">
+          <div class="card-content">
+            <h2>Battle of Talikota 1565 CE </h2>
+            <p>1540 – 1545 CE</p>
+            <p>Promoted art, architecture, and trade.</p>
+          </div>
+        </a>
+      </div>
+
+
 
       <div class="empire-card" onclick="openEmpire('marathas.html')">
         <a href="{% url 'marathas' %}" class="card-link">
           <div class="card-content">
-            <h2>The Great Marathas	</h2>
-            <p>	17th – 18th century CE</p>
+            <h2>The Great Marathas </h2>
+            <p> 17th – 18th century CE</p>
             <p>Promoted art, architecture, and trade.</p>
           </div>
         </a>
       </div>
 
-       <div class="empire-card" onclick="openEmpire('bhakti.html')">
+      <div class="empire-card" onclick="openEmpire('bhakti.html')">
         <a href="{% url 'bhakti' %}" class="card-link">
           <div class="card-content">
-            <h2>Religious Movements (Bhakti & Sufi)	 </h2>
+            <h2>Religious Movements (Bhakti & Sufi) </h2>
             <p>8th – 17th century CE</p>
             <p>Promoted art, architecture, and trade.</p>
           </div>
@@ -539,7 +538,7 @@
       <div class="empire-card" onclick="openEmpire('sikh.html')">
         <a href="{% url 'sikh' %}" class="card-link">
           <div class="card-content">
-            <h2>Sikh Empire	1799 – 1849 CE	 </h2>
+            <h2>Sikh Empire 1799 – 1849 CE </h2>
             <p>1799 – 1849 CE</p>
             <p>Promoted art, architecture, and trade.</p>
           </div>

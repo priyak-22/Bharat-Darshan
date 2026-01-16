@@ -16,12 +16,16 @@
     <nav class="navbar">
       <div class="logo">Bharat Darshan</div>
       <ul>
-        <li><a href="{% url 'empires' %}">Empires and Kingdoms</a></li>
+        <li class="dropdown">
+        <a href="{% url 'empires' %}" class="dropbtn">Empires and Kingdoms</a>
+        <ul class="dropdown-content">
+          <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
+          <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
+          <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
+        </ul>
+      </li>
         <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
         <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
-        <li><a href="{% url 'freedom_movement' %}">Freedom Struggle</a></li>
-        <li><a href="#">Quiz</a></li>
-        <li><a href="#">About</a></li>
       </ul>
 
       <button class="login"><a href="{% url 'login' %}">Login</a></button>
