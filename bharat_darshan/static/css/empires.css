@@ -133,6 +133,8 @@ body, html {
 .login,
 .back-button {
  font-family: "Source Serif 4", serif;
+ text-decoration:none;
+ color:#2f0202
 }
 
 
@@ -251,4 +253,5 @@ body, html {
 }
 a{
     text-decoration: none;
+    color: inherit;
 }
