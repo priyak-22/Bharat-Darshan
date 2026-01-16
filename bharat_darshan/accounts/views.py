@@ -1,33 +1,113 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login , logout
-from django.shortcuts import render
-
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from django.core.mail import send_mail
+from django.conf import settings
+import random
 
 
 def login_view(request):
     if request.method == "POST":
-        username = request.POST.get("username")
+        email = request.POST.get("email")
         password = request.POST.get("password")
 
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(
+            request,
+            username=email,
+            password=password
+        )
+
         if user:
-            login(request, user)
-            return redirect("login")  # change later
-        else:
-            return render(request, "html/login.html", {
-                "error": "Invalid username or password"
-            })
+            if user.is_active:
+                login(request, user)
+                return redirect("atlas")
+            else:
+                return render(request, "html/login.html", {
+                    "error": "Please verify your email first"
+                })
+
+        return render(request, "html/login.html", {
+            "error": "Invalid email or password"
+        })
 
     return render(request, "html/login.html")
 
+
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect("login")
+
+
+def signup(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        confirm_password = request.POST.get("confirm_password")
+
+        print("SIGNUP HIT:", email)
+
+        if password != confirm_password:
+            return render(request, "html/signup.html", {
+                "error": "Passwords do not match"
+            })
+
+        if User.objects.filter(username=email).exists():
+            return render(request, "html/signup.html", {
+                "error": "Email already registered"
+            })
+
+        user = User.objects.create_user(
+            username=email,   # email used as username
+            email=email,
+            password=password,
+            is_active=False
+        )
+
+        otp = random.randint(100000, 999999)
+        print("OTP:", otp)
+
+        request.session["signup_otp"] = otp
+        request.session["signup_user_id"] = user.id
+
+        send_mail(
+            "Bharat Darshan | Email Verification",
+            f"Your OTP is {otp}",
+            settings.EMAIL_HOST_USER,
+            [email],
+        )
+
+        return redirect("verify_otp")
+
+    return render(request, "html/signup.html")
+
+
+
+def verify_otp(request):
+    if request.method == "POST":
+        entered_otp = request.POST.get("otp")
+        saved_otp = request.session.get("signup_otp")
+        user_id = request.session.get("signup_user_id")
+
+        if saved_otp and str(saved_otp) == entered_otp:
+            user = User.objects.get(id=user_id)
+            user.is_active = True
+            user.save()
+
+            del request.session["signup_otp"]
+            del request.session["signup_user_id"]
+
+            return redirect("login")
+
+        return render(request, "html/verify_otp.html", {
+            "error": "Invalid OTP"
+        })
+
+    return render(request, "html/verify_otp.html")
+
 
 def home(request):
     return render(request, "html/atlas.html")
-def signup(request):
-    return render(request, "html/signup.html")
+
 
 def atlas(request):
     return render(request, "html/atlas.html")
@@ -106,8 +186,7 @@ def western_kshatrapas(request):
 
 
 #Medival Dynasties
-def pala(request):                     
-    return render(request, 'html/pala.html')
+
 
 def rashtrakuta(request):          
     return render(request, 'html/rashtrakuta.html')
@@ -168,6 +247,7 @@ def bhakti(request):
     return render(request, 'html/bhakti.html')     
 def sikh(request):
     return render(request, 'html/sikh.html')
+
 
 
 

@@ -12,6 +12,8 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('signup/', views.signup, name='signup'),
+    path("verify-otp/", views.verify_otp, name="verify_otp"),
+
 
 
     path('ancient/', views.ancient, name='ancient'),
@@ -104,9 +106,9 @@ urlpatterns = [
     path('modern_timeline/', views.modern_timeline, name="modern_timeline"),
 
 #culture
-path('ancient_culture/', views.ancient_culture, name="ancient_culture"),
-path('medival_culture/', views.medival_culture, name="medival_culture"),
-path('modern_culture/', views.modern_culture, name="modern_culture"),
+path('ancient-culture/', views.ancient_culture, name="ancient-culture"),
+path('medival-culture/', views.medival_culture, name="medival-culture"),
+path('modern-culture/', views.modern_culture, name="modern-culture"),
 
 
 ]
