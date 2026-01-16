@@ -18,7 +18,17 @@
     <div class="logo">Bharat Darshan</div>
     <ul>
       <li><a href="{% url 'home' %}">Home</a></li>
-      <li><a href="{% url 'empires' %}">Empires and Kingdoms</a></li>
+     <li class="dropdown">
+  <li class="dropdown">
+  <a href="{% url 'empires' %}" class="dropbtn">Empires and Kingdoms</a>
+  <ul class="dropdown-content">
+    <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
+    <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
+    <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
+  </ul>
+</li>
+
+
       <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
       <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
       <li><a href="{% url 'freedom_movement' %}">Freedom Struggle</a></li>
@@ -95,7 +105,7 @@
 
       <!-- Indo-Greek Kingdom -->
       <div class="empire-card" onclick="openEmpire('Indo-Greek Kingdom.html')">
-        <a href="{% url 'indo_greek' %}" clas="card-link">
+        <a href="{% url 'indo-greek' %}" clas="card-link">
           <div class="card-content">
             <h2>Indo-Greek Kingdom</h2>
             <p>c.180-10 BCE | Taxila and other cities</p>
@@ -115,7 +125,7 @@
 
       <!-- Indo-Parthians -->
       <div class="empire-card" onclick="openEmpire('Indo-Parthians.html')">
-        <a href="{% url 'indo_parthian' %}" clas="card-link">
+        <a href="{% url 'indo-parthians' %}" clas="card-link">
           <div class="card-content">
             <h2>Indo-Parthians</h2>
             <p>c. 20-75 CE| Taxila.</p>
@@ -145,7 +155,7 @@
 
       <!--Western Kshatrapas-->
       <div class="empire-card" onclick="openEmpire('WesternKshatrapas.html')">
-        <a href="{% url 'western_kshatrapas' %}" clas="card-link">
+        <a href="{% url 'western-kshatrapas' %}" clas="card-link">
           <div class="card-content">
             <h2>Western Kshatrapas</h2>
             <p>c. 35-405 CE| Ujjain, later Aparanta.</p>
@@ -248,7 +258,7 @@
     
       <!--Southern Kingdoms (Chera, Pandya, Pallava, Chalukya, Chola)-->
       <div class="empire-card" onclick="openEmpire('SouthernKingdoms.html')">
-        <a href="{% url 'southern_kingdoms' %}" clas="card-link">
+        <a href="{% url 'southern-kingdoms' %}" clas="card-link">
           <div class="card-content">
             <h2>Southern Kingdoms (Chera, Pandya, Pallava, Chalukya, Chola)</h2>
             <p>Chera (up to 12th CE), Pandya (up to 14th CE), Pallava (275–897 CE), Chalukya (6th–12th CE), Chola

@@ -81,6 +81,22 @@ body{
   text-transform: uppercase;
   color: #6a4a2b;
 }
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #555;
+}
+
 
 .circle-message {
   position: absolute;

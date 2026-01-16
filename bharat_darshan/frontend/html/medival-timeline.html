@@ -3,11 +3,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Medieval Indian Circular Timeline</title>
+<title>Medieval Timeline</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/medivaltimeline.css' %}">
-
 </head>
 
 <body>
@@ -19,42 +18,145 @@
     <h1 id="dynasty">Pala Dynasty</h1>
     <h3 id="period">750–1174 CE</h3>
     <p id="desc">
-      Major medieval Indian dynasties that influenced politics, culture, and architecture.
+      Powerful Buddhist dynasty ruling Bengal and Bihar, patrons of Nalanda University.
     </p>
+    <button id="learn-more" class="learn-more-btn">Learn More</button>
+
   </div>
 
   <!-- RIGHT CIRCLE -->
   <div class="circle-area">
     <div class="circle-wrapper">
-       <div class="circle-message">
-          Click a dynasty to explore
+      <div class="circle-message">
+        Click a point to explore dynasty
       </div>
+
       <div class="circle" id="circle">
 
-        <!-- MEDIEVAL DYNASTIES FROM PATHS -->
-        <div class="era" data-name="Pala Dynasty"></div>
-        <div class="era" data-name="Rashtrakuta Dynasty"></div>
-        <div class="era" data-name="Gurjara-Pratihara"></div>
-        <div class="era" data-name="Chola Dynasty"></div>
-        <div class="era" data-name="Chandela-Chauhan"></div>
-        <div class="era" data-name="Rajput Kingdoms"></div>
-        <div class="era" data-name="Delhi Sultanate"></div>
-        <div class="era" data-name="Mewar Kingdom"></div>
-        <div class="era" data-name="Vijayanagar Empire"></div>
-        <div class="era" data-name="Bahmani Sultanate"></div>
-        <div class="era" data-name="Kakatiya-Hoysala"></div>
-        <div class="era" data-name="End of Medieval Era"></div>
+        <div class="era" data-name="Pala Dynasty" data-period="750–1174 CE"
+             data-desc="Buddhist dynasty of eastern India, patrons of Nalanda."
+             data-url="{% url 'pala' %}"></div>
+
+        <div class="era" data-name="Rashtrakuta Dynasty" data-period="753–982 CE"
+             data-desc="Powerful Deccan dynasty, builders of Kailasa temple."
+             data-url="{% url 'rashtrakuta' %}"></div>
+
+        <div class="era" data-name="Gurjara-Pratihara" data-period="6th–11th century CE"
+             data-desc="North Indian dynasty that resisted Arab invasions."
+             data-url="{% url 'gurjara' %}"></div>
+
+        <div class="era" data-name="Chola Dynasty" data-period="9th–13th century CE"
+             data-desc="South Indian maritime empire known for temple architecture."
+             data-url="{% url 'chola' %}"></div>
+
+        <div class="era" data-name="Chandela–Chauhan" data-period="9th–12th century CE"
+             data-desc="Rajput dynasties famous for valor and Khajuraho temples."
+             data-url="{% url 'chandelachauhan' %}"></div>
+
+        <div class="era" data-name="Rajput Kingdoms" data-period="7th–12th century CE"
+             data-desc="Warrior clans ruling parts of north and central India."
+             data-url="{% url 'rajput' %}"></div>
+
+        <div class="era" data-name="Delhi Sultanate" data-period="1206–1526 CE"
+             data-desc="Islamic rule established over northern India."
+             data-url="{% url 'delhi' %}"></div>
+
+        <div class="era" data-name="Mewar Kingdom" data-period="8th–16th century CE"
+             data-desc="Rajput kingdom known for resistance and bravery."
+             data-url="{% url 'mewar' %}"></div>
+
+        <div class="era" data-name="Vijayanagar Empire" data-period="1336–1646 CE"
+             data-desc="Major South Indian empire of prosperity and culture."
+             data-url="{% url 'vijaynagar' %}"></div>
+
+        <div class="era" data-name="Bahmani Sultanate" data-period="1347–1527 CE"
+             data-desc="Deccan Sultanate rival of Vijayanagar."
+             data-url="{% url 'bahmani' %}"></div>
+
+        <div class="era" data-name="Kakatiya–Hoysala" data-period="11th–14th century CE"
+             data-desc="Southern dynasties famous for temple art."
+             data-url="{% url 'kakatiya-hoysala' %}"></div>
+
+        <div class="era" data-name="Mahmud of Ghazni" data-period="998–1030 CE"
+             data-desc="Turkish ruler known for invasions of India."
+             data-url="{% url 'mahmud-of-gazhni' %}"></div>
+
+        <div class="era" data-name="Ghurid Dynasty" data-period="1175–1215 CE"
+             data-desc="Founded Muslim rule in northern India."
+             data-url="{% url 'ghurid-dynasty' %}"></div>
+
+        <div class="era" data-name="Khilji Dynasty" data-period="1290–1320 CE"
+             data-desc="Expansionist rulers of Delhi Sultanate."
+             data-url="{% url 'khilji' %}"></div>
+
+        <div class="era" data-name="Tughlaq Dynasty" data-period="1320–1414 CE"
+             data-desc="Known for ambitious administrative reforms."
+             data-url="{% url 'tughlaq' %}"></div>
+
+        <div class="era" data-name="Sayyid Dynasty" data-period="1414–1451 CE"
+             data-desc="Short-lived Delhi Sultanate dynasty."
+             data-url="{% url 'sayyid' %}"></div>
+
+        <div class="era" data-name="Lodi Dynasty" data-period="1451–1526 CE"
+             data-desc="Last rulers of Delhi Sultanate."
+             data-url="{% url 'lodi' %}"></div>
+
+        <div class="era" data-name="Bijapur Sultanate" data-period="1490–1686 CE"
+             data-desc="Deccan Sultanate famous for Gol Gumbaz."
+             data-url="{% url 'bijapur' %}"></div>
+
+        <div class="era" data-name="Barid Shahi of Bidar" data-period="1492–1619 CE"
+             data-desc="One of the Deccan Sultanates."
+             data-url="{% url 'barid-shahid-of-bidar' %}"></div>
+
+        <div class="era" data-name="Nizam Shahi of Ahmadnagar" data-period="1490–1636 CE"
+             data-desc="Major Deccan power resisting the Mughals."
+             data-url="{% url 'nizam-shahi-of-ahmadnagar' %}"></div>
+
+        <div class="era" data-name="Qutb Shahi of Golconda" data-period="1518–1687 CE"
+             data-desc="Founded Hyderabad, known for Charminar."
+             data-url="{% url 'qutb-shahi-of-golconda' %}"></div>
+
+        <div class="era" data-name="Mughal Empire" data-period="1526–1857 CE"
+             data-desc="One of the greatest empires in Indian history."
+             data-url="{% url 'mughal' %}"></div>
+
+        <div class="era" data-name="Sher Shah Suri" data-period="1540–1555 CE"
+             data-desc="Reformer ruler, introduced administrative systems."
+             data-url="{% url 'shershah' %}"></div>
+
+        <div class="era" data-name="Battle of Talikota" data-period="1565 CE"
+             data-desc="Defeat of Vijayanagar Empire."
+             data-url="{% url 'talikota' %}"></div>
+
+        <div class="era" data-name="Marathas" data-period="17th–18th century CE"
+             data-desc="Empire founded by Chhatrapati Shivaji Maharaj."
+             data-url="{% url 'marathas' %}"></div>
+
+        <div class="era" data-name="Bhakti & Sufi Movements" data-period="8th–17th century CE"
+             data-desc="Spiritual movements promoting devotion and unity."
+             data-url="{% url 'bhakti' %}"></div>
+
+        <div class="era" data-name="Sikh Empire" data-period="1799–1849 CE"
+             data-desc="Empire founded by Maharaja Ranjit Singh."
+             data-url="{% url 'sikh' %}"></div>
+
+        <div class="era" data-name="End of Medieval Era" data-period="c. 1700 CE"
+             data-desc="Transition from medieval to modern India."
+             data-url="{% url 'endofmedival' %}"></div>
 
       </div>
+
       <div class="center-label">
         <h2>Medieval India</h2>
       </div>
+
     </div>
   </div>
 
 </div>
 
-<script src="{%static 'js/met.js' %}"></script>
+<script src="{% static 'js/met.js' %}"></script>
 
 </body>
 </html>

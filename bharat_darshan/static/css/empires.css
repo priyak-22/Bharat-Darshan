@@ -134,6 +134,47 @@ body, html {
 .back-button {
  font-family: "Source Serif 4", serif;
 }
+/* Dropdown container */
+.navbar ul li.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.navbar ul li.dropdown .dropbtn {
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.navbar ul li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Dropdown links */
+.navbar ul li.dropdown .dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.navbar ul li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar ul li.dropdown .dropdown-content li a:hover {
+  background-color: #f2f2f2;
+}
+
 
 
 /* Underline hover */

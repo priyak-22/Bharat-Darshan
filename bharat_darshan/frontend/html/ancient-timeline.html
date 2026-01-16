@@ -21,6 +21,8 @@
     <p id="desc">
       Major political power of ancient India that established centralized administration and imperial unity.
     </p>
+    <!-- Dynamic Learn More Button -->
+    <a href="#" id="learn-more" class="learn-more-btn">Learn More</a>
   </div>
 
   <!-- RIGHT CIRCLE -->
@@ -28,38 +30,54 @@
     <div class="circle-wrapper">
        <div class="circle-message">
           Click a point to explore dynasty
-      </div>
-      <div class="circle" id="circle">
+       </div>
+       <div class="circle" id="circle">
 
-       
+        <!-- ALL DYNASTIES WITH DATA AND CORRECT URLS -->
+        <div class="era" data-name="Gauda Kingdom" data-period="6th–7th century CE" data-desc="Ancient kingdom in Bengal known for trade and culture." data-url="{% url 'gauda' %}"></div>
 
-        
-        <!-- ALL DYNASTIES -->
-        <div class="era" data-name="Gauda Kingdom"></div>
-        <div class="era" data-name="Gupta Empire"></div>
-        <div class="era" data-name="Gurjara–Pratihara"></div>
-        <div class="era" data-name="Harsha Empire"></div>
-        <div class="era" data-name="Huna Kingdom"></div>
-        <div class="era" data-name="Indo-Greek Kingdom"></div>
-        <div class="era" data-name="Indo-Parthians"></div>
-        <div class="era" data-name="Kanva Dynasty"></div>
-        <div class="era" data-name="Kushan Empire"></div>
-        <div class="era" data-name="Maurya Empire"></div>
-        <div class="era" data-name="Mukharis"></div>
-        <div class="era" data-name="Maitraka Dynasty"></div>
-        <div class="era" data-name="Nanda Empire"></div>
-        <div class="era" data-name="Pala Empire"></div>
-        <div class="era" data-name="Saka Kingdom"></div>
-        <div class="era" data-name="Satavahana Dynasty"></div>
-        <div class="era" data-name="Shunga Empire"></div>
-        <div class="era" data-name="Vakataka Dynasty"></div>
-        <div class="era" data-name="Southern Kingdoms"></div>
-        <div class="era" data-name="Western Kshatrapas"></div>
+        <div class="era" data-name="Gupta Empire" data-period="320–550 CE" data-desc="Known as the Golden Age of India for culture, art, and science." data-url="{% url 'gupta' %}"></div>
 
-      </div>
-      <div class="center-label">
-        <h2>Ancient India</h2>
-        </div>
+        <div class="era" data-name="Gurjara–Pratihara" data-period="6th–11th century CE" data-desc="Major dynasty in northern India, defended against Arab invasions." data-url="{% url 'gurjara_pratihara' %}"></div>
+
+        <div class="era" data-name="Harsha Empire" data-period="606–647 CE" data-desc="Unified northern India and promoted Buddhism and literature." data-url="{% url 'harsha' %}"></div>
+
+        <div class="era" data-name="Huna Kingdom" data-period="5th–6th century CE" data-desc="Central Asian Huns invading northern India." data-url="{% url 'huna' %}"></div>
+
+        <div class="era" data-name="Indo-Greek Kingdom" data-period="180 BCE–10 CE" data-desc="Greek kings ruled parts of northwestern India after Alexander's campaigns." data-url="{% url 'indo-greek' %}"></div>
+
+        <div class="era" data-name="Indo-Parthians" data-period="19–226 CE" data-desc="Parthian rulers who controlled parts of northwestern India." data-url="{% url 'indo-parthians' %}"></div>
+
+        <div class="era" data-name="Kanva Dynasty" data-period="73–30 BCE" data-desc="Succeeded the Shunga Empire and ruled parts of central India." data-url="{% url 'kanva' %}"></div>
+
+        <div class="era" data-name="Kushan Empire" data-period="30–375 CE" data-desc="Dominated north India and promoted trade and culture." data-url="{% url 'kushana' %}"></div>
+
+        <div class="era" data-name="Maurya Empire" data-period="321–185 BCE" data-desc="Major political power of ancient India that established centralized administration and imperial unity." data-url="{% url 'maurya' %}"></div>
+
+        <div class="era" data-name="Mukharis" data-period="4th–6th century CE" data-desc="Dynasty in central India after Satavahanas." data-url="{% url 'mukharis' %}"></div>
+
+        <div class="era" data-name="Maitraka Dynasty" data-period="475–776 CE" data-desc="Ruled western India, famous for Vallabhi University." data-url="{% url 'maitraka' %}"></div>
+
+        <div class="era" data-name="Nanda Empire" data-period="345–321 BCE" data-desc="Founded the first large empire in Magadha with a powerful army and administration." data-url="{% url 'nanda' %}"></div>
+
+        <div class="era" data-name="Pala Empire" data-period="750–1174 CE" data-desc="Major medieval Indian dynasty controlling Bengal and Bihar." data-url="{% url 'pala' %}"></div>
+
+        <div class="era" data-name="Saka Kingdom" data-period="1st century BCE–4th century CE" data-desc="Indo-Scythian rulers of western India." data-url="{% url 'saka' %}"></div>
+
+        <div class="era" data-name="Satavahana Dynasty" data-period="230 BCE–220 CE" data-desc="Rulers of central and southern India, promoted trade and Buddhism." data-url="{% url 'satvahana' %}"></div>
+
+        <div class="era" data-name="Shunga Empire" data-period="185–73 BCE" data-desc="Known for promoting Hinduism and artistic development after the Mauryas." data-url="{% url 'shunga' %}"></div>
+
+        <div class="era" data-name="Vakataka Dynasty" data-period="250–500 CE" data-desc="Dynasty ruling central India, patrons of Ajanta caves." data-url="{% url 'vakataka' %}"></div>
+
+        <div class="era" data-name="Southern Kingdoms" data-period="3rd–12th century CE" data-desc="Includes Cheras, Cholas, and Pandyas, rich cultural heritage." data-url="{% url 'southern-kingdoms' %}"></div>
+
+        <div class="era" data-name="Western Kshatrapas" data-period="35–405 CE" data-desc="Rulers in western India, known for coins and trade." data-url="{% url 'western-kshatrapas' %}"></div>
+
+       </div>
+       <div class="center-label">
+         <h2>Ancient India</h2>
+       </div>
     </div>
   </div>
 

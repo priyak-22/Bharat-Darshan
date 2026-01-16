@@ -155,7 +155,7 @@ def huna(request):
     return render(request, 'html/huna.html')
 def indo_greek(request):
     return render(request, 'html/indo-greek.html')
-def indo_parthian(request):
+def indo_parthians(request):
     return render(request, 'html/indo-parthians.html')
 def kanva(request):
     return render(request, 'html/kanva.html')

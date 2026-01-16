@@ -30,10 +30,10 @@ urlpatterns = [
     path('gurjara_pratihara/', views.gurjara_pratihara, name='gurjara_pratihara'),
     path('harsha/', views.harsha, name='harsha'),
     path('huna/', views.huna, name='huna'),
-    path('indo-greek/', views.indo_greek, name='indo_greek'),
-    path('indo-parthians/', views.indo_parthian, name='indo_parthian'),
+    path('indo-greek/', views.indo_greek, name='indo-greek'),
+    path('indo-parthians/', views.indo_parthians, name='indo-parthians'),
     path('kanva/', views.kanva, name='kanva'),
-    path('kushan/', views.kushana, name='kushana'),
+    path('kushana/', views.kushana, name='kushana'),
     path('maurya/', views.maurya, name='maurya'),
     path('mukharis/', views.mukharis, name='mukharis'),
     path('maitraka/', views.maitraka, name='maitraka'),
@@ -43,8 +43,8 @@ urlpatterns = [
     path('satvahana/', views.satvahana, name='satvahana'),
     path('shunga/', views.shunga, name='shunga'),
     path('vakataka/', views.vakataka, name='vakataka'),
-    path('southern-kingdoms/', views.southern_kingdoms, name='southern_kingdoms'),
-    path('western-kshatrapas/', views.western_kshatrapas, name='western_kshatrapas'),
+    path('southern-kingdoms/', views.southern_kingdoms, name='southern-kingdoms'),
+    path('western-kshatrapas/', views.western_kshatrapas, name='western-kshatrapas'),
 
 
     #Medival Dynasties
