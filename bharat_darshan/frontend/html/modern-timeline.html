@@ -1,67 +1,126 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Modern Indian Circular Timeline</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/moderntimeline.css' %}">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Indian Circular Timeline</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/moderntimeline.css' %}">
 
 </head>
 
 <body>
 
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- LEFT INFO -->
-  <div class="info">
-    <h1 id="dynasty">Anglo-French Conflicts</h1>
-    <h3 id="period">1600–1947 CE</h3>
-    <p id="desc">
-      Major modern events and movements in India leading to independence.
-    </p>
-  </div>
+    <!-- LEFT INFO -->
+    <div class="info">
+      <h1 id="dynasty">Anglo-French Conflicts</h1>
+      <h3 id="period">1600–1947 CE</h3>
+      <p id="desc">
+        Major modern events and movements in India leading to independence.
+      </p>
+    </div>
 
-  <!-- RIGHT CIRCLE -->
-  <div class="circle-area">
-    <div class="circle-wrapper">
-       <div class="circle-message">
+    <!-- RIGHT CIRCLE -->
+    <div class="circle-area">
+      <div class="circle-wrapper">
+        <div class="circle-message">
           Click a point to explore
-      </div>
-      <div class="circle" id="circle">
+        </div>
+        <div class="circle" id="circle">
 
-        <!-- MODERN DYNASTIES / EVENTS FROM PATHS -->
-        <div class="era" data-name="Advent of Portuguese"></div>
-        <div class="era" data-name="Advent of Dutch"></div>
-        <div class="era" data-name="Advent of Danes"></div>
-        <div class="era" data-name="Advent of French"></div>
-        <div class="era" data-name="Advent of British"></div>
-        <div class="era" data-name="Mughal Decline"></div>
-        <div class="era" data-name="Anglo-French Wars"></div>
-        <div class="era" data-name="Battle of Plassey"></div>
-        <div class="era" data-name="Battle of Buxar"></div>
-        <div class="era" data-name="Social & Religious Reform Movements"></div>
-        <div class="era" data-name="Revolt of 1857"></div>
-        <div class="era" data-name="Formation of Indian National Congress"></div>
-        <div class="era" data-name="Partition of Bengal & Swadeshi Movement"></div>
-        <div class="era" data-name="Home Rule Movement"></div>
-        <div class="era" data-name="Jallianwala Bagh Massacre"></div>
-        <div class="era" data-name="Non-Cooperation Movement"></div>
-        <div class="era" data-name="Civil Disobedience Movement"></div>
-        <div class="era" data-name="Quit India Movement"></div>
-        <div class="era" data-name="Independence of India"></div>
+          <!-- MODERN DYNASTIES / EVENTS FROM PATHS -->
+          <div class="era" data-name="Advent of Portuguese" data-period="1498 CE"
+            data-desc="Portuguese arrived in India with Vasco da Gama, establishing trade posts."
+            data-url="{% url 'portugese' %}"></div>
 
-      </div>
-      <div class="center-label">
-        <h2>Modern India</h2>
+          <div class="era" data-name="Advent of Dutch" data-period="1602 CE"
+            data-desc="Dutch East India Company established trade relations in India." data-url="{% url 'dutch' %}">
+          </div>
+
+          <div class="era" data-name="Advent of Danes" data-period="1616 CE"
+            data-desc="Danes established trading posts in Tranquebar and Serampore." data-url="{% url 'danes' %}"></div>
+
+          <div class="era" data-name="Advent of French" data-period="1668 CE"
+            data-desc="French East India Company established trading settlements at Pondicherry."
+            data-url="{% url 'french' %}"></div>
+
+          <div class="era" data-name="Advent of British" data-period="1600–1700 CE"
+            data-desc="British East India Company started trading and gradually expanded power in India."
+            data-url="{% url 'british' %}"></div>
+
+          <div class="era" data-name="Mughal Decline" data-period="1707–1760 CE"
+            data-desc="Decline of Mughal Empire after Aurangzeb, paving the way for regional powers and European influence."
+            data-url="{% url 'mughal_decline' %}"></div>
+
+          <div class="era" data-name="Anglo-French Wars" data-period="1740–1763 CE"
+            data-desc="Series of wars between British and French East India Companies over Indian territories."
+            data-url="{% url 'anglo_french' %}"></div>
+
+          <div class="era" data-name="Battle of Plassey" data-period="1757 CE"
+            data-desc="Robert Clive defeated Siraj-ud-Daulah, establishing British control over Bengal."
+            data-url="{% url 'plassey' %}"></div>
+
+          <div class="era" data-name="Battle of Buxar" data-period="1764 CE"
+            data-desc="Consolidated British East India Company’s power in Bengal and Bihar."
+            data-url="{% url 'buxar' %}"></div>
+
+          <div class="era" data-name="Social & Religious Reform Movements" data-period="19th century CE"
+            data-desc="Movements led by Raja Ram Mohan Roy, Swami Vivekananda, and others promoting social reform."
+            data-url="{% url 'social_relegious_movement' %}"></div>
+
+          <div class="era" data-name="Revolt of 1857" data-period="1857 CE"
+            data-desc="First large-scale revolt against British East India Company rule."
+            data-url="{% url 'revolt_1857' %}"></div>
+
+          <div class="era" data-name="Formation of Indian National Congress" data-period="1885 CE"
+            data-desc="Political party formed to represent Indian interests and demand reforms."
+            data-url="{% url 'indian_nc' %}"></div>
+
+          <div class="era" data-name="Partition of Bengal & Swadeshi Movement" data-period="1905 CE"
+            data-desc="Bengal partition led to protests and the Swadeshi movement promoting indigenous goods."
+            data-url="{% url 'bengal_swadeshi' %}"></div>
+
+          <div class="era" data-name="Home Rule Movement" data-period="1916–1918 CE"
+            data-desc="Movement led by Bal Gangadhar Tilak and Annie Besant for self-government."
+            data-url="{% url 'home_rule' %}"></div>
+
+          <div class="era" data-name="Jallianwala Bagh Massacre" data-period="1919 CE"
+            data-desc="Mass killing of civilians in Amritsar by British troops under General Dyer."
+            data-url="{% url 'jallianwala_bagh' %}"></div>
+
+          <div class="era" data-name="Non-Cooperation Movement" data-period="1920–1922 CE"
+            data-desc="Mass movement led by Mahatma Gandhi to resist British rule non-violently."
+            data-url="{% url 'non_cooperation' %}"></div>
+
+          <div class="era" data-name="Civil Disobedience Movement" data-period="1930–1934 CE"
+            data-desc="Gandhi-led movement including Salt March and boycotts of British laws."
+            data-url="{% url 'civil_disobidience' %}"></div>
+
+          <div class="era" data-name="Quit India Movement" data-period="1942 CE"
+            data-desc="Mass protest demanding an end to British rule during World War II."
+            data-url="{% url 'quit_india_movement' %}"></div>
+
+          <div class="era" data-name="Independence of India" data-period="1947 CE"
+            data-desc="India gained independence from British rule on 15th August 1947."
+            data-url="{% url 'india_independence' %}"></div>
+
+        </div>
+
+        <div class="center-label">
+          <h2>Modern India</h2>
+        </div>
       </div>
     </div>
+
   </div>
 
-</div>
-
-<script src="{% static 'js/mot.js' %}"></script>
+  <script src="{% static 'js/mot.js' %}"></script>
 
 </body>
+
 </html>
