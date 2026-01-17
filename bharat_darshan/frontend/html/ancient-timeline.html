@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/ancienttimeline.css' %}">
-  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  
 
 
 </head>
@@ -18,6 +18,7 @@
   <nav class="navbar">
       <div class="logo">Bharat Darshan</div>
       <ul>
+        <li><a href="{% url 'atlas' %}">Home</a></li>
         <li class="dropdown">
           Empires and Kingdoms ▾
           <ul class="dropdown-content">

@@ -155,8 +155,8 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 58px;
-  padding: 0 28px;
+  height: 70px;               /* increased height */
+  padding: 0 32px;            /* more padding */
   background: rgba(255, 248, 231, 0.92);
   backdrop-filter: blur(6px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -168,7 +168,7 @@ body{
 
 /* Logo */
 .navbar .logo {
-  font-size: 1.6rem;
+  font-size: 1.9rem;          /* larger logo */
   font-weight: 700;
   font-family: 'Cinzel', serif;
   color: #b8932f;
@@ -178,17 +178,17 @@ body{
 /* Menu */
 .navbar ul {
   display: flex;
-  gap: 22px;
+  gap: 28px;                  /* more space between items */
   list-style: none;
   align-items: center;
 }
 
 /* Links */
 .navbar li a {
-  font-size: 0.95rem;
+  font-size: 1.1rem;          /* bigger links */
   font-weight: 500;
   color: #6b5200;
-  padding: 4px 2px;
+  padding: 6px 4px;
   position: relative;
   transition: color 0.3s;
 }
@@ -216,11 +216,11 @@ body{
 /* Dropdown parent (plain text) */
 .navbar ul li.dropdown {
   position: relative; /* for submenu */
-  font-size: 0.95rem;
+  font-size: 1.1rem;  /* bigger parent text */
   font-weight: 500;
   color: #6b5200;
-  padding: 4px 2px;
-  cursor: default; /* indicate non-clickable */
+  padding: 6px 4px;
+  cursor: default;    /* indicate non-clickable */
   transition: color 0.3s;
 }
 
@@ -235,7 +235,7 @@ body{
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 180px;
+  min-width: 200px;           /* wider dropdown */
   background-color: #f3e6cf;
   border: 2px solid #8a5a2b;
   border-radius: 4px;
@@ -247,10 +247,11 @@ body{
 /* Dropdown links */
 .navbar ul li .dropdown-content li a {
   display: block;
-  padding: 10px 15px;
+  padding: 12px 18px;         /* larger clickable area */
   text-decoration: none;
   color: #4a2d12;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1rem;            /* slightly bigger text */
   transition: background 0.3s, color 0.3s;
 }
 
@@ -267,8 +268,8 @@ body{
 
 /* Login button */
 .navbar .login {
-  padding: 6px 14px;
-  font-size: 0.85rem;
+  padding: 8px 18px;           /* bigger button */
+  font-size: 1rem;             /* larger text */
   border-radius: 6px;
   background: transparent;
   border: 1.5px solid #d4af37;
@@ -285,7 +286,7 @@ body{
 @media (max-width: 900px) {
   .navbar ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
   .navbar ul li .dropdown-content {
     position: relative;
@@ -293,4 +294,7 @@ body{
     left: 0;
     width: 100%;
   }
+}
+a{
+  text-decoration: none;
 }
