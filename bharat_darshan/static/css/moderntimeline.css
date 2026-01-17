@@ -1,75 +1,68 @@
-/* =======================
-   GLOBAL STYLES
-======================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  height: 100vh;
-  background: linear-gradient(90deg, #efe4cf 35%, #e5cfaa 65%);
-  font-family: 'EB Garamond', serif;
-  color: #4a2d12;
-  overflow: hidden;
+body{
+  height:100vh;
+  background: linear-gradient(90deg,#efe4cf 35%,#e5cfaa 65%);
+  font-family:'EB Garamond', serif;
+  color:#4a2d12;
+  overflow:hidden;
 }
 
-.wrapper {
-  display: flex;
-  height: 100%;
+.wrapper{
+  display:flex;
+  height:100%;
 }
 
-/* =======================
-   LEFT PANEL (INFO)
-======================= */
-.info {
-  width: 35%;
-  padding: 70px 50px;
-  border-right: 5px solid #8a5a2b;
+/* LEFT PANEL */
+.info{
+  width:35%;
+  padding:70px 50px;
+  border-right:5px solid #8a5a2b;
 }
 
-.info h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 32px;
-  margin-bottom: 12px;
+.info h1{
+  font-family:'Cinzel', serif;
+  font-size:32px;
+  margin-bottom:12px;
 }
 
-.info h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
+.info h3{
+  font-size:18px;
+  margin-bottom:20px;
 }
 
-.info p {
-  font-size: 17px;
-  line-height: 1.6;
+.info p{
+  font-size:17px;
+  line-height:1.6;
 }
 
-/* =======================
-   RIGHT PANEL (CIRCLE)
-======================= */
-.circle-area {
-  width: 65%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* RIGHT SIDE */
+.circle-area{
+  width:65%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.circle-wrapper {
-  width: min(68vh, 68vw);
-  height: min(68vh, 68vw);
-  position: relative;
+.circle-wrapper{
+  width:min(68vh,68vw);
+  height:min(68vh,68vw);
+  position:relative;
 }
 
-.circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 3px dashed #8a5a2b;
-  background: #f3e6cf;
-  position: relative;
-  transition: transform 0.8s ease;
-  transform-origin: 50% 50%; /* <-- crucial for spinning */
+.circle{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  border:3px dashed #8a5a2b;
+  background:#f3e6cf;
+  position:relative;
+  transition:transform 0.8s ease;
 }
 
 .center-label {
@@ -88,7 +81,6 @@ body {
   text-transform: uppercase;
   color: #6a4a2b;
 }
-
 .learn-more-btn {
   display: inline-block;
   margin-top: 15px;
@@ -105,9 +97,10 @@ body {
   background-color: #555;
 }
 
+
 .circle-message {
   position: absolute;
-  top: -60px; /* above the circle */
+  top: -60px;       /* above the circle */
   width: 100%;
   text-align: center;
   font-family: 'Cinzel', serif;
@@ -116,52 +109,41 @@ body {
   letter-spacing: 1px;
 }
 
-/* =======================
-   DYNASTY CIRCLES (ERAS)
-======================= */
-.era {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #f0e0c2;
-  border: 3px solid #8a5a2b;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: 0.3s;
+/* DYNASTY CIRCLES */
+.era{
+  position:absolute;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#f0e0c2;
+  border:3px solid #8a5a2b;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  transition:0.3s;
 }
 
-.era:hover {
-  transform: translate(-50%, -50%) scale(1.15);
+.era:hover{
+  transform:translate(-50%,-50%) scale(1.15);
 }
 
-.era.active {
-  border-color: #c79a3a;
-  box-shadow: 0 0 14px rgba(199, 154, 58, 0.9);
+.era.active{
+  border-color:#c79a3a;
+  box-shadow:0 0 14px rgba(199,154,58,0.9);
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
-@media (max-width: 900px) {
-  .wrapper {
-    flex-direction: column;
+/* RESPONSIVE */
+@media(max-width:900px){
+  .wrapper{
+    flex-direction:column;
   }
-
-  .info {
-    width: 100%;
-    border-right: none;
-    border-bottom: 5px solid #8a5a2b;
-    padding: 40px;
+  .info{
+    width:100%;
+    border-right:none;
+    border-bottom:5px solid #8a5a2b;
+    padding:40px;
   }
-
-  .circle-area {
-    width: 100%;
-  }
-
-  .circle-wrapper {
-    width: 90vw;
-    height: 90vw;
+  .circle-area{
+    width:100%;
   }
 }
