@@ -264,3 +264,17 @@ a {
     width: 100%;
   }
 }
+/* Style the parent dropdown text when not using <a> */
+.navbar ul li.dropdown {
+  color: #6b5200;        /* same as other links */
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: default;       /* optional, shows it’s not clickable */
+  position: relative;    /* required for positioning dropdown */
+  padding: 4px 2px;
+}
+
+/* Hover effect for parent dropdown text */
+.navbar ul li.dropdown:hover {
+  color: #d4af37;
+}

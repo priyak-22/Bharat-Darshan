@@ -16,19 +16,24 @@
 <body>
 
   <nav class="navbar">
-    <div class="logo">Bharat Darshan</div>
-    <ul>
-      <li><a href="{% url 'home' %}">Home</a></li>
-      <li><a href="{% url 'empires' %}">Empires and Kingdoms</a></li>
-      <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
-      <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
-      <li><a href="{% url 'freedom_movement' %}">Freedom Struggle</a></li>
-      <li><a href="#">Quiz</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
+  <div class="logo">Bharat Darshan</div>
+  <ul>
+    <li><a href="{% url 'atlas' %}">Home</a></li>
+    <li class="dropdown">
+      Empires and Kingdoms ▾
+      <ul class="dropdown-content">
+        <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
+        <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
+        <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
+      </ul>
+    </li>
+    <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
+    <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
+  </ul>
 
-    <button class="login"><a href="{% url 'login' %}">Login</a></button>
-  </nav>
+  <button class="login"><a href="{% url 'login' %}">Login</a></button>
+</nav>
+
 
   <section class="page-header">
     <h1>Cultural Heritage of India</h1>

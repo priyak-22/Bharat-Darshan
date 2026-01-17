@@ -9,10 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/ancienttimeline.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+
 
 </head>
 
 <body>
+  <nav class="navbar">
+      <div class="logo">Bharat Darshan</div>
+      <ul>
+        <li class="dropdown">
+          Empires and Kingdoms ▾
+          <ul class="dropdown-content">
+            <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
+            <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
+            <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
+        <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
+      </ul>
+
+      <button class="login"><a href="{% url 'login' %}">Login</a></button>
+    </nav>
 
   <div class="wrapper">
 
