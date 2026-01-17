@@ -1,18 +1,19 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from accounts import views
 
 urlpatterns = [
+    path('', views.atlas, name='home'),
+
     path('admin/', admin.site.urls),
 
-    path('', views.home, name='home'),
     path('main/', views.main, name='main'),
 
     path('atlas/',views.atlas, name='atlas'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('signup/', views.signup, name='signup'),
-    path("verify-otp/", views.verify_otp, name="verify_otp"),
+
 
 
 
@@ -105,13 +106,13 @@ urlpatterns = [
     path('medival_timeline/', views.medival_timeline, name="medival_timeline"),
     path('modern_timeline/', views.modern_timeline, name="modern_timeline"),
 
-#culture
-path('ancient-culture/', views.ancient_culture, name="ancient-culture"),
-path('medival-culture/', views.medival_culture, name="medival-culture"),
-path('modern-culture/', views.modern_culture, name="modern-culture"),
+    #culture
+    path('ancient-culture/', views.ancient_culture, name="ancient-culture"),
+    path('medival-culture/', views.medival_culture, name="medival-culture"),
+    path('modern-culture/', views.modern_culture, name="modern-culture"),
+
 
 
 ]
-
 
 
