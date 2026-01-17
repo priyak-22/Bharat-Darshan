@@ -112,6 +112,8 @@ urlpatterns = [
     path('modern-culture/', views.modern_culture, name="modern-culture"),
 
 
+    path("", include("accounts.urls")),
+
 
 ]
 

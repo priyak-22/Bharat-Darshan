@@ -12,23 +12,109 @@ from pathlib import Path
 import random
 from datetime import timedelta
 from django.utils import timezone
+from django.contrib.sites.shortcuts import get_current_site
+from django.template.loader import render_to_string
+from django.utils.encoding import force_bytes, force_str
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 
 
+#signup view
+def signup(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
 
+        if User.objects.filter(username=username).exists():
+            return HttpResponse("Username already exists")
+
+        if User.objects.filter(email=email).exists():
+            return HttpResponse("Email already registered")
+
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=password
+        )
+        user.is_active = False
+        user.save()
+
+        current_site = get_current_site(request)
+        subject = "Activate your Bharat Darshan account"
+
+        message = render_to_string("html/verify_email.html", {
+            "user": user,
+            "domain": current_site.domain,
+            "uid": urlsafe_base64_encode(force_bytes(user.pk)),
+            "token": default_token_generator.make_token(user),
+        })
+
+        send_mail(
+            subject,
+            message,
+            settings.DEFAULT_FROM_EMAIL,
+            [email],
+            fail_silently=False,
+        )
+
+        return HttpResponse("Check your email to verify your account")
+
+    return render(request, "html/signup.html")
+
+
+def activate(request, uidb64, token):
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+
+    if user and default_token_generator.check_token(user, token):
+        user.is_active = True
+        user.save()
+        return redirect("login")
+
+    return HttpResponse("Activation link is invalid or expired.")
+
+
+#login view
+
+def login_view(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        try:
+            user_obj = User.objects.get(email=email)
+            username = user_obj.username
+        except User.DoesNotExist:
+            return HttpResponse("Invalid credentials")
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            if user.is_active:
+                auth_login(request, user)
+                return redirect("atlas")
+            else:
+                return HttpResponse("Please verify your email first")
+        else:
+            return HttpResponse("Invalid credentials")
+
+    return render(request, "html/login.html")
+
+
+#logout view
+def logout_view(request):
+    auth_logout(request)
+    return redirect("login")
 
 
 def home(request):
     return render(request, "html/atlas.html")
 
-def login_view(request):
-    return render(request, "html/login.html")
 
-def logout_view(request):
-    return render(request, "html/login.html")
-
-
-def signup(request):
-    return render(request, "html/signup.html")
 
 def atlas(request):
     return render(request, "html/atlas.html")
