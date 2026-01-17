@@ -33,13 +33,13 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         });
 
-        // Initialize first era as active
+        // Set the first era as active on page load
         const firstEra = eras[0];
         firstEra.classList.add("active");
         dynasty.textContent = firstEra.dataset.name;
         period.textContent = firstEra.dataset.period;
         desc.textContent = firstEra.dataset.desc;
-        learnMore.href = firstEra.dataset.url;
+        learnMore.href = firstEra.dataset.url; // <-- initial button URL
     }
 
     positionEras();
