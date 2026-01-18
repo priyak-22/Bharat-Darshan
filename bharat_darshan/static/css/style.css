@@ -209,6 +209,49 @@ a {
   color: #2a1f16;
 }
 
+/* User menu container */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #4a2d12; /* dark brown for visibility */
+}
+
+/* User icon */
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #1f0909; /* optional gold border */
+}
+
+/* Username */
+.user-menu span {
+  color: #4a2d12; /* dark text for contrast */
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Logout button */
+.logout-btn {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #b8932f; /* goldish button */
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d4af37; /* brighter gold on hover */
+  color: #2a1f16; /* dark text inside button on hover */
+}
+s
+
 
 /* =======================
    NAVBAR DROPDOWN

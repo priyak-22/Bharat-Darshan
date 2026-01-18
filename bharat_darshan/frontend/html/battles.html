@@ -78,6 +78,16 @@
   <script>
     const BATTLE_ICON_URL = "{% static 'Data/map_11788777.png' %}";
   </script>
+  {{ is_authenticated|json_script:"auth-flag" }}
+
+  <script>
+    const IS_AUTHENTICATED = JSON.parse(
+      document.getElementById("auth-flag").textContent
+    );
+  </script>
+
+
+
   <script src="{%static 'js/script.js' %}"></script>
   <script src="{% static 'js/battles.js' %}"></script>
 

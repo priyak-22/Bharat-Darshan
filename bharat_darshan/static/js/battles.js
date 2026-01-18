@@ -97,6 +97,8 @@ const battleIcon = L.icon({
   popupAnchor: [0, -30]
 });
 
+
+
 /* =========================
    EVENTS DATA
 ========================= */
@@ -276,18 +278,8 @@ const events = [
   // Independence
   { id: "independence", name: "Indian Independence (1947)", coords: [28.6, 77.2], region: "Delhi", year: "1947 CE", summary: "India becomes independent. India gained independence from British colonial rule on 15th August 1947, marking the end of nearly 200 years of foreign domination. The struggle for freedom involved countless movements, protests, and sacrifices by leaders and ordinary citizens alike, including the Revolt of 1857, the Non-Cooperation Movement, the Civil Disobedience Movement, and the Quit India Movement. After years of negotiations and mounting pressure, the British Parliament passed the Indian Independence Act, which created two separate nations: India and Pakistan. Delhi, the capital, became the center of this historic moment, where the first Prime Minister of India, Jawaharlal Nehru, delivered his iconic “Tryst with Destiny” speech to a nation full of hope and anticipation.Independence brought both joy and challenges. Millions of people were displaced during the partition, leading to communal violence and migration, but it also marked the beginning of India’s journey as a sovereign, democratic republic. The event is celebrated every year on 15th August as Independence Day, honoring the sacrifices and resilience of generations who fought for freedom." },
 ];
-/* =========================
-   ADD MARKERS
-========================= */
 
-events.forEach(event => {
-  L.marker(event.coords, {
-    icon: battleIcon,
-    pane: 'markerPane'
-  })
-    .addTo(map)
-    .on('click', () => openPanel(event));
-});
+
 
 /* =========================
    INFO PANEL LOGIC
@@ -311,3 +303,23 @@ function openPanel(event) {
   document.getElementById("learnMoreBtn").href =
     `battles-details.html?id=${event.id}`;
 }
+
+/* =========================
+   ADD MARKERS
+========================= */
+
+events.forEach(battle => {
+  const marker = L.marker(battle.coords, {
+    icon: battleIcon,
+    pane: 'markerPane'
+  }).addTo(map);
+
+  marker.on('click', () => {
+    if (!IS_AUTHENTICATED) {
+      alert("Please log in to view battle details.");
+      return;
+    }
+
+    openPanel(battle);
+  });
+});

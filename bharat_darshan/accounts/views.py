@@ -1,22 +1,26 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
-from django.contrib.auth.models import User
-from django.contrib.auth.tokens import default_token_generator
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.utils.encoding import force_bytes, force_str  # Django 4+
-from django.core.mail import send_mail
 from django.http import HttpResponse, Http404, FileResponse
 from django.conf import settings
+
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from pathlib import Path
-import random
-from datetime import timedelta
-from django.utils import timezone
-from django.contrib.sites.shortcuts import get_current_site
-from django.template.loader import render_to_string
-from django.utils.encoding import force_bytes, force_str
 from django.contrib.auth.tokens import default_token_generator
+
+from django.core.mail import send_mail
+from django.utils import timezone
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes, force_str
+
+from django.template.loader import render_to_string
+from django.contrib.sites.shortcuts import get_current_site
+
+from pathlib import Path
+from datetime import timedelta
+import random
+
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 
 
 #signup view
@@ -108,7 +112,7 @@ def login_view(request):
 #logout view
 def logout_view(request):
     auth_logout(request)
-    return redirect("login")
+    return redirect("home")
 
 
 def home(request):
@@ -334,3 +338,16 @@ def medival_culture(request):
     return render(request, 'html/medival-culture.html')
 def modern_culture(request):
     return render(request, 'html/modern-culture.html')
+
+@login_required(login_url='login')
+def modern_timeline(request):
+    return render(request, 'html/modern-timeline.html')
+
+def battles(request):
+    return render(
+        request,
+        "html/battles.html",
+        {
+            "is_authenticated": request.user.is_authenticated
+        }
+    )
