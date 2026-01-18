@@ -17,34 +17,34 @@
   <div id="main" class="main-site">
 
     <nav class="navbar">
-  <div class="logo">Bharat Darshan</div>
+      <div class="logo">Bharat Darshan</div>
 
-  <ul>
-    <li class="dropdown">
-      Empires and Kingdoms ▾
-      <ul class="dropdown-content">
-        <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
-        <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
-        <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
+      <ul>
+        <li class="dropdown">
+          Empires and Kingdoms ▾
+          <ul class="dropdown-content">
+            <li><a href="{% url 'ancient_timeline' %}">Ancient Timeline</a></li>
+            <li><a href="{% url 'medival_timeline' %}">Medieval Timeline</a></li>
+            <li><a href="{% url 'modern_timeline' %}">Modern Timeline</a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
+        <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
       </ul>
-    </li>
-    <li><a href="{% url 'battles' %}">Battles and Wars</a></li>
-    <li><a href="{% url 'cultural_heritage' %}">Cultural Heritage</a></li>
-  </ul>
 
-  <!-- Login / User menu -->
-  <div class="auth-section">
-    {% if user.is_authenticated %}
-      <div class="user-menu">
-        <img src="{% static 'Data/profile.png' %}" alt="User" class="user-icon">
-        <span>{{ user.username }}</span>
-        <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
-      </div>
-    {% else %}
-    <button class="login"><a href="{% url 'login' %}">Login</a></button>
+      <!-- Login / User menu -->
+      <div class="auth-section">
+        {% if user.is_authenticated %}
+        <div class="user-menu">
+          <img src="{% static 'Data/profile.png' %}" alt="User" class="user-icon">
+          <span>{{ user.username }}</span>
+          <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+        </div>
+        {% else %}
+        <button class="login"><a href="{% url 'login' %}">Login</a></button>
         {% endif %}
-  </div>
-</nav>
+      </div>
+    </nav>
 
 
     <!-- ========================
