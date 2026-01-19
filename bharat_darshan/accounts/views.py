@@ -154,44 +154,102 @@ def freedom_movement(request):
     return render(request, 'html/freedom.html')
 
 # Ancient Dynasties
+
+@login_required(login_url='login')
 def gauda(request):
-    return render(request, 'html/Gauda.html')
+    return render(request, 'html/gauda.html')
+
+
+@login_required(login_url='login')
 def gupta(request):
     return render(request, 'html/gupta.html')
-def  gurjara_pratihara(request):
+
+
+@login_required(login_url='login')
+def gurjara_pratihara(request):
     return render(request, 'html/gurjara-pratihara.html')
+
+
+@login_required(login_url='login')
 def harsha(request):
     return render(request, 'html/harsha.html')
+
+
+
+@login_required(login_url='login')
 def huna(request):
     return render(request, 'html/huna.html')
+
+
+@login_required(login_url='login')
 def indo_greek(request):
     return render(request, 'html/indo-greek.html')
+
+
+
+@login_required(login_url='login')
 def indo_parthians(request):
     return render(request, 'html/indo-parthians.html')
+
+
+@login_required(login_url='login')
 def kanva(request):
     return render(request, 'html/kanva.html')
+
+
+@login_required(login_url='login')
 def kushana(request):
     return render(request, 'html/kushana.html')
+
+
+@login_required(login_url='login')
 def maitraka(request):
     return render(request, 'html/maitraka.html')
+
+
+@login_required(login_url='login')
 def maurya(request):
     return render(request, 'html/mauryan.html')
+
+
+@login_required(login_url='login')
 def mukharis(request):
     return render(request, 'html/mukharis.html')
+
+
+
+@login_required(login_url='login')
 def nanda(request):
     return render(request, 'html/nanda.html')
+
+
+@login_required(login_url='login')
 def pala(request):
     return render(request, 'html/pala.html')
+
+
+@login_required(login_url='login')
 def saka(request):
     return render(request, 'html/saka.html')
+
+
+@login_required(login_url='login')
 def satvahana(request):
     return render(request, 'html/satvahana.html')
+
+@login_required(login_url='login')
 def shunga(request):
     return render(request, 'html/shunga.html')
+
+@login_required(login_url='login')
 def southern_kingdoms(request):
     return render(request, 'html/southern-kingdoms.html')
+
+@login_required(login_url='login')
 def vakataka(request):
-    return render(request, 'html/vakataka.html')  
+    return render(request, 'html/vakataka.html') 
+
+@login_required(login_url='login')
 def western_kshatrapas(request):
     return render(request, 'html/western-kshatrapas.html')
 
@@ -342,6 +400,8 @@ def modern_culture(request):
 @login_required(login_url='login')
 def modern_timeline(request):
     return render(request, 'html/modern-timeline.html')
+
+
 
 def battles(request):
     return render(
