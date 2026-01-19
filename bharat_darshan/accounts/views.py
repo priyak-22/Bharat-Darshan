@@ -223,6 +223,7 @@ def nanda(request):
     return render(request, 'html/nanda.html')
 
 
+
 @login_required(login_url='login')
 def pala(request):
     return render(request, 'html/pala.html')
@@ -256,64 +257,139 @@ def western_kshatrapas(request):
 
 #Medival Dynasties
 
-
+@login_required(login_url='login')
 def rashtrakuta(request):          
     return render(request, 'html/rashtrakuta.html')
 
+@login_required(login_url='login')
 def gurjara(request):                  
     return render(request, 'html/gurjara.html')
 
+@login_required(login_url='login')
 def chola(request):                  
     return render(request, 'html/chola.html')
 
+@login_required(login_url='login')
 def chandelachauhan(request):         
     return render(request, 'html/chandelachauhan.html')
+
+
+@login_required(login_url='login')
 def chola(request):
     return render(request, 'html/chola.html')
+
+
+@login_required(login_url='login')    
 def delhi(request):
     return render(request, 'html/delhi.html')
+
+ 
+@login_required(login_url='login')   
 def rajput(request):
     return render(request, 'html/rajput.html')
+
+    
+@login_required(login_url='login')
 def mewar(request):
     return render(request, 'html/mewar.html')
+
+ 
+@login_required(login_url='login')   
 def kakatiya_hoysala(request):
     return render(request, 'html/kakatiya-hoysala.html')
+
+
+@login_required(login_url='login')    
 def vijaynagar(request):               
     return render(request, 'html/vijaynagar.html')
+
+
+@login_required(login_url='login')   
 def bahmani(request):                  
     return render(request, 'html/bahmani.html')
+
+
+@login_required(login_url='login')
 def endofmedival(request):             
     return render(request, 'html/endofmedival.html')
+
+
+@login_required(login_url='login')
 def mahmud_of_gazhni(request):             
     return render(request, 'html/mahmud-of-gazhni.html')
+
+
+@login_required(login_url='login')
 def ghurid_dynasty(request):
     return render(request, 'html/ghurid-dynasty.html')
+
+
+@login_required(login_url='login')
 def khilji(request):                  
     return render(request, 'html/khilji.html')
+
+
+@login_required(login_url='login')
 def tughlaq(request):             
     return render(request, 'html/tughlaq.html')
+
+
+@login_required(login_url='login')
 def sayyid(request):             
     return render(request, 'html/sayyid.html')
+
+
+@login_required(login_url='login')
 def lodi(request):
     return render(request, 'html/lodi.html')
+
+
+@login_required(login_url='login')
 def bijapur(request):
     return render(request, 'html/bijapur.html')
+
+
+@login_required(login_url='login')
 def barid_shahid_of_bidar(request):
-    return render(request, 'html/barid-shahid-of-bidar.html')     
+    return render(request, 'html/barid-shahid-of-bidar.html') 
+
+
+@login_required(login_url='login')    
 def nizam_shahi_of_ahmadnagar(request):
     return render(request, 'html/nizam-shahi-of-ahmadnagar.html')
+
+
+@login_required(login_url='login')
 def qutb_shahi_of_golconda(request):                  
     return render(request, 'html/qutb-shahi-of-golconda.html')
+
+
+@login_required(login_url='login')
 def mughal(request):             
     return render(request, 'html/mughal.html')
+
+
+@login_required(login_url='login')
 def shershah(request):             
     return render(request, 'html/shershah.html')
+
+
+@login_required(login_url='login')
 def talikota(request):
     return render(request, 'html/talikota.html')
+
+
+@login_required(login_url='login')
 def marathas(request):
     return render(request, 'html/marathas.html')
+
+
+@login_required(login_url='login')
 def bhakti(request):
-    return render(request, 'html/bhakti.html')     
+    return render(request, 'html/bhakti.html') 
+
+
+@login_required(login_url='login')    
 def sikh(request):
     return render(request, 'html/sikh.html')
 
@@ -321,62 +397,67 @@ def sikh(request):
 
 
  # modern dynasties
+@login_required(login_url='login') 
 def portugese(request):               
     return render(request, 'html/portugese.html')
-
+@login_required(login_url='login') 
 def dutch(request):                     
     return render(request, 'html/dutch.html')
-
+@login_required(login_url='login') 
 def danes(request):                     
     return render(request, 'html/danes.html')
-
+@login_required(login_url='login') 
 def french(request):                    
     return render(request, 'html/french.html')
-
+@login_required(login_url='login') 
 def anglo_french(request):              
     return render(request, 'html/anglo-french.html')
-
+@login_required(login_url='login') 
 def plassey(request):                  
     return render(request, 'html/plassey.html')
-
+@login_required(login_url='login') 
 def buxar(request):                     
     return render(request, 'html/buxar.html')
-
+@login_required(login_url='login') 
 def british_expansion(request):         
     return render(request, 'html/british-expansion.html')
-
+@login_required(login_url='login') 
 def mughal_decline(request):            
     return render(request, 'html/mughal-decline.html')
-
+@login_required(login_url='login') 
 def revolt_1857(request):               
     return render(request, 'html/revolt-1857.html')
-
+@login_required(login_url='login') 
 def social_relegious_movement(request): 
     return render(request, 'html/social-religious-movement.html')
-
+@login_required(login_url='login') 
 def indian_nc(request):                 
     return render(request, 'html/indian-nc.html')
-
+@login_required(login_url='login') 
 def bengal_swadeshi(request):          
     return render(request, 'html/bengal-swadeshi.html')
-
+@login_required(login_url='login') 
 def home_rule(request):                
     return render(request, 'html/home-rule.html')
-
+@login_required(login_url='login') 
 def jallianwala_bagh(request):           
     return render(request, 'html/jallianwala-bagh.html')
-
+@login_required(login_url='login') 
 def non_cooperation(request):
     return render(request, 'html/non-cooperation.html')
+@login_required(login_url='login') 
 def plassey(request):
     return render(request, 'html/plassey.html')
+@login_required(login_url='login') 
 def portugese(request):
     return render(request, 'html/portugese.html')
+@login_required(login_url='login') 
 def quit_india_movement(request):
     return render(request, 'html/quit-india-movement.html')
-
+@login_required(login_url='login') 
 def india_independence(request):         
     return render(request, 'html/india-independence.html')
+@login_required(login_url='login') 
 def civil_disobidience(request):        
     return render(request, 'html/civil-disobidience.html')
 
@@ -397,9 +478,7 @@ def medival_culture(request):
 def modern_culture(request):
     return render(request, 'html/modern-culture.html')
 
-@login_required(login_url='login')
-def modern_timeline(request):
-    return render(request, 'html/modern-timeline.html')
+
 
 
 
