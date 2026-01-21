@@ -71,3 +71,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'noreply@bharatdarshan.com'
 
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'

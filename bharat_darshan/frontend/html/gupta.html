@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gupta Empire | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/gupta.css' %}">
 </head>
+
 <body>
   <header class="page-header">
     <h1>Gupta Empire (c. 320 – 550 CE)</h1>
@@ -37,7 +39,9 @@
 
     <section class="info-card">
       <h2>Administration</h2>
-      <p>The Gupta Empire followed a monarchical system with a well-organized bureaucracy. Provinces (Bhuktis) were governed by Uparikas, and districts (Vishayas) were managed by Vishayapatis. Local administration was efficient and supported by guilds.</p>
+      <p>The Gupta Empire followed a monarchical system with a well-organized bureaucracy. Provinces (Bhuktis) were
+        governed by Uparikas, and districts (Vishayas) were managed by Vishayapatis. Local administration was efficient
+        and supported by guilds.</p>
     </section>
 
     <section class="info-card">
@@ -50,15 +54,14 @@
         <li>Introduction of the decimal system and zero in mathematics</li>
       </ul>
     </section>
-
     <section class="map-section">
       <h2>Region Map</h2>
-      <img src="images/gupta-map.jpg" alt="Map of Gupta Empire region">
-    </section>
+      <iframe src="{% url 'gupta_map' %}" style="width:100%; height:450px; border:none;"></iframe>
 
-    <button id="backBtn" class="back-button">← Back to Atlas</button>
+    </section>
   </main>
 
   <script src="{% static 'js/kingdoms.js' %}"></script>
 </body>
+
 </html>
