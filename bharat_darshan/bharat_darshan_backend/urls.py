@@ -115,6 +115,28 @@ urlpatterns = [
     path("", include("accounts.urls")),
 
 
+    #maps
+    #ancient maps
+    path('nanda-map/', views.nanda_map, name='nanda_map'),
+    path('mauryan-map/', views.mauryan_map, name='mauryan_map'),
+    path('shunga-map/', views.shunga_map, name='shunga_map'),
+    path('kanva-map/', views.kanva_map, name='kanva_map'),
+    path('saka-map/', views.saka_map, name='saka_map'),
+    path('indo-greek-map/', views.indo_greek_map, name='indo_greek_map'),
+    path('satvahana-map/', views.satvahana_map, name='satvahana_map'),
+    path('indo-parthians-map/', views.indo_parthians_map, name='indo_parthians_map'),
+    path('kushana-map/', views.kushana_map, name='kushana_map'),
+    path('western-kshatrapas-map/', views.western_kshatrapas_map, name='western_kshatrapas_map'),
+    path('mukharis-map/', views.mukharis_map, name='mukharis_map'),
+    path('gupta-map/', views.gupta_map, name='gupta_map'),
+    path('huna-map/', views.huna_map, name='huna_map'),
+    path('vakataka-map/', views.vakataka_map, name='vakataka_map'),
+    path('harsha-map/', views.harsha_map, name='harsha_map'),
+    path('gauda-map/', views.gauda_map, name='gauda_map'),
+    path('maitraka-map/', views.maitraka_map, name='maitraka_map'),
+    path('gurjara-pratihara-map/', views.gurjara_pratihara_map, name='gurjara_pratihara_map'),
+    path('pala-map/', views.pala_map, name='pala_map'),
+    path('southern-kingdoms-map/', views.southern_kingdoms_map, name='southern_kingdoms_map'),
 ]
 
 

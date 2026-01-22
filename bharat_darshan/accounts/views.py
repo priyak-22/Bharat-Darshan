@@ -490,3 +490,47 @@ def battles(request):
             "is_authenticated": request.user.is_authenticated
         }
     )
+
+
+#maps
+#ANCIENT MAPS
+def nanda_map(request):
+    return render(request, 'Maps/nanda-map.html')
+def mauryan_map(request):
+    return render(request, 'Maps/mauryan-map.html')
+def shunga_map(request):
+    return render(request, 'Maps/shunga-map.html')
+def kanva_map(request):
+    return render(request, 'Maps/kanva-map.html')
+def saka_map(request):
+    return render(request, 'Maps/saka-map.html')
+def indo_greek_map(request):
+    return render(request, 'Maps/indo-greek-map.html')
+def satvahana_map(request):
+    return render(request, 'Maps/satvahana-map.html')
+def indo_parthians_map(request):
+    return render(request, 'Maps/indo-parthians-map.html')  
+def kushana_map(request):
+    return render(request, 'Maps/kushana-map.html')
+def western_kshatrapas_map(request):
+    return render(request, 'Maps/western-kshatrapas-map.html')
+def mukharis_map(request):
+    return render(request, 'Maps/mukharis-map.html')
+def gupta_map(request):
+    return render(request, 'Maps/gupta-map.html')
+def huna_map(request):
+    return render(request, 'Maps/huna-map.html')
+def vakataka_map(request):
+    return render(request, 'Maps/vakataka-map.html')
+def harsha_map(request):
+    return render(request, 'Maps/harsha-map.html')
+def gauda_map(request):
+    return render(request, 'Maps/gauda-map.html')
+def maitraka_map(request):
+    return render(request, 'Maps/maitraka-map.html')
+def gurjara_pratihara_map(request):
+    return render(request, 'Maps/gurjara-pratihara-map.html')
+def pala_map(request):
+    return render(request, 'Maps/pala-map.html')
+def southern_kingdoms_map(request):
+    return render(request, 'Maps/southern-kingdoms-map.html')

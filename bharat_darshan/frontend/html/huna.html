@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Huna Invasions | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/huna.css' %}">
 </head>
+
 <body>
   <header class="page-header">
     <h1>Huna Invasions (Hephthalites)</h1>
@@ -26,12 +28,15 @@
 
     <section class="info-card">
       <h2>Religion</h2>
-      <p>The Hunas followed a mix of local Hindu and Central Asian practices, though some were hostile to Buddhism under Mihirakula’s rule.</p>
+      <p>The Hunas followed a mix of local Hindu and Central Asian practices, though some were hostile to Buddhism under
+        Mihirakula’s rule.</p>
     </section>
 
     <section class="info-card">
       <h2>Administration</h2>
-      <p>The Hunas established short-lived kingdoms across northwestern India. Their rule lacked a centralized structure and was marked by military dominance and local governance by chieftains. They disrupted trade and learning centers during their invasions.</p>
+      <p>The Hunas established short-lived kingdoms across northwestern India. Their rule lacked a centralized structure
+        and was marked by military dominance and local governance by chieftains. They disrupted trade and learning
+        centers during their invasions.</p>
     </section>
 
     <section class="info-card">
@@ -46,11 +51,13 @@
 
     <section class="map-section">
       <h2>Region Map</h2>
-      <img src="images/huna-map.jpg" alt="Map of Huna Invasions in India">
+      <iframe src="{% url 'huna_map' %}" style="width:100%; height:450px; border:none;"></iframe>
+
     </section>
-  
+
   </main>
 
   <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
+
 </html>
