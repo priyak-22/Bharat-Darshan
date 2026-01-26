@@ -1,527 +1,336 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Medieval & Early Modern Cultural Heritage of India</title>
+<title>Medieval Indian Dynasties | Cultural Heritage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="{% static 'css/medivalculture.css' %}">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+   background: url('') no-repeat center center fixed;
+  color: #f4f4f4;
+  font-family: 'Playfair Display', serif;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85), #111),
+  url("https://images.unsplash.com/photo-1609943246327-6e4c5f6d7a0c") center/cover;
+}
+
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid #c9a14a;
+  color: #c9a14a;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 750px;
+  width: 100%;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateY(8px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.section-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.section-btn {
+  flex: 1;
+  border: 1px solid #c9a14a;
+  padding: 18px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.section-btn:hover {
+  background: #2a2a2a;
+}
+
+.section-btn i {
+  font-size: 26px;
+  color: #c9a14a;
+}
+
+.content-box {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  background: #181818;
+  border-left: 4px solid #c9a14a;
+}
+
+.why-box {
+  margin-top: 35px;
+  padding: 20px;
+  border: 1px dashed #c9a14a;
+  background: #1b1b1b;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+</style>
 </head>
+
 <body>
 
+<header>
+  <h1>Cultural Heritage of Medieval Indian Dynasties</h1>
+  <p>Tangible and Intangible traditions across medieval India</p>
+</header>
+
 <div class="container">
+  <div class="card-wrapper">
+    <button class="nav-btn" onclick="prevDynasty()"><i class="fas fa-chevron-left"></i></button>
 
-<!-- PALA -->
-<div class="card active">
-  <h2>Pala Empire</h2>
-  <p class="period">8th – 12th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Nalanda University</li>
-        <li>Bronze sculptures</li>
-      </ul>
+    <div class="card">
+      <h2 id="dynastyName"></h2>
+      <p id="dynastyPeriod"></p>
+
+      <div class="section-buttons">
+        <div class="section-btn" onclick="show('tangible')">
+          <i class="fas fa-landmark"></i>
+          <h4>Tangible Culture</h4>
+        </div>
+        <div class="section-btn" onclick="show('intangible')">
+          <i class="fas fa-om"></i>
+          <h4>Intangible Culture</h4>
+        </div>
+      </div>
+
+      <div class="content-box" id="tangible"></div>
+      <div class="content-box" id="intangible"></div>
+
+      <div class="why-box">
+        <h3>Why it matters</h3>
+        <p id="why"></p>
+      </div>
     </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Tantric Buddhism</li>
-        <li>Patronage of education & arts</li>
-      </ul>
-    </div>
+
+    <button class="nav-btn" onclick="nextDynasty()"><i class="fas fa-chevron-right"></i></button>
   </div>
 </div>
 
-<!-- RASHTRAKUTA -->
-<div class="card">
-  <h2>Rashtrakuta Dynasty</h2>
-  <p class="period">8th – 10th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Ellora cave temples</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Kannada literature & poetry</li>
-      </ul>
-    </div>
-  </div>
-</div>
+<footer>
+  © Digital Atlas of India | Medieval Dynasties Module
+</footer>
 
-<!-- GURJARA -->
-<div class="card">
-  <h2>Gurjara Kingdom</h2>
-  <p class="period">8th – 11th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Temple ruins & forts</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Feudal system & administration</li>
-      </ul>
-    </div>
-  </div>
-</div>
+<script>
+const dynasties = [
+  { name:"Mewar Kingdom", period:"7th–18th CE", 
+    tangible:"Fortresses like Chittorgarh and Kumbhalgarh, royal palaces, temples.",
+    intangible:"Legend of Rajput valor, resistance to invaders, codes of honor.",
+    why:"Symbol of bravery and resilience in North Indian history." },
 
-<!-- CHOLA -->
-<div class="card">
-  <h2>Chola Dynasty</h2>
-  <p class="period">9th – 13th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Brihadeshwara temple</li>
-        <li>Bronze sculptures</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Maritime trade & naval power</li>
-        <li>Tamil literature</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Pala Dynasty", period:"8th–12th CE", 
+    tangible:"Nalanda University, monasteries, Buddhist sculptures.",
+    intangible:"Promotion of Mahayana Buddhism, scholarship and arts.",
+    why:"Significant patrons of Buddhism and learning in eastern India." },
 
-<!-- CHANDELACHAUHAN -->
-<div class="card">
-  <h2>Chandel & Chauhan</h2>
-  <p class="period">9th – 12th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Khajuraho temples</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Rajput traditions & warfare</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Rashtrakuta Dynasty", period:"8th–10th CE", 
+    tangible:"Kailasa temple at Ellora, coinage, inscriptions.",
+    intangible:"Administrative innovations and military prowess.",
+    why:"Major Deccan power influencing art, architecture, and politics." },
 
-<!-- RAJPUT -->
-<div class="card">
-  <h2>Rajput Kingdoms</h2>
-  <p class="period">10th – 16th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Forts and palaces</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Chivalry and Rajput culture</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Gurjara-Pratihara", period:"8th–11th CE", 
+    tangible:"Fortifications, temples, coins.",
+    intangible:"Defended India from Arab invasions, strong administration.",
+    why:"Crucial in preserving Indian culture against foreign invasions." },
 
-<!-- MEWAR -->
-<div class="card">
-  <h2>Mewar Kingdom</h2>
-  <p class="period">7th – 16th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Chittorgarh & Kumbhalgarh forts</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Rajput valor & culture</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Chola Dynasty", period:"9th–13th CE", 
+    tangible:"Grand temples like Brihadeshwara, naval fleets, bronze sculptures.",
+    intangible:"Maritime trade culture, temple rituals, Tamil literature.",
+    why:"Expanded South Indian culture across Southeast Asia." },
 
-<!-- DELHI SULTANATE: MAHMUD OF GHAZNI → GHURID → KHILJI → TUGHLAQ → SAYYID → LODI -->
-<div class="card">
-  <h2>Mahmud of Ghazni</h2>
-  <p class="period">997 – 1030 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Mosques & fortifications</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Patronage of Islamic culture</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Chandel/Chauhan", period:"10th–12th CE", 
+    tangible:"Khajuraho temples, forts.",
+    intangible:"Rajput valor, local governance, patronage of arts.",
+    why:"Notable for architecture and military achievements." },
 
-<div class="card">
-  <h2>Ghurid Dynasty</h2>
-  <p class="period">12th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Fortifications & monuments</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Military administration & culture</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Rajput Kingdoms", period:"10th–16th CE", 
+    tangible:"Palaces, forts, and temples across Rajasthan and north-central India.",
+    intangible:"Warrior ethos, alliances, and courtly culture.",
+    why:"Defined medieval North Indian political and cultural landscape." },
 
-<div class="card">
-  <h2>Khilji Dynasty</h2>
-  <p class="period">1290 – 1320 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Alai Darwaza & fort architecture</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Centralized administration & military reforms</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Mahmud of Ghazni", period:"11th CE", 
+    tangible:"Looted temples, fortresses.",
+    intangible:"Spread of fear and Persian cultural influence.",
+    why:"Marked the start of repeated invasions from Central Asia." },
 
-<div class="card">
-  <h2>Tughlaq Dynasty</h2>
-  <p class="period">1320 – 1414 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Tughlaqabad Fort</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Administrative experiments</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Ghurid Dynasty", period:"12th CE", 
+    tangible:"Qutb Minar, forts.",
+    intangible:"Introduction of organized Muslim rule in northern India.",
+    why:"Foundation for Delhi Sultanate and Islamic influence." },
 
-<div class="card">
-  <h2>Sayyid Dynasty</h2>
-  <p class="period">1414 – 1451 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Mosques & tombs</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Islamic administrative culture</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Kakatiya & Hoysala", period:"12th–14th CE", 
+    tangible:"Warangal Fort, Chennakesava temples, inscriptions.",
+    intangible:"Promotion of Telugu and Kannada literature, art, and administration.",
+    why:"Important South Indian dynasties influencing architecture and culture." },
 
-<div class="card">
-  <h2>Lodi Dynasty</h2>
-  <p class="period">1451 – 1526 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Sikandra Tomb & fortifications</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Centralized governance & Afghan military traditions</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Delhi Sultanate", period:"1206–1526 CE", 
+    tangible:"Qutb Minar, Alai Darwaza, mosques and forts.",
+    intangible:"Spread of Islam, administrative reforms, cultural fusion.",
+    why:"Established Islamic governance and new cultural traditions in India." },
 
-<!-- SHERSHAH & MUGHAL -->
-<div class="card">
-  <h2>Shershah Suri</h2>
-  <p class="period">1540 – 1545 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Grand Trunk Road</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Efficient administration & revenue system</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Khilji Dynasty", period:"1290–1320 CE", 
+    tangible:"Forts and market structures.",
+    intangible:"Expansionist policies, economic reforms, strong army.",
+    why:"Extended Delhi Sultanate influence to South India." },
 
-<div class="card">
-  <h2>Mughal Empire</h2>
-  <p class="period">1526 – 1857 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>>Taj Mahal, Red Fort</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Persian art, music, & administration</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Tughlaq Dynasty", period:"1320–1414 CE", 
+    tangible:"Firoz Shah Kotla, city planning.",
+    intangible:"Ambitious revenue and administrative reforms.",
+    why:"Attempted centralized governance and infrastructural growth." },
 
-<!-- DECCAN SULTANATES -->
-<div class="card">
-  <h2>Bahmani Sultanate</h2>
-  <p class="period">1347 – 1527 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Forts & mosques</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Persianized administration</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Bahmani Sultanate", period:"1347–1527 CE", 
+    tangible:"Bidar and Gulbarga forts, mosques.",
+    intangible:"Promoted Deccan culture, Persian art, and administration.",
+    why:"Important Deccan power fostering regional culture." },
 
-<div class="card">
-  <h2>Kakatiya & Hoysala</h2>
-  <p class="period">12th – 14th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Warangal fort & Hoysala temples</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Trade & administration</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Vijayanagar Empire", period:"14th–17th CE", 
+    tangible:"Hampi ruins, temples, irrigation systems.",
+    intangible:"Promotion of Hindu culture, literature, and trade.",
+    why:"Major South Indian empire preserving culture under threat of invasions." },
 
-<div class="card">
-  <h2>Bijapur Sultanate</h2>
-  <p class="period">1490 – 1686 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Gol Gumbaz & forts</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Deccan music & arts</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Sayyid Dynasty", period:"1414–1451 CE", 
+    tangible:"Fortifications and coins.",
+    intangible:"Continued Delhi Sultanate administration.",
+    why:"Maintained political stability during a transitional period." },
 
-<div class="card">
-  <h2>Barid Shahis of Bidar</h2>
-  <p class="period">1489 – 1619 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Bidar Fort</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Deccan administration & culture</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Lodi Dynasty", period:"1451–1526 CE", 
+    tangible:"Tombs, forts, and city planning in Delhi.",
+    intangible:"Pashtun cultural influences, central administration.",
+    why:"Last dynasty of Delhi Sultanate before Mughal rule." },
 
-<div class="card">
-  <h2>Nizam Shahi of Ahmadnagar</h2>
-  <p class="period">1490 – 1636 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Ahmadnagar forts & mosques</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Court culture & Persian influence</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Bijapur Sultanate", period:"1489–1686 CE", 
+    tangible:"Gol Gumbaz, mosques, palaces.",
+    intangible:"Persianate culture, Deccan administration.",
+    why:"Prominent Deccan Sultanate influencing art and architecture." },
 
-<div class="card">
-  <h2>Qutb Shahi of Golconda</h2>
-  <p class="period">1518 – 1687 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Golconda Fort</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Persianate culture & trade</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Barid Shahis of Bidar", period:"1489–1619 CE", 
+    tangible:"Bidar Fort, palaces.",
+    intangible:"Local governance, cultural patronage.",
+    why:"Part of Deccan Sultanates consolidating regional power." },
 
-<div class="card">
-  <h2>Vijayanagar Empire</h2>
-  <p class="period">1336 – 1646 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Hampi ruins</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Trade, religion & administration</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Nizam Shahi of Ahmadnagar", period:"1490–1636 CE", 
+    tangible:"Fortresses and mosques.",
+    intangible:"Deccan administration and military campaigns.",
+    why:"Resisted Mughal expansion and contributed to Deccan politics." },
 
-<div class="card">
-  <h2>Talikota Battle / End of Medieval Kingdoms</h2>
-  <p class="period">1565 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Battle site remains</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Decline of Deccan kingdoms</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Qutb Shahi of Golconda", period:"1518–1687 CE", 
+    tangible:"Golconda Fort, Charminar.",
+    intangible:"Persian-Telugu cultural fusion, diamond trade.",
+    why:"Founded Hyderabad and influenced Deccan culture." },
 
-<!-- MARATHAS, BHAKTI, SIKH -->
-<div class="card">
-  <h2>Marathas</h2>
-  <p class="period">1674 – 1818 CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Raigad Fort & forts across Maharashtra</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Guerrilla warfare & administration</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Mughal Empire", period:"1526–1857 CE", 
+    tangible:"Taj Mahal, Red Fort, mosques, forts.",
+    intangible:"Persian-influenced art, architecture, administration, literature.",
+    why:"One of the largest empires in India shaping modern history." },
 
-<div class="card">
-  <h2>Bhakti Movement</h2>
-  <p class="period">14th – 17th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Temples & devotional sites</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Devotional poetry & music</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Sher Shah Suri", period:"1540–1545 CE", 
+    tangible:"Rohtas Fort, roads (Grand Trunk Road).",
+    intangible:"Efficient administration and land revenue system.",
+    why:"Introduced reforms still influential in India." },
 
-<div class="card">
-  <h2>Sikh Gurus & Sikh Kingdoms</h2>
-  <p class="period">15th – 18th Century CE</p>
-  <div class="grid">
-    <div class="box">
-      <h3>Tangible Heritage</h3>
-      <ul>
-        <li>Golden Temple & forts</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>Intangible Heritage</h3>
-      <ul>
-        <li>Gurbani, martial tradition & administration</li>
-      </ul>
-    </div>
-  </div>
-</div>
+  { name:"Talikota Kingdoms", period:"1565 CE", 
+    tangible:"Battlefields, ruined cities.",
+    intangible:"Shift in Deccan power dynamics.",
+    why:"Defeat of Vijayanagar marked major political change in South India." },
 
-</div>
-<script src="{% static 'js/mec.js' %}">
+  { name:"Bhakti Movement", period:"14th–17th CE", 
+    tangible:"Temples, devotional manuscripts.",
+    intangible:"Spread of devotion, vernacular literature, spiritual reform.",
+    why:"Shaped social and religious thought in medieval India." },
+
+  { name:"Sikh Gurus", period:"15th–18th CE", 
+    tangible:"Gurdwaras, manuscripts.",
+    intangible:"Teachings of Sikhism, community institutions.",
+    why:"Provided spiritual and social framework influencing Punjab." },
+
+  { name:"End of Medieval Period", period:"16th CE onwards", 
+    tangible:"Transition in forts, architecture.",
+    intangible:"Shift from medieval governance to early modern structures.",
+    why:"Marks transition to modern Indian political era." },
+
+  { name:"Marathas", period:"17th–19th CE", 
+    tangible:"Fortresses, palaces, temples.",
+    intangible:"Military organization, administration, regional influence.",
+    why:"Important power in India resisting Mughals and influencing Maratha Confederacy." }
+];
+
+let i = 0;
+
+function load() {
+  document.getElementById("dynastyName").innerText = dynasties[i].name;
+  document.getElementById("dynastyPeriod").innerText = dynasties[i].period;
+  document.getElementById("tangible").innerText = dynasties[i].tangible;
+  document.getElementById("intangible").innerText = dynasties[i].intangible;
+  document.getElementById("why").innerText = dynasties[i].why;
+}
+
+function nextDynasty() {
+  i = (i + 1) % dynasties.length;
+  hide();
+  load();
+}
+
+function prevDynasty() {
+  i = (i - 1 + dynasties.length) % dynasties.length;
+  hide();
+  load();
+}
+
+function show(id) {
+  hide();
+  document.getElementById(id).style.display = "block";
+}
+
+function hide() {
+  document.getElementById("tangible").style.display = "none";
+  document.getElementById("intangible").style.display = "none";
+}
+
+load();
 </script>
+
 </body>
 </html>
