@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background: #111;
+  background: #111,
+  url("https://plus.unsplash.com/premium_photo-1691763916216-d64cfad0f42e");
   color: #f4f4f4;
   font-family: 'Playfair Display', serif;
 }
