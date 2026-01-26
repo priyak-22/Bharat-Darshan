@@ -14,14 +14,14 @@ body {
   position: relative;
 
   /* Background image with fade effect */
-  background: url('https://wallpapercat.com/w/full/e/b/d/32661-3840x2160-desktop-4k-india-background.jpg') no-repeat center center fixed;
+  background: url("/static/Data/modern_background.jpg") no-repeat center center fixed;
   background-size: cover;
 
   /* Blackish-brown gradient overlay fading from left */
   background-image:
     linear-gradient(to right, rgba(20, 12, 8, 0.85) 0%, rgba(20, 12, 8, 0) 50%),
     /* left dark fade */
-    url('https://wallpapercat.com/w/full/e/b/d/32661-3840x2160-desktop-4k-india-background.jpg');
+    url("/static/Data/modern_background.jpg");
 
   background-blend-mode:multiply;
   /* multiplies dark overlay with image */

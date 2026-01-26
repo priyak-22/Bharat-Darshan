@@ -13,14 +13,14 @@ body {
   position: relative;
 
   /* Background image with fade effect */
-  background: url('https://wallpapercave.com/wp/wp8670202.jpg') no-repeat center center fixed;
+  background: url("/static/Data/ancient_timeline.jpg") no-repeat center center fixed;
   background-size: cover;
 
   /* Blackish-brown gradient overlay fading from left */
   background-image:
     linear-gradient(to right, rgba(20, 12, 8, 0.85) 0%, rgba(20, 12, 8, 0) 50%),
     /* left dark fade */
-    url('https://wallpapercave.com/wp/wp8670202.jpg');
+    url("/static/Data/ancient_timeline.jpg");
 
   background-blend-mode:multiply;
   /* multiplies dark overlay with image */
