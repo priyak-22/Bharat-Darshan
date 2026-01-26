@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,108 +8,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-body {
-  margin: 0;
-  background: #111;
-  color: #f4f4f4;
-  font-family: 'Playfair Display', serif;
-}
-
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.85), #111),
-  url("https://images.unsplash.com/photo-1609943246327-6e4c5f6d7a0c") center/cover;
-}
-
-header h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 36px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.card-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.nav-btn {
-  background: none;
-  border: 1px solid #c9a14a;
-  color: #c9a14a;
-  font-size: 22px;
-  padding: 10px 14px;
-  cursor: pointer;
-}
-
-.card {
-  max-width: 750px;
-  width: 100%;
-  background: #1e1e1e;
-  padding: 30px;
-  border-radius: 10px;
-  animation: fade 0.4s ease;
-}
-
-@keyframes fade {
-  from {opacity: 0; transform: translateY(8px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-.section-buttons {
-  display: flex;
-  gap: 20px;
-  margin-top: 25px;
-}
-
-.section-btn {
-  flex: 1;
-  border: 1px solid #c9a14a;
-  padding: 18px;
-  cursor: pointer;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.section-btn:hover {
-  background: #2a2a2a;
-}
-
-.section-btn i {
-  font-size: 26px;
-  color: #c9a14a;
-}
-
-.content-box {
-  display: none;
-  margin-top: 25px;
-  padding: 20px;
-  background: #181818;
-  border-left: 4px solid #c9a14a;
-}
-
-.why-box {
-  margin-top: 35px;
-  padding: 20px;
-  border: 1px dashed #c9a14a;
-  background: #1b1b1b;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.7;
-}
-</style>
+<link rel="stylesheet" href="{% static 'css/modernculture.css' %}">
 </head>
 
 <body>
@@ -120,18 +20,20 @@ footer {
 
 <div class="container">
   <div class="card-wrapper">
-    <button class="nav-btn" onclick="prevEvent()"><i class="fas fa-chevron-left"></i></button>
+    <button class="nav-btn" onclick="prevEvent()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
 
     <div class="card">
       <h2 id="eventName"></h2>
       <p id="eventPeriod"></p>
 
       <div class="section-buttons">
-        <div class="section-btn" onclick="show('tangible')">
+        <div class="section-btn" onclick="showSection('tangible')">
           <i class="fas fa-landmark"></i>
           <h4>Tangible</h4>
         </div>
-        <div class="section-btn" onclick="show('intangible')">
+        <div class="section-btn" onclick="showSection('intangible')">
           <i class="fas fa-om"></i>
           <h4>Intangible</h4>
         </div>
@@ -146,7 +48,9 @@ footer {
       </div>
     </div>
 
-    <button class="nav-btn" onclick="nextEvent()"><i class="fas fa-chevron-right"></i></button>
+    <button class="nav-btn" onclick="nextEvent()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
   </div>
 </div>
 
@@ -155,60 +59,27 @@ footer {
 </footer>
 
 <script>
-const events = [
-  { name:"Portuguese in India", period:"1498–17th century", tangible:"Fortresses, ports", intangible:"Maritime trade influence", why:"First European colonial power in India", url:"{% url 'portugese' %}" },
-  { name:"Dutch in India", period:"1602–18th century", tangible:"Trading posts", intangible:"Trade networks", why:"Influenced commerce and culture", url:"{% url 'dutch' %}" },
-  { name:"Danes in India", period:"1620–19th century", tangible:"Colonial settlements", intangible:"Trade practices", why:"Small colonial presence", url:"{% url 'danes' %}" },
-  { name:"French in India", period:"1668–18th century", tangible:"Fortified cities", intangible:"Cultural influence", why:"Rival of British", url:"{% url 'french' %}" },
-  { name:"Anglo-French Conflicts", period:"1750–1763", tangible:"Battlefields", intangible:"Political treaties", why:"Determined colonial dominance", url:"{% url 'anglo_french' %}" },
-  { name:"Plassey Battle", period:"1757", tangible:"Fortifications", intangible:"Political shift", why:"Start of British political control", url:"{% url 'plassey' %}" },
-  { name:"Buxar Battle", period:"1764", tangible:"Battlefields", intangible:"Consolidation of British power", why:"Secured Bengal under British", url:"{% url 'buxar' %}" },
-  { name:"British Expansion", period:"1765–1857", tangible:"Administrative buildings", intangible:"Colonial administration", why:"Expansion of East India Company", url:"{% url 'british' %}" },
-  { name:"Mughal Decline", period:"1707–1857", tangible:"Palaces & forts", intangible:"Political vacuum", why:"Allowed British expansion", url:"{% url 'mughal_decline' %}" },
-  { name:"Bengal Swadeshi Movement", period:"1905–1911", tangible:"Pamphlets, newspapers", intangible:"Nationalist sentiment", why:"First mass movement of economic protest", url:"{% url 'bengal_swadeshi' %}" },
-  { name:"Indian National Congress", period:"1885 onwards", tangible:"Meeting halls", intangible:"Political mobilization", why:"Organized freedom struggle", url:"{% url 'indian_nc' %}" },
-  { name:"Non-Cooperation Movement", period:"1920–1922", tangible:"Protests, rallies", intangible:"Civil disobedience spirit", why:"Nationwide participation against British", url:"{% url 'non_cooperation' %}" },
-  { name:"Civil Disobedience Movement", period:"1930–1934", tangible:"Salt March, picketing", intangible:"Mass civil resistance", why:"Key movement against colonial laws", url:"{% url 'civil_disobidience' %}" },
-  { name:"Home Rule Movement", period:"1916–1918", tangible:"Meetings, leaflets", intangible:"Political awareness", why:"Spread political consciousness", url:"{% url 'home_rule' %}" },
-  { name:"Jallianwala Bagh Massacre", period:"1919", tangible:"Amritsar site", intangible:"National outrage", why:"Symbol of colonial oppression", url:"{% url 'jallianwala_bagh' %}" },
-  { name:"Quit India Movement", period:"1942", tangible:"Protests", intangible:"Mass civil disobedience", why:"Final large-scale campaign for independence", url:"{% url 'quit_india_movement' %}" },
-  { name:"India Independence", period:"1947", tangible:"Government institutions", intangible:"Freedom & sovereignty", why:"End of British rule", url:"{% url 'india_independence' %}" }
-];
-
-let i = 0;
-
-function load() {
-  document.getElementById("eventName").innerText = events[i].name;
-  document.getElementById("eventPeriod").innerText = events[i].period;
-  document.getElementById("tangible").innerText = events[i].tangible;
-  document.getElementById("intangible").innerText = events[i].intangible;
-  document.getElementById("why").innerText = events[i].why;
-}
-
-function nextEvent() {
-  i = (i + 1) % events.length;
-  hide();
-  load();
-}
-
-function prevEvent() {
-  i = (i - 1 + events.length) % events.length;
-  hide();
-  load();
-}
-
-function show(id) {
-  hide();
-  document.getElementById(id).style.display = "block";
-}
-
-function hide() {
-  document.getElementById("tangible").style.display = "none";
-  document.getElementById("intangible").style.display = "none";
-}
-
-load();
+  const eventUrls = {
+    portugese: "{% url 'portugese' %}",
+    dutch: "{% url 'dutch' %}",
+    danes: "{% url 'danes' %}",
+    french: "{% url 'french' %}",
+    anglo_french: "{% url 'anglo_french' %}",
+    plassey: "{% url 'plassey' %}",
+    buxar: "{% url 'buxar' %}",
+    british: "{% url 'british' %}",
+    mughal_decline: "{% url 'mughal_decline' %}",
+    bengal_swadeshi: "{% url 'bengal_swadeshi' %}",
+    indian_nc: "{% url 'indian_nc' %}",
+    non_cooperation: "{% url 'non_cooperation' %}",
+    civil_disobidience: "{% url 'civil_disobidience' %}",
+    home_rule: "{% url 'home_rule' %}",
+    jallianwala_bagh: "{% url 'jallianwala_bagh' %}",
+    quit_india_movement: "{% url 'quit_india_movement' %}",
+    india_independence: "{% url 'india_independence' %}"
+  };
 </script>
 
+<script src="{% static 'js/moc.js' %}"></script>
 </body>
 </html>
