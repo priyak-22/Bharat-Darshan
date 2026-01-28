@@ -1,43 +1,82 @@
 const events = [
-  { name:"Portuguese in India", period:"1498–17th century", tangible:"Fortresses, ports", intangible:"Maritime trade influence", why:"First European colonial power in India" },
-  { name:"Dutch in India", period:"1602–18th century", tangible:"Trading posts", intangible:"Trade networks", why:"Influenced commerce and culture" },
-  { name:"Danes in India", period:"1620–19th century", tangible:"Colonial settlements", intangible:"Trade practices", why:"Small colonial presence" },
-  { name:"French in India", period:"1668–18th century", tangible:"Fortified cities", intangible:"Cultural influence", why:"Rival of British" },
-  { name:"Anglo-French Conflicts", period:"1750–1763", tangible:"Battlefields", intangible:"Political treaties", why:"Determined colonial dominance" },
-  { name:"Battle of Plassey", period:"1757", tangible:"Fortifications", intangible:"Political shift", why:"Start of British political control" },
-  { name:"Battle of Buxar", period:"1764", tangible:"Battlefields", intangible:"British consolidation", why:"Secured Bengal under British" },
-  { name:"British Expansion", period:"1765–1857", tangible:"Administrative buildings", intangible:"Colonial governance", why:"Company rule expansion" },
-  { name:"Mughal Decline", period:"1707–1857", tangible:"Palaces & forts", intangible:"Political vacuum", why:"Enabled British dominance" },
-  { name:"Bengal Swadeshi Movement", period:"1905–1911", tangible:"Pamphlets", intangible:"Nationalism", why:"Economic resistance" },
-  { name:"Indian National Congress", period:"1885 onwards", tangible:"Meeting halls", intangible:"Political unity", why:"Organized freedom struggle" },
-  { name:"Non-Cooperation Movement", period:"1920–1922", tangible:"Protests", intangible:"Civil resistance", why:"Mass participation" },
-  { name:"Civil Disobedience Movement", period:"1930–1934", tangible:"Salt March", intangible:"Defiance of laws", why:"Challenged colonial authority" },
-  { name:"Home Rule Movement", period:"1916–1918", tangible:"Meetings", intangible:"Political awareness", why:"Demand for self-rule" },
-  { name:"Jallianwala Bagh", period:"1919", tangible:"Memorial site", intangible:"National outrage", why:"Turning point in struggle" },
-  { name:"Quit India Movement", period:"1942", tangible:"Protests", intangible:"Mass uprising", why:"Final independence push" },
-  { name:"Indian Independence", period:"1947", tangible:"Institutions", intangible:"Sovereignty", why:"End of British rule" }
+  { name:"Portuguese in India", period:"1498–17th century", 
+    tangible:[{img:"images/portuguese_fort.jpg", text:"Fortresses and ports"}], 
+    intangible:[{img:"images/portuguese_trade.jpg", text:"Maritime trade influence"}] },
+
+  { name:"Dutch in India", period:"1602–18th century", 
+    tangible:[{img:"images/dutch_post.jpg", text:"Trading posts"}], 
+    intangible:[{img:"images/dutch_trade.jpg", text:"Trade networks"}] },
+
+  { name:"Danes in India", period:"1620–19th century", 
+    tangible:[{img:"images/danish_settlement.jpg", text:"Colonial settlements"}], 
+    intangible:[{img:"images/danish_trade.jpg", text:"Trade practices"}] },
+
+  { name:"French in India", period:"1668–18th century", 
+    tangible:[{img:"images/french_fort.jpg", text:"Fortified cities"}], 
+    intangible:[{img:"images/french_culture.jpg", text:"Cultural influence"}] },
+
+  { name:"Anglo-French Conflicts", period:"1750–1763", 
+    tangible:[{img:"images/battlefield.jpg", text:"Battlefields"}], 
+    intangible:[{img:"images/political_treaties.jpg", text:"Political treaties"}] },
+
+  { name:"Battle of Plassey", period:"1757", 
+    tangible:[{img:"images/plassey_fort.jpg", text:"Fortifications"}], 
+    intangible:[{img:"images/political_shift.jpg", text:"Political shift"}] },
+
+  { name:"Battle of Buxar", period:"1764", 
+    tangible:[{img:"images/buxar.jpg", text:"Battlefields"}], 
+    intangible:[{img:"images/british_consolidation.jpg", text:"British consolidation"}] },
+
+  { name:"British Expansion", period:"1765–1857", 
+    tangible:[{img:"images/admin_building.jpg", text:"Administrative buildings"}], 
+    intangible:[{img:"images/colonial_governance.jpg", text:"Colonial governance"}] },
+
+  { name:"Mughal Decline", period:"1707–1857", 
+    tangible:[{img:"images/mughal_palace.jpg", text:"Palaces & forts"}], 
+    intangible:[{img:"images/political_vacuum.jpg", text:"Political vacuum"}] },
+
+  { name:"Indian Independence", period:"1947", 
+    tangible:[{img:"images/independence_buildings.jpg", text:"Institutions"}], 
+    intangible:[{img:"images/sovereignty.jpg", text:"Sovereignty"}] }
 ];
 
 let i = 0;
+let tIndex = 0;
+let itIndex = 0;
 
 function load() {
-  document.getElementById("eventName").innerText = events[i].name;
-  document.getElementById("eventPeriod").innerText = events[i].period;
-  document.getElementById("tangible").innerText = events[i].tangible;
-  document.getElementById("intangible").innerText = events[i].intangible;
-  document.getElementById("why").innerText = events[i].why;
+  const e = events[i];
+  document.getElementById("eventName").innerText = e.name;
+  document.getElementById("eventPeriod").innerText = e.period;
+
+  tIndex = 0;
+  itIndex = 0;
+
+  loadTangible();
+  loadIntangible();
+  hideSections(); // hide both at start
 }
 
-function nextEvent() {
-  i = (i + 1) % events.length;
-  hideSections();
-  load();
+function loadTangible() {
+  const item = events[i].tangible[tIndex];
+  document.getElementById("tangibleImg").src = item.img;
+  document.getElementById("tangibleText").innerText = item.text;
 }
 
-function prevEvent() {
-  i = (i - 1 + events.length) % events.length;
-  hideSections();
-  load();
+function loadIntangible() {
+  const item = events[i].intangible[itIndex];
+  document.getElementById("intangibleImg").src = item.img;
+  document.getElementById("intangibleText").innerText = item.text;
+}
+
+function nextTangible() {
+  tIndex = (tIndex + 1) % events[i].tangible.length;
+  loadTangible();
+}
+
+function nextIntangible() {
+  itIndex = (itIndex + 1) % events[i].intangible.length;
+  loadIntangible();
 }
 
 function showSection(id) {
@@ -50,4 +89,15 @@ function hideSections() {
   document.getElementById("intangible").style.display = "none";
 }
 
+function nextEvent() {
+  i = (i + 1) % events.length;
+  load();
+}
+
+function prevEvent() {
+  i = (i - 1 + events.length) % events.length;
+  load();
+}
+
+// Initialize page
 load();

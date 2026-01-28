@@ -39,12 +39,14 @@
         </div>
       </div>
 
-      <div class="content-box" id="tangible"></div>
-      <div class="content-box" id="intangible"></div>
+      <div class="content-box" id="tangible">
+        <img id="tangibleImg" class="heritage-img" onclick="nextTangible()" />
+        <p id="tangibleText"></p>
+      </div>
 
-      <div class="why-box">
-        <h3>Why it matters</h3>
-        <p id="why"></p>
+      <div class="content-box" id="intangible">
+        <img id="intangibleImg" class="heritage-img" onclick="nextIntangible()" />
+        <p id="intangibleText"></p>
       </div>
     </div>
 
@@ -57,28 +59,6 @@
 <footer>
   © Digital Atlas of India | Modern History Module
 </footer>
-
-<script>
-  const eventUrls = {
-    portugese: "{% url 'portugese' %}",
-    dutch: "{% url 'dutch' %}",
-    danes: "{% url 'danes' %}",
-    french: "{% url 'french' %}",
-    anglo_french: "{% url 'anglo_french' %}",
-    plassey: "{% url 'plassey' %}",
-    buxar: "{% url 'buxar' %}",
-    british: "{% url 'british' %}",
-    mughal_decline: "{% url 'mughal_decline' %}",
-    bengal_swadeshi: "{% url 'bengal_swadeshi' %}",
-    indian_nc: "{% url 'indian_nc' %}",
-    non_cooperation: "{% url 'non_cooperation' %}",
-    civil_disobidience: "{% url 'civil_disobidience' %}",
-    home_rule: "{% url 'home_rule' %}",
-    jallianwala_bagh: "{% url 'jallianwala_bagh' %}",
-    quit_india_movement: "{% url 'quit_india_movement' %}",
-    india_independence: "{% url 'india_independence' %}"
-  };
-</script>
 
 <script src="{% static 'js/moc.js' %}"></script>
 </body>
