@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background: #111;
+  background: #111,
+  url("https://plus.unsplash.com/premium_photo-1691763916216-d64cfad0f42e");
   color: #f4f4f4;
   font-family: 'Playfair Display', serif;
 }
@@ -16,6 +17,20 @@ header h1 {
   font-family: 'Cinzel', serif;
   font-size: 36px;
 }
+.heritage-img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.content-box p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 
 .container {
   max-width: 1100px;
@@ -86,12 +101,7 @@ header h1 {
   border-left: 4px solid #c9a14a;
 }
 
-.why-box {
-  margin-top: 35px;
-  padding: 20px;
-  border: 1px dashed #c9a14a;
-  background: #1b1b1b;
-}
+
 
 footer {
   text-align: center;
