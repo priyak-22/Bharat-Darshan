@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nanda Dynasty | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/nanda.css' %}">
 </head>
+
 <body>
   <header class="page-header">
     <h1>Nanda Dynasty (c. 345–321 BCE)</h1>
@@ -20,41 +22,99 @@
     </section>
 
     <section class="info-card">
-      <h2>Notable Rulers</h2>
-      <ul>
-        <li>Mahapadma Nanda (Founder)</li>
-        <li>Dhana Nanda (last ruler, defeated by Chandragupta Maurya)</li>
-      </ul>
+      <h2>Background</h2>
+      <p>The Nanda Empire was an ancient Indian dynasty that ruled northern India from approximately 345 BCE to 321 BCE.
+        It emerged as a powerful successor to the Shishunaga dynasty in the Magadha region (modern-day Bihar). The
+        empire is notable for its vast wealth, large army, and administrative reforms, but it was short-lived, lasting
+        about 24 years. It was overthrown by Chandragupta Maurya, founder of the Maurya Empire, with the help of the
+        strategist Chanakya (Kautilya). Historical accounts come from ancient texts like the Puranas, Buddhist
+        scriptures, and Greek sources such as those from Alexander the Great's campaign.</p>
+    </section>
+    <section class="info-card">
+      <h2>Founding and Rise</h2>
+      <p>Founder: Mahapadma Nanda, a low-born (possibly barber or sudra caste) ruler who usurped power from the
+        Shishunaga dynasty around 345 BCE. He is credited with expanding the empire through conquests.
+        Territory: Centered in Magadha, it extended across much of northern India, including parts of present-day Uttar
+        Pradesh, Bihar, and possibly Bengal. The capital was Pataliputra (modern Patna).
+        Key Achievements: Mahapadma is described in legends as a ruthless conqueror who defeated many kings, amassing
+        great wealth. The empire is said to have had a standing army of 200,000 infantry, 20,000 cavalry, 2,000
+        chariots, and 3,000 elephants, making it one of the largest in ancient India.</p>
     </section>
 
     <section class="info-card">
-      <h2>Religion</h2>
-      <p>Primarily Hinduism</p>
+      <h2>Economy and Administration</h2>
+      <img src="{% static 'Data/MauryanCoin.jpeg' %}" alt="Nanda Army">
+      <p>Wealth: The Nandas were extraordinarily rich, with legends claiming Mahapadma collected taxes from 60,000
+        villages and hoarded gold. Greek historian Plutarch noted their wealth rivaling that of the Persians.
+        Administration: They implemented centralized governance, including a sophisticated tax system and bureaucracy.
+        Chanakya's Arthashastra (though written later) may reflect some Nanda-era practices, such as espionage and
+        economic policies.
+        Military: The empire maintained a massive army, as reported by Greek sources during Alexander's invasion
+        (327–325 BCE). Alexander's army reportedly refused to advance further due to the Nandas' strength, leading to a
+        treaty.</p>
     </section>
 
-    <section class="info-card">
-      <h2>Administration</h2>
-      <p>The Nandas established a strong centralized state with immense wealth and a powerful army. They maintained a complex taxation system and extensive bureaucracy inherited from the Magadhan tradition.</p>
-    </section>
+      <section class="info-card">
+        <h2>Notable Rulers</h2>
+        <ul>
+          <li>Mahapadma Nanda (Founder)</li>
+          <li>Pandhuka</li>
+          <li>Panghupati</li>
+          <li>Bhutapala</li>
+          <li>Rashtrapala</li>
+          <li>Govishanaka</li>
+          <li>Dashasiddhaka</li>
+          <li>Kaivarta</li>
+          <li>Dhana Nanda (Dhidara, last ruler, defeated by Chandragupta Maurya)</li>
+        </ul>
+      </section>
 
-    <section class="info-card">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Expanded Magadha’s territory through conquest and diplomacy</li>
-        <li>Maintained one of the largest standing armies in ancient India</li>
-        <li>Strengthened economic prosperity through efficient administration</li>
-        <li>Laid the foundation for the Mauryan Empire</li>
-      </ul>
-    </section>
+      <section class="info-card">
+        <h2>Religion</h2>
+        <p>Primarily Hinduism</p>
+      </section>
 
-    <section class="map-section">
-      <h2>Region Map</h2>
-      <iframe src="{% url 'nanda_map' %}" style="width:100%; height:450px; border:none;"></iframe>
 
-    </section>
-    
+      <section class="info-card">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Expanded Magadha’s territory through conquest and diplomacy</li>
+          <li>Maintained one of the largest standing armies in ancient India</li>
+          <li>Strengthened economic prosperity through efficient administration</li>
+          <li>Laid the foundation for the Mauryan Empire</li>
+        </ul>
+      </section>
+
+      <section class="info-card">
+        <h2>Decline and Fall</h2>
+        <p>Overthrow: In 321 BCE, Dhidara Nanda was defeated by Chandragupta Maurya, aided by Chanakya. Chanakya,
+          insulted by Dhidara, sought revenge and trained Chandragupta to usurp the throne.
+          Reasons for Fall: Internal weaknesses, such as corruption and unpopularity due to caste prejudices, combined
+          with external threats. The empire's short duration suggests instability.
+          Legacy: The Nandas paved the way for the Maurya Empire, which adopted and expanded their administrative
+          systems. They are remembered in Indian history for their opulence and as a cautionary tale of hubris.</p>
+      </section>
+
+      <section class="info-card">
+        <h2>Historical Sources and Evidence</h2>
+        <p>Primary Sources: Puranas (e.g., Vishnu Purana), Buddhist texts (e.g., Mahavamsa), and Jain scriptures provide
+          dynastic lists and legends.
+          Greek Accounts: Historians like Megasthenes (ambassador to Chandragupta) and Plutarch describe the Nandas'
+          wealth and army.
+          Archaeological Evidence: Limited; Pataliputra's ruins date to this period, but direct Nanda artifacts are
+          scarce. Coins attributed to the Nandas exist, but attribution is debated.
+          Controversies: Some historians question the dynasty's existence or extent, suggesting it might be exaggerated
+          in later texts. Modern scholarship, like that of Romila Thapar, views them as transitional rulers.</p>
+      </section>
+      <section class="map-section">
+        <h2>Region Map</h2>
+        <iframe src="{% url 'nanda_map' %}" style="width:100%; height:450px; border:none;"></iframe>
+
+      </section>
+
   </main>
 
   <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
+
 </html>

@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saka Dynasty | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/saka.css' %}">
 </head>
+
 <body>
   <header class="page-header">
     <h1>Saka Dynasty (c. 2nd century BCE – 4th century CE)</h1>
@@ -31,13 +33,25 @@
     </section>
 
     <section class="info-card">
+      <h2>Notable Rulers</h2>
+      <ul>
+        <li>Maues (Moga)</li>
+        <li>Azes I & II</li>
+        <li>Nahapana</li>
+        <li>Chashtana</li>
+        <li>Rudradaman I</li>
+      </ul>
+    </section>
+
+    <section class="info-card">
       <h2>Religion</h2>
       <p>Hinduism, Buddhism, and Zoroastrian influences</p>
     </section>
 
     <section class="info-card">
       <h2>Administration</h2>
-      <p>The Sakas established regional kingdoms ruled by satraps (governors). They adopted Indian titles and administration while maintaining Central Asian traditions.</p>
+      <p>The Sakas established regional kingdoms ruled by satraps (governors). They adopted Indian titles and
+        administration while maintaining Central Asian traditions.</p>
     </section>
 
     <section class="info-card">
@@ -55,8 +69,11 @@
       <iframe src="{% url 'saka_map' %}" style="width:100%; height:450px; border:none;"></iframe>
 
     </section>
+
+
   </main>
 
   <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
+
 </html>
