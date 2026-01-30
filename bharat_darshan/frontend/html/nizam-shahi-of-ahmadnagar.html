@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nanda Dynasty | Digital Atlas of India</title>
+  <title>Nizamshahi | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/nizam-shahi-of-ahmadnagar.css' %}">
 </head>
 <body>
@@ -49,10 +49,10 @@
 
     <section class="map-section">
       <h2>Region Map</h2>
-      <img src="images/nanda-map.jpg" alt="Map of Nanda Dynasty region">
+       <iframe src="{% url 'nizam-shahi-of-ahmadnagar-map' %}" style="width:100%; height:450px; border:none;"></iframe>
     </section>
 
-    <button id="backBtn" class="back-button">← Back to Atlas</button>
+   
   </main>
 
   <script src="{% static 'js/kingdom.js' %}"></script>
