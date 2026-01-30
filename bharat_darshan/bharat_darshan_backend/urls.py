@@ -137,6 +137,43 @@ urlpatterns = [
     path('gurjara-pratihara-map/', views.gurjara_pratihara_map, name='gurjara_pratihara_map'),
     path('pala-map/', views.pala_map, name='pala_map'),
     path('southern-kingdoms-map/', views.southern_kingdoms_map, name='southern_kingdoms_map'),
+
+
+
+    #Medival Maps
+    path('gurjara-map/',views.gurjara_map,name="gurjara_map"),
+    path('pala-map/', views.pala_map, name='pala_map'),                        
+    path('rashtrakuta-map/', views.rashtrakuta_map, name='rashtrakuta_map'),                   
+    path('chola-map/', views.chola_map, name='chola_map'),                       
+    path('chandelachauhan-map/', views.chandelachauhan_map, name='chandelachauhan_map'),
+    path('rajput-map/', views.rajput_map, name='rajput_map'),
+    path('delhi-map/', views.delhi_map, name='delhi_map'),
+    path('mewar-map/', views.mewar_map, name='mewar_map'),
+    path('vijaynagar-map/', views.vijaynagar_map, name='vijaynagar_map'),
+    path('bahmani-map/', views.bahmani_map, name='bahmani_map'),
+    path('kakatiya-hoysala-map/', views.kakatiya_hoysala_map, name='kakatiya-hoysala-map'),
+    path('endofmedival-map/', views.endofmedival_map, name='endofmedival_map'),
+    path('mahmud-of-gazhni-map/', views.mahmud_of_gazhni_map, name='mahmud-of-gazhni-map'),
+    path('ghurid-dynasty-map/', views.ghurid_dynasty_map, name='ghurid_dynasty_map'),
+    path('khilji-map/', views.khilji_map, name='khilji_map'),
+    path('tughlaq-map/', views.tughlaq_map, name='tughlaq_map'),
+    path('sayyid-map/', views.sayyid_map, name='sayyid_map'),
+    path('lodi-map/', views.lodi_map, name='lodi_map'),
+    path('bijapur-map/', views.bijapur_map, name='bijapur_map'),
+    path('barid-shahid-of-bidar-map/', views.barid_shahid_of_bidar, name='barid-shahid-of-bidar-map'),
+    path('nizam-shahi-of-ahmadnagar-map/', views.nizam_shahi_of_ahmadnagar, name='nizam-shahi-of-ahmadnagar-map'),
+    path('qutb-shahi-of-golconda-map/', views.qutb_shahi_of_golconda, name='qutb-shahi-of-golconda-map'),
+    path('mughal-map/', views.mughal_map, name='mughal_map'),
+    path('shershah-map/', views.shershah_map, name='shershah_map'),
+    path('talikota-map/', views.talikota_map, name='talikota_map'),
+    path('marathas-map/', views.marathas_map, name='marathas_map'),
+    path('bhakti-map/', views.bhakti_map, name='bhakti_map'),
+    path('sikh-map/', views.sikh_map, name='sikh_map'),
+
 ]
+
+
+
+  
 
 

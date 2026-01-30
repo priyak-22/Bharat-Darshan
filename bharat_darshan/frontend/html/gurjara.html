@@ -44,12 +44,13 @@
       </ul>
     </section>
 
-    <section class="map-section">
+ <section class="map-section">
       <h2>Region Map</h2>
-      <img src="images/gurjara-pratihara-map.jpg" alt="Map of Gurjara–Pratihara Empire region">
-    </section>
+      <iframe src="{% url 'gurjara_map' %}" style="width:100%; height:450px; border:none;"></iframe>
 
-    <button id="backBtn" class="back-button">← Back to Atlas</button>
+  </section>
+
+    
   </main>
 
   <script src="{% static 'js/kingdom.js' %}"></script>

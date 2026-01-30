@@ -534,3 +534,65 @@ def pala_map(request):
     return render(request, 'Maps/pala-map.html')
 def southern_kingdoms_map(request):
     return render(request, 'Maps/southern-kingdoms-map.html')
+
+
+#medival map
+def gurjara_map(request):
+    return render(request, 'Maps/gurjara-map.html')
+def pala_map(request):
+    return render(request, 'Maps/pala-map.html')
+def rashtrakuta_map(request):
+    return render(request, 'Maps/rashtrakuta-map.html')
+def chola_map(request):
+    return render(request, 'Maps/chola-map.html')
+def chandelachauhan_map(request):
+    return render(request, 'Maps/chandelachauhan-map.html')
+def rajput_map(request):
+    return render(request, 'Maps/rajput-map.html')
+def delhi_map(request):
+    return render(request, 'Maps/delhi-map.html')
+def mewar_map(request):
+    return render(request, 'Maps/mewar-map.html')
+def vijaynagar_map(request):
+    return render(request, 'Maps/vijaynagar-map.html')
+def bahmani_map(request):
+    return render(request, 'Maps/bahmani-map.html')
+def kakatiya_hoysala_map(request):
+    return render(request, 'Maps/kakatiya-hoysala-map.html')
+def endofmedival_map(request):
+    return render(request, 'Maps/endofmedival-map.html')
+def mahmud_of_gazhni_map(request):
+    return render(request, 'Maps/mahmud-of-gazhni-map.html')
+def ghurid_dynasty_map(request):
+    return render(request, 'Maps/ghurid-dynasty-map.html')
+def khilji_map(request):
+    return render(request, 'Maps/khilji-map.html')
+def tughlaq_map(request):
+    return render(request, 'Maps/tughlaq-map.html')
+def sayyid_map(request):
+    return render(request, 'Maps/sayyid-map.html')
+def lodi_map(request):
+    return render(request, 'Maps/lodi-map.html')
+def bijapur_map(request):
+    return render(request, 'Maps/bijapur-map.html')
+def barid_shahid_of_bidar_map(request):
+   return render(request, 'Maps/barid-shahid-of-bidar-map.html')
+def nizam_shahi_of_ahmadnagar_map(request):
+    return render(request, 'Maps/nizam-shahi-of-ahmadnagar-map.html')
+def qutb_shahi_of_golconda_map(request):
+    return render(request, 'Maps/qutb-shahi-of-golconda-map.html')
+def mughal_map(request):
+    return render(request, 'Maps/mughal-map.html')
+def shershah_map(request):
+    return render(request, 'Maps/shershah-map.html')
+def talikota_map(request):
+    return render(request, 'Maps/talikota-map.html')
+def marathas_map(request):
+    return render(request, 'Maps/marathas-map.html')
+def bhakti_map(request):
+    return render(request, 'Maps/bhakti-map.html')
+def sikh_map(request):
+    return render(request, 'Maps/sikh-map.html')
+
+    
+# Modern Maps

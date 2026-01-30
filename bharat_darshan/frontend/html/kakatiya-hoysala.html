@@ -79,10 +79,10 @@
 
     <section class="map-section">
       <h2>Region Map</h2>
-      <img src="images/kakatiya-hoysala-map.jpg" alt="Map showing Kakatiya and Hoysala regions">
+            <iframe src="{% url 'kakatiya-hoysala-map' %}" style="width:100%; height:450px; border:none;"></iframe>
     </section>
 
-    <button id="backBtn" class="back-button" onclick="window.history.back()">← Back to Atlas</button>
+    
   </main>
 
   <script src="{% static 'js/kingdom.js' %}"></script>
