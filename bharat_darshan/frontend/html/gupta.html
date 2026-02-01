@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,57 +10,69 @@
 
 <body>
   <header class="page-header">
-    <h1>Gupta Empire (c. 320 – 550 CE)</h1>
-    <p class="subheading">Region: Northern and Central India</p>
+    <h1>Gupta Empire (c. 320–550 CE)</h1>
+    <p class="subheading">Region: Northern India | Capital: Pataliputra</p>
   </header>
 
   <main class="content">
+
     <section class="info-card">
       <h2>Capital</h2>
-      <p>Pataliputra (modern Patna) and Ujjain (secondary capital)</p>
+      <p>Pataliputra (modern Patna, Bihar)</p>
     </section>
 
     <section class="info-card">
-      <h2>Notable Rulers</h2>
-      <ul>
-        <li>Chandragupta I</li>
-        <li>Samudragupta</li>
-        <li>Chandragupta II (Vikramaditya)</li>
-        <li>Kumaragupta I</li>
-        <li>Skandagupta</li>
-      </ul>
+      <h2>Background</h2>
+      <p>The Gupta Empire was one of the greatest empires in ancient Indian history, ruling much of northern and central India from about 320 CE to 550 CE. It marked a period of political stability, economic prosperity, and remarkable achievements in art, science, mathematics, and literature. This era is often called the "Golden Age of India".</p>
     </section>
 
     <section class="info-card">
-      <h2>Religion</h2>
-      <p>Predominantly Hinduism, with tolerance toward Buddhism and Jainism</p>
+      <h2>Origin and Rise</h2>
+      <p>Founding: The empire was founded by Chandragupta I around 320 CE, who took the title of Maharajadhiraja (King of Kings).</p>
+      <p>Expansion: His successors expanded the empire through military conquests and strategic marriages, bringing large parts of northern India under Gupta control.</p>
     </section>
 
     <section class="info-card">
-      <h2>Administration</h2>
-      <p>The Gupta Empire followed a monarchical system with a well-organized bureaucracy. Provinces (Bhuktis) were
-        governed by Uparikas, and districts (Vishayas) were managed by Vishayapatis. Local administration was efficient
-        and supported by guilds.</p>
+      <h2>Notable Rulers and Territory</h2>
+      <p>Prominent Kings: Chandragupta I (c. 320–335 CE), Samudragupta (c. 335–375 CE), Chandragupta II (c. 375–415 CE), Kumaragupta I (c. 415–455 CE), and Skandagupta (c. 455–467 CE).</p>
+      <p>Territory: At its height, the empire stretched from Punjab in the west to Bengal in the east, and from the Himalayas in the north to central India (Deccan plateau). Pataliputra served as the political and administrative center.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Culture and Religion</h2>
+      <p>Religious Patronage: The Guptas were mainly patrons of Hinduism but also supported Buddhism and Jainism. Temples and monasteries were built across the empire.</p>
+      <p>Art and Literature: This period saw the creation of classical Indian art such as the Ajanta cave paintings and famous Sanskrit works by scholars like Kalidasa. Sculpture and temple architecture flourished.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Administration and Economy</h2>
+      <p>Governance: The empire was divided into provinces governed by officials and feudatories. Sanskrit was the official language of administration and inscriptions.</p>
+      <p>Economy: Agriculture was the backbone of the economy. Trade flourished with Southeast Asia, Rome, and Central Asia. Gold coins (dinars) indicate economic prosperity.</p>
     </section>
 
     <section class="info-card">
       <h2>Achievements</h2>
       <ul>
-        <li>Known as the "Golden Age of India" for advancements in art, science, and literature</li>
-        <li>Flourishing of Sanskrit literature (Kalidasa, Aryabhata)</li>
-        <li>Development of classical Indian sculpture and architecture</li>
-        <li>Expansion of trade and prosperity across the subcontinent</li>
-        <li>Introduction of the decimal system and zero in mathematics</li>
+        <li>Golden Age of Indian science, mathematics, and astronomy</li>
+        <li>Development of decimal system and concept of zero</li>
+        <li>Flourishing of Sanskrit literature and classical art</li>
+        <li>Strong centralized administration and stable rule</li>
+        <li>Construction of temples and universities like Nalanda (later period)</li>
       </ul>
     </section>
+
+    <section class="info-card">
+      <h2>Decline</h2>
+      <p>The Gupta Empire declined after the reign of Skandagupta due to repeated invasions by the Hunas (White Huns), internal conflicts, and weakening central authority. By around 550 CE, the empire had fragmented into smaller kingdoms, leading to the rise of regional dynasties such as the Maukharis and Pushyabhutis.</p>
+    </section>
+
     <section class="map-section">
       <h2>Region Map</h2>
       <iframe src="{% url 'gupta_map' %}" style="width:100%; height:450px; border:none;"></iframe>
-
     </section>
+
   </main>
 
   <script src="{% static 'js/kingdoms.js' %}"></script>
 </body>
-
 </html>

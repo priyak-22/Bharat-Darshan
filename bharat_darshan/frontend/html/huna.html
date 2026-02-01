@@ -1,63 +1,76 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Huna Invasions | Digital Atlas of India</title>
+  <title>Huna Invasion | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/huna.css' %}">
 </head>
 
 <body>
   <header class="page-header">
-    <h1>Huna Invasions (Hephthalites)</h1>
-    <p class="subheading">Period: 5th – 6th century CE | Region: Northwestern India</p>
+    <h1>Huna Invasion (5th–6th century CE)</h1>
+    <p class="subheading">Region: North-Western & Northern India | Capitals: Sakala (Sialkot), later regions of Punjab & Malwa</p>
   </header>
 
   <main class="content">
+
     <section class="info-card">
       <h2>Capital</h2>
-      <p>Ruled from various northern and northwestern strongholds (Punjab and Gandhara regions)</p>
+      <p>Sakala (modern Sialkot in Pakistan), with control over parts of Punjab and central India</p>
     </section>
 
     <section class="info-card">
-      <h2>Notable Rulers</h2>
-      <p>Toramana and Mihirakula</p>
+      <h2>Background</h2>
+      <p>The Hunas, also known as the White Huns or Hephthalites, were a Central Asian nomadic group who invaded northwestern India during the 5th and 6th centuries CE. Their invasions weakened the Gupta Empire and disrupted political stability in northern India, marking the beginning of the post-Gupta period.</p>
     </section>
 
     <section class="info-card">
-      <h2>Religion</h2>
-      <p>The Hunas followed a mix of local Hindu and Central Asian practices, though some were hostile to Buddhism under
-        Mihirakula’s rule.</p>
+      <h2>Origin and Rise</h2>
+      <p>Origin: The Hunas originated from Central Asia and migrated southward through Afghanistan into India.</p>
+      <p>Rise: Taking advantage of the declining Gupta power, they established control over regions such as Gandhara, Punjab, and parts of Rajasthan and Malwa.</p>
     </section>
 
     <section class="info-card">
-      <h2>Administration</h2>
-      <p>The Hunas established short-lived kingdoms across northwestern India. Their rule lacked a centralized structure
-        and was marked by military dominance and local governance by chieftains. They disrupted trade and learning
-        centers during their invasions.</p>
+      <h2>Notable Rulers and Territory</h2>
+      <p>Prominent Kings: Toramana (c. 490–515 CE) and Mihirakula (c. 515–540 CE), known for their military campaigns and harsh rule.</p>
+      <p>Territory: Their empire extended over northwestern India including Punjab, Kashmir, Rajasthan, and central India (Malwa region).</p>
     </section>
 
     <section class="info-card">
-      <h2>Achievements / Impact</h2>
+      <h2>Culture and Religion</h2>
+      <p>Religious Beliefs: The Hunas followed their own Central Asian traditions but later adopted Hindu and Buddhist practices in India.</p>
+      <p>Art and Influence: Their rule caused destruction of monasteries and cities, but they also left inscriptions and coinage showing Indian cultural influence.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Administration and Economy</h2>
+      <p>Governance: The Hunas ruled through military dominance and local governors. Their administration was less centralized compared to the Guptas.</p>
+      <p>Economy: Continuous warfare weakened agriculture and trade. Many urban centers declined during their invasions.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Achievements</h2>
       <ul>
-        <li>Accelerated the decline of the Gupta Empire</li>
-        <li>Introduced Central Asian military traditions to Indian warfare</li>
-        <li>Led to the rise of regional kingdoms in post-Gupta India</li>
-        <li>Eventually defeated by Yashodharman of Malwa and Narasimhagupta Baladitya</li>
+        <li>Established control over large parts of northwestern India</li>
+        <li>Played a major role in ending Gupta political dominance</li>
+        <li>Introduced Central Asian military techniques and culture</li>
       </ul>
+    </section>
+
+    <section class="info-card">
+      <h2>Decline</h2>
+      <p>The Hunas were defeated by a coalition of Indian rulers including Yasodharman of Malwa and the Gupta king Skandagupta. Their power rapidly declined by the mid-6th century CE, and they were absorbed into local Indian kingdoms, paving the way for regional dynasties such as the Maukharis and Pushyabhutis.</p>
     </section>
 
     <section class="map-section">
       <h2>Region Map</h2>
       <iframe src="{% url 'huna_map' %}" style="width:100%; height:450px; border:none;"></iframe>
-
     </section>
 
   </main>
 
-  <script src="{% static 'js/kingdom.js' %}"></script>
+  <script src="{% static 'js/kingdoms.js' %}"></script>
 </body>
-
 </html>

@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Satavahana Kingdom | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/satvahana.css' %}">
 </head>
+
 <body>
   <header class="page-header">
     <h1>Satavahana Kingdom (c. 1st century BCE – 3rd century CE)</h1>
@@ -20,42 +22,71 @@
     </section>
 
     <section class="info-card">
-      <h2>Notable Rulers</h2>
-      <ul>
-        <li>Simuka</li>
-        <li>Gautamiputra Satakarni</li>
-        <li>Vashishtiputra Pulumavi</li>
-        <li>Yajna Sri Satakarni</li>
-      </ul>
+      <h2>Background</h2>
+      <p>The Satavahana dynasty was an ancient Indian royal house that ruled the Deccan region (modern-day Maharashtra,
+        Andhra Pradesh, Telangana, and parts of Karnataka) from approximately 230 BCE to 220 CE. They are also known as
+        the Andhra dynasty in some historical texts. The dynasty is noted for its patronage of Buddhism, extensive trade
+        networks, and the production of high-quality coinage. Their rule bridged the Mauryan and Gupta empires, marking
+        a period of cultural and economic prosperity in South India.</p>
     </section>
 
     <section class="info-card">
-      <h2>Religion</h2>
-      <p>Hinduism and Buddhism</p>
+      <h2>Culture and Religion</h2>
+      <p>Buddhism Patronage: The dynasty was a major supporter of Buddhism, erecting stupas, monasteries, and rock-cut
+        caves (e.g., at Karla and Bhaja). Amaravati Stupa, a UNESCO site, is a prime example of their architectural and
+        sculptural achievements.</p>
+      <p>Art and Literature: They produced intricate sculptures, reliefs, and inscriptions in Prakrit and Sanskrit. The
+        Puranas and Buddhist texts like the Mahavamsa mention them. Art blended indigenous styles with Hellenistic
+        influences from trade contacts.</p>
+      <p>Society: The period saw advancements in Sanskrit literature, with figures like the poet Hala associated with
+        the
+        dynasty. Social structure included Brahmins, warriors, and merchants, with evidence of gender equality in some
+        inscriptions.</p>
     </section>
-
     <section class="info-card">
-      <h2>Administration</h2>
-      <p>The Satavahanas ruled through a centralized monarchy with provincial governors. They used Prakrit in inscriptions and promoted trade and agriculture.</p>
-    </section>
+      <h2>Origin and Rise</h2>
+      <p>Founding: The dynasty is believed to have originated from the Andhra region. The founder, Simuka (c. 230–207
+        BCE), established the kingdom after the decline of the Mauryan Empire. Early rulers expanded control over the
+        Deccan plateau, coastal areas, and parts of central India.</p>
+      <p>Key Rulers: Prominent kings included Gautamiputra Satakarni (c. 106–130 CE), who defeated the Western
+        Kshatrapas
+        and expanded the empire northward; Vasisthiputra Pulumavi (c. 130–160 CE), known for his inscriptions and
+        administrative reforms; and Yajna Sri Satakarni (c. 170–200 CE), the last major ruler.</p>
+      <p>Territory: At its peak, the empire stretched from the Bay of Bengal to the Arabian Sea, including ports like
+        Bharuch and Kalyan, facilitating trade with the Roman Empire, Southeast Asia, and the Mediterranean.</p>
 
-    <section class="info-card">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Revived Vedic culture and promoted Brahmanism</li>
-        <li>Supported Buddhist architecture — Sanchi, Amaravati, and Nasik caves</li>
-        <li>Issued silver and lead coins with inscriptions in Prakrit</li>
-        <li>Maintained strong trade relations with the Romans via ports on the west coast</li>
-      </ul>
-    </section>
+      <section class="info-card">
+        <h2>Administration and Economy</h2>
+        <p>Governance: The Satavahanas used a decentralized system with feudatories and local governors. They minted
+          coins in lead, copper, and silver, featuring symbols like the ship (indicating maritime trade) and the
+          elephant (royal emblem).</p>
+        <p>Trade and Economy: They controlled key trade routes, exporting cotton, spices, pearls, and ivory. Roman coins
+          and artifacts found in Satavahana sites (e.g., at Kondapur) evidence extensive commerce. Agriculture
+          flourished with irrigation systems, and they promoted urbanization with cities like Amaravati and
+          Nagarjunakonda.</p>
+      </section>
 
-    <section class="map-section">
-      <h2>Region Map</h2>
-      <iframe src="{% url 'satvahana_map' %}" style="width:100%; height:450px; border:none;"></iframe>
+      <section class="info-card">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Revived Vedic culture and promoted Brahmanism</li>
+          <li>Supported Buddhist architecture — Sanchi, Amaravati, and Nasik caves</li>
+          <li>Issued silver and lead coins with inscriptions in Prakrit</li>
+          <li>Maintained strong trade relations with the Romans via ports on the west coast</li>
+        </ul>
+      </section>
+      <section class="info-card">
+        <h2>Decline</h2>
+        <p>The dynasty weakened due to internal conflicts, succession disputes, and invasions by the Western Kshatrapas and later the Ikshvakus. By the 3rd century CE, it fragmented into smaller kingdoms. Their legacy influenced later South Indian dynasties like the Pallavas and Chutus.</p>
+      </section>
+      <section class="map-section">
+        <h2>Region Map</h2>
+        <iframe src="{% url 'satvahana_map' %}" style="width:100%; height:450px; border:none;"></iframe>
 
-    </section>
+      </section>
   </main>
 
   <script src="{% static 'js/kingdoms.js' %}"></script>
 </body>
+
 </html>
