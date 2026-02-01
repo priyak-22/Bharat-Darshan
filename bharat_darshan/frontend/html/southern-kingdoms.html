@@ -7,58 +7,105 @@
   <title>Southern Kingdoms | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/southern-kingdom.css' %}">
 </head>
+
 <body>
+<div class="bg-slider">
+  <div class="slide slide1"></div>
+  <div class="slide slide2"></div>
+  <div class="slide slide3"></div>
+</div>
+
+
+
   <header class="page-header">
     <h1>Southern Kingdoms</h1>
-    <p class="subheading">(Chera, Pandya, Pallava, Chalukya, and Chola)</p>
+    <p class="subheading">Chera, Pandya, Pallava, Chalukya, and Chola Dynasties</p>
   </header>
 
   <main class="content">
+
     <section class="info-summary">
-      <p>The Southern dynasties were among the most influential in peninsular India. They shaped trade, culture, and temple architecture while maintaining distinct regional identities. Their rule spanned from early historic times to the medieval period.</p>
+      <p>
+        The Southern Kingdoms played a major role in shaping the political, cultural, and economic life of peninsular India. 
+        These dynasties promoted trade, temple architecture, literature, and overseas connections. 
+        Their influence extended from the early historic period to the medieval age.
+      </p>
     </section>
 
     <section class="info-card">
       <h2>Chera Dynasty (up to 12th century CE)</h2>
-      <p><strong>Capital:</strong> Vanji (Karur) or Mahodayapuram (Makotai)</p>
+      <p><strong>Capital:</strong> Vanji (Karur) and later Mahodayapuram (Makotai)</p>
       <p><strong>Region:</strong> Present-day Kerala and western Tamil Nadu</p>
-      <p><strong>Highlights:</strong> The Cheras were known for maritime trade with the Romans, and for promoting Tamil literature during the Sangam age.</p>
+      <p><strong>Highlights:</strong> 
+        The Cheras were famous for maritime trade with the Roman Empire and West Asia. 
+        They supported Sangam literature and controlled spice trade routes along the western coast.
+      </p>
     </section>
 
     <section class="info-card">
       <h2>Pandya Dynasty (up to 14th century CE)</h2>
-      <p><strong>Capital:</strong> Madurai (Tamil Nadu)</p>
+      <p><strong>Capital:</strong> Madurai</p>
       <p><strong>Region:</strong> Southern Tamil Nadu</p>
-      <p><strong>Highlights:</strong> Among the oldest Tamil dynasties, the Pandyas supported literature and temple architecture. Madurai became a major cultural and religious center.</p>
+      <p><strong>Highlights:</strong> 
+        One of the oldest Tamil dynasties, the Pandyas were patrons of Tamil literature and temple culture. 
+        Madurai became a major center of learning and religious activity.
+      </p>
     </section>
 
     <section class="info-card">
       <h2>Pallava Dynasty (275–897 CE)</h2>
-      <p><strong>Capital:</strong> Kanchipuram (Tamil Nadu)</p>
-      <p><strong>Region:</strong> Northern Tamil Nadu</p>
-      <p><strong>Highlights:</strong> Known for early Dravidian architecture; built monuments at Mahabalipuram; promoted Sanskrit and Tamil culture.</p>
+      <p><strong>Capital:</strong> Kanchipuram</p>
+      <p><strong>Region:</strong> Northern Tamil Nadu and southern Andhra Pradesh</p>
+      <p><strong>Highlights:</strong> 
+        The Pallavas pioneered Dravidian temple architecture. 
+        They built the rock-cut temples and monuments of Mahabalipuram and promoted Sanskrit and Tamil culture.
+      </p>
     </section>
 
     <section class="info-card">
       <h2>Chalukya Dynasty (6th–12th century CE)</h2>
-      <p><strong>Capital:</strong> Badami (Vatapi), later Kalyani (present-day Karnataka)</p>
-      <p><strong>Region:</strong> Deccan region, mainly Karnataka</p>
-      <p><strong>Highlights:</strong> The Chalukyas developed unique temple architecture (e.g., Aihole, Pattadakal) and contributed to art and administration in the Deccan.</p>
+      <p><strong>Capitals:</strong> Badami (Vatapi) and later Kalyani</p>
+      <p><strong>Region:</strong> Karnataka and Deccan plateau</p>
+      <p><strong>Highlights:</strong> 
+        The Chalukyas developed a distinct style of temple architecture seen at Aihole, Pattadakal, and Badami. 
+        They played a key role in Deccan politics and administration.
+      </p>
     </section>
 
     <section class="info-card">
       <h2>Chola Dynasty (9th–13th century CE)</h2>
-      <p><strong>Capitals:</strong> Thanjavur (Tanjore) and later Gangaikonda Cholapuram</p>
-      <p><strong>Region:</strong> Tamil Nadu and parts of Sri Lanka</p>
-      <p><strong>Highlights:</strong> The Cholas built a powerful maritime empire, spread Indian culture overseas, and built the Brihadeeswarar Temple at Thanjavur.</p>
+      <p><strong>Capitals:</strong> Thanjavur and later Gangaikonda Cholapuram</p>
+      <p><strong>Region:</strong> Tamil Nadu, Sri Lanka, and parts of Southeast Asia</p>
+      <p><strong>Highlights:</strong> 
+        The Cholas built a powerful naval empire and expanded Indian influence overseas. 
+        They constructed grand temples such as the Brihadeeswarar Temple at Thanjavur and developed efficient local administration.
+      </p>
+    </section>
+
+    <section class="info-card">
+      <h2>Art, Trade, and Culture</h2>
+      <p>
+        The Southern Kingdoms promoted temple architecture, bronze sculpture, classical dance, and literature. 
+        Overseas trade connected India with Rome, Arabia, and Southeast Asia. 
+        Hinduism, Buddhism, and Jainism flourished under royal patronage.
+      </p>
+    </section>
+
+    <section class="info-card">
+      <h2>Historical Significance</h2>
+      <p>
+        These dynasties laid the foundation of South Indian culture and political traditions. 
+        Their contributions in architecture, administration, and overseas relations made South India an important center of civilization in the medieval world.
+      </p>
     </section>
 
     <section class="map-section">
       <h2>Region Map</h2>
-      <iframe src="{% url 'mauryan_map' %}" style="width:100%; height:450px; border:none;"></iframe>
-
+      <iframe src="{% url 'southern_kingdoms_map' %}" style="width:100%; height:450px; border:none;"></iframe>
     </section>
+
   </main>
+  
 
   <script src="{% static 'js/kingdoms.js' %}"></script>
 </body>
