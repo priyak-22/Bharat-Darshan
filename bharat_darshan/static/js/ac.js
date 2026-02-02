@@ -1,304 +1,306 @@
-const dynasties = [
-  {
-    name: "Nanda Dynasty",
-    period: "4th Century BCE",
+const dynastiesData = {
+
+  "gauda": {
+    name: "Gauda Dynasty",
+    period: "7th–8th CE",
     tangible: [
-      { img: "https://upload.wikimedia.org/wikipedia/commons/1/15/Punch_marked_coin.jpg", text: "Fortified cities showing strong defense systems." },
-      { img: "images/nanda_coins.jpg", text: "Punch-marked coins used for administration." }
+      { img: "images/gauda_fort.jpg", short: "Fort ruins", more: "Gauda had fortified cities." }
     ],
     intangible: [
-      { img: "images/nanda_admin.jpg", text: "Highly centralized administrative system." },
-      { img: "images/nanda_tax.jpg", text: "Efficient taxation system across regions." }
+      { img: "images/gauda_culture.jpg", short: "Administration", more: "Structured administration system." }
     ],
-    why: "Prepared the base for Mauryan unification."
+    why: "Important for eastern Indian politics and culture."
   },
 
-  {
-    name: "Maurya Dynasty",
-    period: "322–185 BCE",
-    tangible: [
-      { img: "images/ashoka_pillar.jpg", text: "Ashokan pillars with inscriptions of Dhamma." },
-      { img: "images/maurya_stupa.jpg", text: "Stupas promoting Buddhist architecture." }
-    ],
-    intangible: [
-      { img: "images/dhamma.jpg", text: "Dhamma as ethical governance." },
-      { img: "images/buddhism.jpg", text: "Spread of Buddhism across Asia." }
-    ],
-    why: "First pan-Indian empire."
-  },
-
-  {
-    name: "Shunga Dynasty",
-    period: "185–73 BCE",
-    tangible: [
-      { img: "images/bharhut.jpg", text: "Bharhut stupa with stone railings." }
-    ],
-    intangible: [
-      { img: "images/brahmanism.jpg", text: "Revival of Brahmanical traditions." }
-    ],
-    why: "Preserved indigenous culture."
-  },
-
-  {
-    name: "Kanva Dynasty",
-    period: "73–28 BCE",
-    tangible: [
-      { img: "images/kanva_coins.jpg", text: "Coins and inscriptions from Kanva rulers." }
-    ],
-    intangible: [
-      { img: "images/court_tradition.jpg", text: "Continuation of court traditions." }
-    ],
-    why: "Bridge period in North India."
-  },
-
-  {
-    name: "Indo-Greek Kingdom",
-    period: "2nd Century BCE",
-    tangible: [
-      { img: "images/indo_greek_coins.jpg", text: "Coins with Greek and Indian scripts." }
-    ],
-    intangible: [
-      { img: "images/syncretism.jpg", text: "Cultural and artistic syncretism." }
-    ],
-    why: "Connected India with the Hellenistic world."
-  },
-
-  {
-    name: "Indo-Parthians",
-    period: "1st Century CE",
-    tangible: [
-      { img: "images/parthian_coins.jpg", text: "Coins reflecting trade dominance." }
-    ],
-    intangible: [
-      { img: "images/trade_diplomacy.jpg", text: "Trade diplomacy across regions." }
-    ],
-    why: "Promoted Silk Route trade."
-  },
-
-  {
-    name: "Saka (Scythians)",
-    period: "1st Century BCE–4th CE",
-    tangible: [
-      { img: "images/rock_caves.jpg", text: "Rock-cut cave architecture." }
-    ],
-    intangible: [
-      { img: "images/admin_reforms.jpg", text: "Administrative reforms influenced by Central Asia." }
-    ],
-    why: "Linked Central Asia to India."
-  },
-
-  {
-    name: "Kushana Dynasty",
-    period: "1st–3rd Century CE",
-    tangible: [
-      { img: "images/gandhara.jpg", text: "Gandhara and Mathura schools of art." }
-    ],
-    intangible: [
-      { img: "images/buddhist_patronage.jpg", text: "Royal patronage to Buddhism." }
-    ],
-    why: "Golden age of international trade."
-  },
-
-  {
-    name: "Satavahana Dynasty",
-    period: "1st BCE–3rd CE",
-    tangible: [
-      { img: "images/amaravati.jpg", text: "Amaravati stupa architecture." }
-    ],
-    intangible: [
-      { img: "images/prakrit.jpg", text: "Promotion of Prakrit language." }
-    ],
-    why: "Unified Deccan culture."
-  },
-
-  {
-    name: "Western Kshatrapas",
-    period: "1st–4th CE",
-    tangible: [
-      { img: "images/kshatrapa_coins.jpg", text: "Coins showing maritime influence." }
-    ],
-    intangible: [
-      { img: "images/maritime_trade.jpg", text: "Strong maritime trade culture." }
-    ],
-    why: "Controlled western trade routes."
-  },
-
-  {
-    name: "Vakataka Dynasty",
-    period: "3rd–5th CE",
-    tangible: [
-      { img: "images/ajanta.jpg", text: "Ajanta cave paintings." }
-    ],
-    intangible: [
-      { img: "images/art_patronage.jpg", text: "Royal patronage of art." }
-    ],
-    why: "Flourishing classical art."
-  },
-
-  {
+  "gupta": {
     name: "Gupta Dynasty",
     period: "4th–6th CE",
     tangible: [
-      { img: "images/gupta_temple.jpg", text: "Development of temple architecture." }
+      { img: "images/gupta_coin.jpg", short: "Gold coins", more: "Coins showed prosperity." },
+      { img: "images/gupta_temple.jpg", short: "Hindu temples", more: "Temples flourished under Gupta rule." }
     ],
     intangible: [
-      { img: "images/science.jpg", text: "Advancements in science and literature." }
+      { img: "images/gupta_math.jpg", short: "Science & Math", more: "Advances in mathematics and astronomy." }
     ],
-    why: "Golden Age of India."
+    why: "Golden Age of India in arts, science, and politics."
   },
 
-  {
-    name: "Huna",
-    period: "5th–6th CE",
+  "gurjara_pratihara": {
+    name: "Gurjara-Pratihara",
+    period: "8th–11th CE",
     tangible: [
-      { img: "images/huna_fort.jpg", text: "Military fortifications." }
+      { img: "images/pratihara_temple.jpg", short: "Temple architecture", more: "Built fortified temples and palaces." }
     ],
     intangible: [
-      { img: "images/military_culture.jpg", text: "Strong warrior culture." }
+      { img: "images/feudalism.jpg", short: "Feudal system", more: "Maintained strong feudal defense in northern India." }
     ],
-    why: "Triggered major political changes."
+    why: "Defended North India from invasions."
   },
 
-  {
-    name: "Mukharis",
-    period: "6th CE",
-    tangible: [
-      { img: "images/mukhari_inscription.jpg", text: "Important inscriptions." }
-    ],
-    intangible: [
-      { img: "images/admin_continuity.jpg", text: "Administrative continuity after Guptas." }
-    ],
-    why: "Transitional ruling power."
-  },
-
-  {
-    name: "Maitraka Dynasty",
-    period: "6th–8th CE",
-    tangible: [
-      { img: "images/valabhi.jpg", text: "Valabhi University ruins." }
-    ],
-    intangible: [
-      { img: "images/education.jpg", text: "Strong educational traditions." }
-    ],
-    why: "Major learning center of western India."
-  },
-
-  {
-    name: "Gauda Kingdom",
-    period: "7th CE",
-    tangible: [
-      { img: "images/gauda_city.jpg", text: "Urban settlements in Bengal." }
-    ],
-    intangible: [
-      { img: "images/bengal_culture.jpg", text: "Regional Bengali traditions." }
-    ],
-    why: "Strengthened regional identity."
-  },
-
-  {
-    name: "Harsha Empire",
+  "harsha": {
+    name: "Harsha Dynasty",
     period: "606–647 CE",
     tangible: [
-      { img: "images/harsha_monastery.jpg", text: "Monasteries and institutions." }
+      { img: "images/harsha_palace.jpg", short: "Palaces & monuments", more: "Built monuments and promoted Buddhism." }
     ],
     intangible: [
-      { img: "images/cultural_unity.jpg", text: "Cultural and religious unity." }
+      { img: "images/harsha_culture.jpg", short: "Cultural patronage", more: "Supported art, literature, and religion." }
     ],
-    why: "North Indian consolidation."
+    why: "Unified North India temporarily under one rule."
   },
 
-  {
+  "huna": {
+    name: "Huna Dynasty",
+    period: "5th–6th CE",
+    tangible: [
+      { img: "images/huna_fort.jpg", short: "Fortifications", more: "Built defensive fortifications." }
+    ],
+    intangible: [
+      { img: "images/huna_culture.jpg", short: "Warrior culture", more: "Fierce warrior traditions and invasions." }
+    ],
+    why: "Influenced Indian politics and weakened Gupta empire."
+  },
+
+  "indo-greek": {
+    name: "Indo-Greek Kingdom",
+    period: "2nd BCE – 1st CE",
+    tangible: [
+      { img: "images/indo_greek_coin.jpg", short: "Coins", more: "Greek-style coins used for trade." }
+    ],
+    intangible: [
+      { img: "images/indo_greek_culture.jpg", short: "Hellenistic culture", more: "Blend of Greek and Indian culture." }
+    ],
+    why: "Introduced Greek influence in northern India."
+  },
+
+  "indo-parthians": {
+    name: "Indo-Parthian Kingdom",
+    period: "19–226 CE",
+    tangible: [
+      { img: "images/indo_parthian_coin.jpg", short: "Coins", more: "Parthian-style coins with local inscriptions." }
+    ],
+    intangible: [
+      { img: "images/indo_parthian_culture.jpg", short: "Culture & trade", more: "Promoted trade and cross-cultural exchange." }
+    ],
+    why: "Linked India with Central Asia culturally and economically."
+  },
+
+  "kanva": {
+    name: "Kanva Dynasty",
+    period: "1st–2nd BCE",
+    tangible: [
+      { img: "images/kanva_art.jpg", short: "Art & sculptures", more: "Continued Mauryan-style art and coins." }
+    ],
+    intangible: [
+      { img: "images/kanva_culture.jpg", short: "Political administration", more: "Maintained small but stable rule in Magadha." }
+    ],
+    why: "Bridge between Mauryas and later regional kingdoms."
+  },
+
+  "kushana": {
+    name: "Kushana Dynasty",
+    period: "1st–3rd CE",
+    tangible: [
+      { img: "images/kushana_coin.jpg", short: "Coins", more: "Gold coins showed trade and wealth." },
+      { img: "images/kushana_stupa.jpg", short: "Buddhist stupas", more: "Built stupas promoting Buddhism." }
+    ],
+    intangible: [
+      { img: "images/kushana_culture.jpg", short: "Art & trade", more: "Spread Gandhara art and trade networks." }
+    ],
+    why: "Expanded trade and spread Buddhism to Central Asia."
+  },
+
+  "maurya": {
+    name: "Maurya Dynasty",
+    period: "321–185 BCE",
+    tangible: [
+      { img: "images/ashoka_edict.jpg", short: "Edicts of Ashoka", more: "Promoted governance and Buddhist principles." },
+      { img: "images/maurya_palace.jpg", short: "Palaces", more: "Built administrative centers and forts." }
+    ],
+    intangible: [
+      { img: "images/maurya_admin.jpg", short: "Centralized administration", more: "Efficient bureaucracy and military." }
+    ],
+    why: "Unified India under centralized rule."
+  },
+
+  "mukharis": {
+    name: "Mukharis",
+    period: "Post-Gupta period",
+    tangible: [
+      { img: "images/mukhari_art.jpg", short: "Art & temples", more: "Continued local temple traditions." }
+    ],
+    intangible: [
+      { img: "images/mukhari_culture.jpg", short: "Regional governance", more: "Local rulers with limited influence." }
+    ],
+    why: "Maintained regional culture after Gupta decline."
+  },
+
+  "maitraka": {
+    name: "Maitraka Dynasty",
+    period: "475–767 CE",
+    tangible: [
+      { img: "images/maitraka_temples.jpg", short: "Temples", more: "Built Buddhist and Hindu temples." }
+    ],
+    intangible: [
+      { img: "images/maitraka_culture.jpg", short: "Trade & administration", more: "Strong trade links and local governance." }
+    ],
+    why: "Important for Gujarat region history."
+  },
+
+  "nanda": {
+    name: "Nanda Dynasty",
+    period: "4th Century BCE",
+    tangible: [
+      { img: "https://upload.wikimedia.org/wikipedia/commons/1/15/Punch_marked_coin.jpg", short: "Punch-marked silver coins", more: "Indicated strong monetary system." },
+      { img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Pataliputra_ruins.jpg", short: "Fortified cities like Pataliputra", more: "Political and administrative capital." }
+    ],
+    intangible: [
+      { img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ancient_Indian_Administration.jpg", short: "Centralized administration", more: "Controlled provinces efficiently." },
+      { img: "https://upload.wikimedia.org/wikipedia/commons/3/34/Ancient_Indian_Taxation.jpg", short: "Efficient taxation", more: "Revenue collected systematically." }
+    ],
+    why: "Laid foundation for Mauryan Empire."
+  },
+
+  "pala": {
     name: "Pala Dynasty",
     period: "8th–12th CE",
     tangible: [
-      { img: "images/nalanda.jpg", text: "Nalanda and Vikramshila universities." }
+      { img: "images/nalanda.jpg", short: "Nalanda University ruins", more: "Center of Buddhist learning attracting students from Asia." }
     ],
     intangible: [
-      { img: "images/tantric_buddhism.jpg", text: "Growth of Tantric Buddhism." }
+      { img: "images/tantric_buddhism.jpg", short: "Growth of Tantric Buddhism", more: "Rulers patronized Buddhist traditions." }
     ],
     why: "Education and Buddhism flourished."
   },
 
-  {
-    name: "Gurjara-Pratihara",
-    period: "8th–11th CE",
+  "saka": {
+    name: "Saka Dynasty",
+    period: "1st Century BCE – 4th CE",
     tangible: [
-      { img: "images/pratihara_temple.jpg", text: "Temple architecture." }
+      { img: "images/saka_coin.jpg", short: "Coins", more: "Gold and silver coins with inscriptions." }
     ],
     intangible: [
-      { img: "images/feudalism.jpg", text: "Feudal political structure." }
+      { img: "images/saka_culture.jpg", short: "Influence", more: "Spread Indo-Scythian culture in India." }
     ],
-    why: "Defended North India."
+    why: "Introduced new cultural and trade practices."
   },
 
-  {
-    name: "Southern Kingdoms",
-    period: "Early Historic Period",
+  "satvahana": {
+    name: "Satavahana Dynasty",
+    period: "1st Century BCE – 2nd CE",
     tangible: [
-      { img: "images/south_temples.jpg", text: "Temples and port cities." }
+      { img: "images/satavahana_stupa.jpg", short: "Buddhist stupas", more: "Built stupas and trade centers." }
     ],
     intangible: [
-      { img: "images/dravidian.jpg", text: "Dravidian cultural traditions." }
+      { img: "images/satavahana_culture.jpg", short: "Trade & administration", more: "Encouraged maritime trade." }
     ],
-    why: "Growth of maritime culture."
+    why: "Connected Deccan with other regions through trade."
+  },
+
+  "shunga": {
+    name: "Shunga Dynasty",
+    period: "2nd–1st BCE",
+    tangible: [
+      { img: "images/shunga_stupa.jpg", short: "Stupas & temples", more: "Promoted Buddhist architecture." }
+    ],
+    intangible: [
+      { img: "images/shunga_culture.jpg", short: "Art & religion", more: "Supported Brahmanical and Buddhist traditions." }
+    ],
+    why: "Preserved Indian art and culture post-Maurya."
+  },
+
+  "vakataka": {
+    name: "Vakataka Dynasty",
+    period: "3rd–5th CE",
+    tangible: [
+      { img: "images/vakataka_caves.jpg", short: "Ajanta caves", more: "Built rock-cut caves with murals." }
+    ],
+    intangible: [
+      { img: "images/vakataka_culture.jpg", short: "Art & administration", more: "Promoted regional culture." }
+    ],
+    why: "Preserved art and strengthened regional power."
+  },
+
+  "southern-kingdoms": {
+    name: "Southern Kingdoms",
+    period: "3rd–13th CE",
+    tangible: [
+      { img: "images/southern_temple.jpg", short: "Dravidian temples", more: "Famous temple architecture." }
+    ],
+    intangible: [
+      { img: "images/southern_culture.jpg", short: "Trade & culture", more: "Maritime trade and cultural expansion." }
+    ],
+    why: "Flourished in art, trade, and administration."
+  },
+
+  "western-kshatrapas": {
+    name: "Western Kshatrapas",
+    period: "1st–4th CE",
+    tangible: [
+      { img: "images/kshatrapa_coin.jpg", short: "Coins", more: "Showed economic strength." }
+    ],
+    intangible: [
+      { img: "images/kshatrapa_culture.jpg", short: "Trade & governance", more: "Maintained trade routes and regional administration." }
+    ],
+    why: "Important for western India trade and governance."
   }
-];
+};
 
+const dynastyKeys = Object.keys(dynastiesData);
 let i = 0;
-let tIndex = 0;
-let itIndex = 0;
 
+// load dynasty info
 function load() {
-  const d = dynasties[i];
+  const key = dynastyKeys[i];
+  const d = dynastiesData[key];
 
   document.getElementById("dynastyName").innerText = d.name;
   document.getElementById("dynastyPeriod").innerText = d.period;
- 
+  document.getElementById("why").innerText = d.why;
 
-  tIndex = 0;
-  itIndex = 0;
+  renderSection("tangible", d.tangible);
+  renderSection("intangible", d.intangible);
 
-  loadTangible();
-  loadIntangible();
+  show("tangible"); // show tangible by default
 }
 
-function loadTangible() {
-  const item = dynasties[i].tangible[tIndex];
-  document.getElementById("tangibleImg").src = item.img;
-  document.getElementById("tangibleText").innerText = item.text;
+function renderSection(id, items) {
+  const box = document.getElementById(id);
+  box.innerHTML = "";
+  items.forEach(item => {
+    box.innerHTML += `
+      <div class="heritage-item">
+        <img src="${item.img}" class="heritage-img" onclick="openModal('${item.more}')">
+        <p>${item.short}</p>
+      </div>
+    `;
+  });
 }
 
-function loadIntangible() {
-  const item = dynasties[i].intangible[itIndex];
-  document.getElementById("intangibleImg").src = item.img;
-  document.getElementById("intangibleText").innerText = item.text;
-}
-
-function nextTangible() {
-  tIndex = (tIndex + 1) % dynasties[i].tangible.length;
-  loadTangible();
-}
-
-function nextIntangible() {
-  itIndex = (itIndex + 1) % dynasties[i].intangible.length;
-  loadIntangible();
-}
 function show(id) {
   document.getElementById("tangible").style.display = "none";
   document.getElementById("intangible").style.display = "none";
   document.getElementById(id).style.display = "block";
 }
 
-
 function nextDynasty() {
-  i = (i + 1) % dynasties.length;
+  i = (i + 1) % dynastyKeys.length;
   load();
 }
 
 function prevDynasty() {
-  i = (i - 1 + dynasties.length) % dynasties.length;
+  i = (i - 1 + dynastyKeys.length) % dynastyKeys.length;
   load();
 }
 
-load();
+function openModal(text) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalText").innerText = text;
+}
 
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+// initial load
+window.onload = load;

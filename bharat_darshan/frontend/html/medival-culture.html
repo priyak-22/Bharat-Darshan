@@ -3,25 +3,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Medieval Indian Dynasties | Cultural Heritage</title>
+<title>Cultural Heritage | Digital Atlas of India</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <link rel="stylesheet" href="{% static 'css/medivalculture.css' %}">
 </head>
 
 <body>
 
 <header>
-  <h1>Cultural Heritage of Medieval Indian Dynasties</h1>
-  <p>Tangible and Intangible traditions across medieval India</p>
+  <h1>Cultural Heritage of Ancient Indian Dynasties</h1>
+  <p>Tangible and Intangible Traditions</p>
 </header>
 
 <div class="container">
   <div class="card-wrapper">
-    <button class="nav-btn" onclick="prevDynasty()"><i class="fas fa-chevron-left"></i></button>
+    <button class="nav-btn" onclick="prevDynasty()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
 
     <div class="card">
       <h2 id="dynastyName"></h2>
@@ -38,29 +39,33 @@
         </div>
       </div>
 
-      
-      <div class="content-box" id="tangible">
-  <img id="tangibleImg" class="heritage-img" onclick="nextTangible()" />
-  <p id="tangibleText"></p>
-</div>
+      <div class="content-box" id="tangible"></div>
+      <div class="content-box" id="intangible"></div>
 
-<div class="content-box" id="intangible">
-  <img id="intangibleImg" class="heritage-img" onclick="nextIntangible()" />
-  <p id="intangibleText"></p>
-</div>
-
+      <div class="why-box">
+        <h3>Why it matters</h3>
+        <p id="why"></p>
+      </div>
     </div>
 
-    <button class="nav-btn" onclick="nextDynasty()"><i class="fas fa-chevron-right"></i></button>
+    <button class="nav-btn" onclick="nextDynasty()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
   </div>
 </div>
 
 <footer>
-  © Digital Atlas of India | Medieval Dynasties Module
+  © Digital Atlas of India
 </footer>
 
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">✖</span>
+    <p id="modalText"></p>
+  </div>
+</div>
+
 <script src="{% static 'js/mec.js' %}"></script>
-
-
 </body>
 </html>
