@@ -423,7 +423,7 @@ def british_expansion(request):
     return render(request, 'html/british-expansion.html')
 @login_required(login_url='login') 
 def mughal_decline(request):            
-    return render(request, 'html/mughal-decline.html')
+    return render(request, 'html/mughal_decline.html')
 @login_required(login_url='login') 
 def revolt_1857(request):               
     return render(request, 'html/revolt-1857.html')
@@ -596,3 +596,14 @@ def sikh_map(request):
 
     
 # Modern Maps
+def portugese_map(request):
+    return render(request, 'Maps/portuguese-map.html')
+def dutch_map(request):
+    return render(request, 'Maps/dutch-map.html')
+def danes_map(request):
+    return render(request, 'Maps/danes-map.html')
+def french_map(request):
+    return render(request, 'Maps/french-map.html')      
+def british_map(request):
+    return render(request, 'Maps/british-map.html')
+

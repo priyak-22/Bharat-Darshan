@@ -1,63 +1,111 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advent of the Danes | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/danes.css' %}">
 </head>
+
 <body>
   <header class="page-header">
     <h1>Advent of the Danes (1620 CE)</h1>
     <p class="subheading">Period: 1620 CE | Region: Tranquebar (Tamil Nadu) and Serampore (West Bengal)</p>
   </header>
-
   <main class="content">
     <section class="info-card">
       <h2>Background</h2>
-      <p>The Danish East India Company established its presence in India in 1620 CE, aiming to participate in the lucrative spice and textile trade. The Danes, though smaller in influence compared to the British, French, or Dutch, played a brief yet notable role in India’s coastal trade network.</p>
+      <p>The Danish East India Company (later the Danish Asiatic Company) was formed in the early 17th century to
+        participate in the growing European trade with Asia, especially the spice and textile markets. In 1620 CE, the
+        Danes established their first permanent settlement in India at Tranquebar (Tharangambadi) on the Coromandel
+        Coast, under an agreement with Raghunatha Nayak, the Nayak ruler of Tanjore. Though much smaller in scale than
+        the British, French, or Dutch, the Danes carved out a niche in coastal trade and later became notable for
+        missionary and cultural activities rather than large‑scale territorial control.</p>
+      <p>Over time, two separate Danish‑Norwegian trading companies operated in India, with the second (Danish Asiatic
+        Company, chartered in 1732) managing Tranquebar, Serampore, and other minor outposts more systematically.
+        Despite their limited political power, the Danish presence contributed to the early spread of Protestant
+        Christianity and Indo‑European cultural exchange in South and East India.</p>
     </section>
 
     <section class="info-card">
       <h2>Major Trading Settlements</h2>
       <ul>
-        <li><strong>Tranquebar (Tharangambadi):</strong> Founded in 1620 CE on the Coromandel Coast; became the first Danish trading settlement in India.</li>
-        <li><strong>Serampore:</strong> Established later in Bengal as an important Danish trading post along the Hooghly River.</li>
+        <li>Tranquebar (Tharangambadi): Founded in 1620 CE on the Coromandel Coast, Tranquebar was the first Danish
+          trading settlement in India and remained their principal base for over two centuries. The Danes built Fort
+          Dansborg here and developed it into a fortified town with administrative buildings, warehouses, and a small
+          garrison.</li>
+        <li>Serampore (Frederiksnagore): Located on the Hooghly River in Bengal, Serampore became a Danish settlement in
+          the late 17th century and later a major Danish outpost in eastern India. It served as a key port for trade
+          with Bengal’s rich textile‑producing hinterland and functioned as a semi‑autonomous Danish enclave under
+          Mughal and later British‑dominated surroundings.</li>
+        <li>Other minor posts: The Danes also operated smaller factories such as Oddeway Torre on the Malabar Coast and
+          Dannemarksnagore near Chandernagore, though these were less prominent than Tranquebar and Serampore.</li>
       </ul>
     </section>
 
     <section class="info-card">
       <h2>Administration</h2>
-      <p>The Danish East India Company governed its settlements through local governors. Their rule focused mainly on commerce and missionary activities rather than territorial expansion. Tranquebar became a center for trade and cultural exchange between India and Europe.</p>
+      <p>The Danish East India Company governed its Indian settlements through local governors and company officials
+        appointed from Denmark‑Norway, with Tranquebar serving as the administrative centre for the southern
+        possessions. The Danes maintained a relatively small bureaucracy and focused on running the fort, customs, and
+        trade rather than extensive territorial administration.</p>
+      <p>In Bengal, Serampore was administered separately but coordinated with Tranquebar, especially after the Danish
+        Asiatic Company took over management in the 18th century. The Danes paid annual tribute or rent to local rulers
+        such as the Tanjore Nayaks and later acknowledged the suzerainty of the Mughal and British authorities, which
+        allowed them to retain their enclaves while avoiding direct military confrontation.</p>
     </section>
 
     <section class="info-card">
       <h2>Trade and Economy</h2>
       <ul>
-        <li>Traded textiles, spices, and ivory with other European and Asian merchants.</li>
-        <li>Established small forts and warehouses to manage export operations.</li>
-        <li>Engaged in trade partnerships with local rulers for mutual benefit.</li>
+        <li>The Danes traded Indian cotton textiles, spices, ivory, and other goods with European and Asian merchants,
+          using Tranquebar and Serampore as nodes in a wider Indian‑Ocean network.</li>
+        <li>They established small forts, warehouses, and customs arrangements at Tranquebar and Serampore to manage
+          exports and protect their goods, often relying on local artisans and merchants for production and
+          distribution.</li>
+        <li>The Danes entered into trade agreements with local rulers, paying tribute or rent in exchange for the right
+          to trade and maintain their settlements, which helped integrate them into regional political‑economic systems.
+        </li>
+        <li>By the late 18th century, Serampore in particular became known not only for trade but also as a centre for
+          printing, education, and missionary work, adding a cultural‑economic dimension to Danish activity.</li>
       </ul>
     </section>
 
     <section class="info-card">
       <h2>Decline and Impact</h2>
       <ul>
-        <li>Faced financial difficulties and competition from stronger European powers like the British and Dutch.</li>
-        <li>Sold their Indian settlements to the British in 1845 CE.</li>
-        <li>Left a legacy of early missionary work and Indo-European architecture, especially in Tranquebar.</li>
+        <li>The Danish companies faced persistent financial difficulties and struggled to compete with the much larger
+          British and Dutch East India Companies, which dominated key markets and shipping routes.</li>
+        <li>After a brief “golden age” of Danish‑Indian trade in the late 18th century, declining profits and changing
+          European trade policies weakened the Danish position in India.</li>
+        <li>In 1845 CE, Denmark sold its Indian settlements—Tranquebar and Serampore—to the British for a relatively
+          small sum, formally ending Danish colonial presence in India.</li>
+        <li>The Danes left behind a legacy of early Protestant missionary work, including the Tranquebar Mission founded
+          in 1706, which was among the first sustained Protestant missions in India.</li>
+        <li>Their forts, churches, and colonial‑era buildings in Tranquebar and Serampore remain important examples of
+          Indo‑European architecture and are now heritage sites that reflect the multicultural history of coastal India.
+        </li>
       </ul>
     </section>
 
     <section class="map-section">
       <h2>Region Map</h2>
-      <img src="images/danes-map.jpg" alt="Map showing Danish trading settlements in India">
+      <iframe src="{% url 'danes_map' %}" style="width:100%; height:450px; border:none;"></iframe>
     </section>
 
-    <button id="backBtn" class="back-button">← Back to Atlas</button>
+
+    <section class="map-section">
+      <h2>Region Map</h2>
+      <iframe src="{% url 'danes_map' %}" style="width:100%; height:450px; border:none;"></iframe>
+
+    </section>
+
+
   </main>
 
   <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
+
 </html>
