@@ -1,24 +1,59 @@
+document.addEventListener("DOMContentLoaded", function () {
 
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("zoomImage");
+  const captionText = document.getElementById("modalCaption");
+  const closeBtn = document.querySelector(".close");
 
-// Function used by other buttons (like opening a dynasty page)
-function openKingdom(page) {
-  window.location.href = page;
-}
+  let scale = 1;
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Open modal for any link with class open-modal
+  document.querySelectorAll(".open-modal").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
 
-  // Smooth scroll to top on page load
-  window.scrollTo({ top: 0, behavior: "smooth" });
+      const imageSrc = this.getAttribute("data-image");
+      const caption = this.getAttribute("data-caption");
 
-  // Subtle hover effect for info cards
-  const cards = document.querySelectorAll(".info-card");
-  cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-      card.style.transform = "scale(1.03)";
-      card.style.transition = "transform 0.3s ease";
-    });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "scale(1)";
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+      captionText.innerText = caption;
+
+      scale = 1;
+      modalImg.style.transform = "scale(1)";
     });
   });
+
+  // Close modal
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  }
+
+  // Close when clicking outside image
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Scroll zoom
+  if (modalImg) {
+    modalImg.addEventListener("wheel", function (event) {
+      event.preventDefault();
+
+      if (event.deltaY < 0) {
+        scale += 0.15;
+      } else {
+        scale -= 0.15;
+      }
+
+      if (scale < 1) scale = 1;
+      if (scale > 4) scale = 4;
+
+      modalImg.style.transform = "scale(" + scale + ")";
+    });
+  }
+
 });
