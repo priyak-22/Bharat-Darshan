@@ -3,63 +3,511 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Modern Indian History | Cultural Heritage</title>
+<title>Cultural Heritage | Digital Atlas of India</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="{% static 'css/modernculture.css' %}">
+<style>
+  
+body {
+  margin: 0;
+  background: #f4ecd8; /* light parchment color */
+  color: #2b1a0f; /* dark brown for text */
+  font-family: 'Playfair Display', serif;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: 
+    linear-gradient(to bottom, rgba(241, 224, 177, 0.95), rgba(180, 145, 80, 0.9)),
+    url("https://images.unsplash.com/photo-1609943246327-6e4c5f6d7a0c") center/cover;
+  border-bottom: 4px double #b28a3b;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 38px;
+  color: #593e1a;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6), 0 0 8px rgba(194, 144, 60, 0.5);
+}
+
+header p {
+  font-family: 'Playfair Display', serif;
+  color: #3f2e1b;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  font-size: 18px;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid #8b6d3b;
+  color: #8b6d3b;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #d8c3a5;
+  color: #3d2b1f;
+  border-color: #3d2b1f;
+}
+
+.card {
+  max-width: 760px;
+  width: 100%;
+  background: #f0e6d2; /* parchment texture feel */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 2px solid #b4996c;
+}
+
+.section-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.section-btn {
+  flex: 1;
+  border: 1px solid #b4996c;
+  padding: 18px;
+  cursor: pointer;
+  text-align: center;
+  background: #e6d7b3;
+  transition: all 0.2s ease;
+}
+
+.section-btn:hover {
+  background: #d4b788;
+  color: #2b1a0f;
+}
+
+.section-btn i {
+  font-size: 26px;
+  color: #8b6d3b;
+}
+
+.content-box {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f6f0e1;
+  border-left: 4px solid #b4996c;
+  border-radius: 5px;
+}
+
+.heritage-item {
+  margin-bottom: 25px;
+}
+
+.heritage-img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 3px solid #b4996c;
+  transition: transform 0.2s ease;
+}
+
+.heritage-img:hover {
+  transform: scale(1.03);
+  border-color: #8b6d3b;
+}
+
+.why-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px dashed #b4996c;
+  background: #f0e6d2;
+  border-radius: 6px;
+  color: #3d2b1f;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #f4ecd8;
+  padding: 25px;
+  max-width: 600px;
+  border-radius: 12px;
+  border: 2px solid #b4996c;
+  color: #2b1a0f;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  color: #8b6d3b;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Modern Indian History</h1>
-  <p>Key events, movements, and colonial interactions in modern India</p>
+  <h1>Cultural Heritage of Ancient Indian Dynasties</h1>
+  <p>Tangible and Intangible Traditions </p>
 </header>
 
 <div class="container">
   <div class="card-wrapper">
-    <button class="nav-btn" onclick="prevEvent()">
+    <button class="nav-btn" onclick="prevDynasty()">
       <i class="fas fa-chevron-left"></i>
     </button>
 
     <div class="card">
-      <h2 id="eventName"></h2>
-      <p id="eventPeriod"></p>
+      <h2 id="dynastyName"></h2>
+      <p id="dynastyPeriod"></p>
 
       <div class="section-buttons">
-        <div class="section-btn" onclick="showSection('tangible')">
+        <div class="section-btn" onclick="show('tangible')">
           <i class="fas fa-landmark"></i>
-          <h4>Tangible</h4>
+          <h4>Tangible Culture</h4>
         </div>
-        <div class="section-btn" onclick="showSection('intangible')">
+        <div class="section-btn" onclick="show('intangible')">
           <i class="fas fa-om"></i>
-          <h4>Intangible</h4>
+          <h4>Intangible Culture</h4>
         </div>
       </div>
 
-      <div class="content-box" id="tangible">
-        <img id="tangibleImg" class="heritage-img" onclick="nextTangible()" />
-        <p id="tangibleText"></p>
-      </div>
+      <div class="content-box" id="tangible"></div>
+      <div class="content-box" id="intangible"></div>
 
-      <div class="content-box" id="intangible">
-        <img id="intangibleImg" class="heritage-img" onclick="nextIntangible()" />
-        <p id="intangibleText"></p>
+      <div class="why-box">
+        <h3>Why it matters</h3>
+        <p id="why"></p>
       </div>
     </div>
 
-    <button class="nav-btn" onclick="nextEvent()">
+    <button class="nav-btn" onclick="nextDynasty()">
       <i class="fas fa-chevron-right"></i>
     </button>
   </div>
 </div>
 
 <footer>
-  © Digital Atlas of India | Modern History Module
+  © Digital Atlas of India
 </footer>
 
-<script src="{% static 'js/moc.js' %}"></script>
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">✖</span>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script>
+  
+const dynasties = [
+
+  /* European Entry */
+  {
+    name: "Portuguese in India",
+    period: "1498 CE onwards",
+    tangible: [
+      { img: "images/goa_church.jpg", short: "Churches and forts in Goa.", more: "The Portuguese established early European settlements, especially in Goa." }
+    ],
+    intangible: [
+      { img: "images/portuguese_trade.jpg", short: "Maritime trade practices.", more: "Introduced European naval power and trade routes." }
+    ],
+    why: "Marked the beginning of European colonial presence in India."
+  },
+
+  {
+    name: "Dutch in India",
+    period: "1605–1795 CE",
+    tangible: [
+      { img: "images/dutch_factories.jpg", short: "Trading factories.", more: "The Dutch set up trading centers along coastal India." }
+    ],
+    intangible: [
+      { img: "images/dutch_trade.jpg", short: "Commercial networks.", more: "Focused mainly on spice trade." }
+    ],
+    why: "Played a role in early European trade competition."
+  },
+
+  {
+    name: "Danes in India",
+    period: "1620–1845 CE",
+    tangible: [
+      { img: "images/serampore.jpg", short: "Serampore settlement.", more: "Serampore was the main Danish settlement in India." }
+    ],
+    intangible: [
+      { img: "images/missionary_work.jpg", short: "Missionary activities.", more: "Contributed to education and printing." }
+    ],
+    why: "A smaller but culturally significant European presence."
+  },
+
+  {
+    name: "French in India",
+    period: "1667–1954 CE",
+    tangible: [
+      { img: "images/pondicherry.jpg", short: "Pondicherry town.", more: "French urban planning and architecture are visible in Pondicherry." }
+    ],
+    intangible: [
+      { img: "images/french_admin.jpg", short: "French administration.", more: "Introduced European legal and administrative ideas." }
+    ],
+    why: "Major European rival of the British in India."
+  },
+
+  {
+    name: "Anglo-French Rivalry",
+    period: "1740–1763 CE",
+    tangible: [
+      { img: "images/carnatic_wars.jpg", short: "Carnatic Wars sites.", more: "Battles fought mainly in South India." }
+    ],
+    intangible: [
+      { img: "images/political_intrigue.jpg", short: "Indian alliances.", more: "European powers interfered in Indian politics." }
+    ],
+    why: "Cleared the path for British dominance."
+  },
+
+  /* British Expansion */
+  {
+    name: "Battle of Plassey",
+    period: "1757 CE",
+    tangible: [
+      { img: "images/plassey.jpg", short: "Battlefield of Plassey.", more: "Robert Clive defeated Siraj-ud-Daulah." }
+    ],
+    intangible: [
+      { img: "images/company_rule.jpg", short: "Company rule begins.", more: "Marked the start of British political control." }
+    ],
+    why: "Foundation of British rule in India."
+  },
+
+  {
+    name: "Battle of Buxar",
+    period: "1764 CE",
+    tangible: [
+      { img: "images/buxar.jpg", short: "Battlefield of Buxar.", more: "British victory over combined Indian forces." }
+    ],
+    intangible: [
+      { img: "images/diwani_rights.jpg", short: "Diwani rights.", more: "British gained revenue control of Bengal." }
+    ],
+    why: "Confirmed British supremacy in North India."
+  },
+
+  {
+    name: "British Expansion",
+    period: "1765–1857 CE",
+    tangible: [
+      { img: "images/british_forts.jpg", short: "British forts and cities.", more: "Infrastructure built to support colonial rule." }
+    ],
+    intangible: [
+      { img: "images/admin_reforms.jpg", short: "Administrative systems.", more: "Introduced Western education and laws." }
+    ],
+    why: "Transformed India politically and economically."
+  },
+
+  /* Resistance and National Movement */
+  {
+    name: "Revolt of 1857",
+    period: "1857 CE",
+    tangible: [
+      { img: "images/1857_sites.jpg", short: "Revolt centers.", more: "Major uprising across North India." }
+    ],
+    intangible: [
+      { img: "images/sepoy_revolt.jpg", short: "Popular resistance.", more: "First large-scale resistance against British rule." }
+    ],
+    why: "Marked the end of Company rule."
+  },
+
+  {
+    name: "Indian National Congress",
+    period: "1885 CE onwards",
+    tangible: [
+      { img: "images/inc_session.jpg", short: "Congress sessions.", more: "Platform for Indian political expression." }
+    ],
+    intangible: [
+      { img: "images/nationalism.jpg", short: "Indian nationalism.", more: "Unified Indians politically." }
+    ],
+    why: "Became the backbone of freedom struggle."
+  },
+
+  {
+    name: "Bengal Swadeshi Movement",
+    period: "1905–1911 CE",
+    tangible: [
+      { img: "images/swadeshi_goods.jpg", short: "Swadeshi products.", more: "Promotion of Indian-made goods." }
+    ],
+    intangible: [
+      { img: "images/boycott.jpg", short: "Boycott movement.", more: "Economic resistance to British goods." }
+    ],
+    why: "Mass-based nationalist movement."
+  },
+
+  {
+    name: "Home Rule Movement",
+    period: "1916–1918 CE",
+    tangible: [
+      { img: "images/home_rule_league.jpg", short: "Home Rule League.", more: "Political organization demanding self-rule." }
+    ],
+    intangible: [
+      { img: "images/self_governance.jpg", short: "Demand for autonomy.", more: "Prepared ground for mass movements." }
+    ],
+    why: "Strengthened political awareness."
+  },
+
+  {
+    name: "Jallianwala Bagh",
+    period: "1919 CE",
+    tangible: [
+      { img: "images/jallianwala.jpg", short: "Jallianwala Bagh memorial.", more: "Site of brutal massacre." }
+    ],
+    intangible: [
+      { img: "images/national_outrage.jpg", short: "National outrage.", more: "Turned public opinion against British rule." }
+    ],
+    why: "A turning point in freedom struggle."
+  },
+
+  {
+    name: "Non-Cooperation Movement",
+    period: "1920–1922 CE",
+    tangible: [
+      { img: "images/non_cooperation.jpg", short: "Mass protests.", more: "Boycott of British institutions." }
+    ],
+    intangible: [
+      { img: "images/gandhian_methods.jpg", short: "Gandhian methods.", more: "Non-violence and civil resistance." }
+    ],
+    why: "First nationwide mass movement."
+  },
+
+  {
+    name: "Civil Disobedience Movement",
+    period: "1930–1934 CE",
+    tangible: [
+      { img: "images/dandi_march.jpg", short: "Dandi March.", more: "Salt Satyagraha led by Gandhi." }
+    ],
+    intangible: [
+      { img: "images/civil_resistance.jpg", short: "Breaking unjust laws.", more: "Direct challenge to colonial authority." }
+    ],
+    why: "Deepened mass participation."
+  },
+
+  {
+    name: "Quit India Movement",
+    period: "1942 CE",
+    tangible: [
+      { img: "images/quit_india.jpg", short: "Protest movements.", more: "Mass uprisings across India." }
+    ],
+    intangible: [
+      { img: "images/do_or_die.jpg", short: "Do or Die call.", more: "Final push for independence." }
+    ],
+    why: "Accelerated British exit."
+  },
+
+  {
+    name: "Indian Independence",
+    period: "1947 CE",
+    tangible: [
+      { img: "images/independence.jpg", short: "Independence celebrations.", more: "End of British rule." }
+    ],
+    intangible: [
+      { img: "images/freedom.jpg", short: "Sovereignty and democracy.", more: "Birth of modern India." }
+    ],
+    why: "Culmination of long freedom struggle."
+  }
+
+];
+let i = 0;
+
+function load() {
+  const d = dynasties[i];
+  dynastyName.innerText = d.name;
+  dynastyPeriod.innerText = d.period;
+  why.innerText = d.why;
+
+  renderSection("tangible", d.tangible);
+  renderSection("intangible", d.intangible);
+}
+
+function renderSection(id, items) {
+  const box = document.getElementById(id);
+  box.innerHTML = "";
+
+  items.forEach(item => {
+    box.innerHTML += `
+      <div class="heritage-item">
+        <img src="${item.img}" class="heritage-img" onclick="openModal('${item.more}')">
+        <p>${item.short}</p>
+      </div>
+    `;
+  });
+}
+
+function show(id) {
+  tangible.style.display = "none";
+  intangible.style.display = "none";
+  document.getElementById(id).style.display = "block";
+}
+
+function nextDynasty() {
+  i = (i + 1) % dynasties.length;
+  load();
+}
+
+function prevDynasty() {
+  i = (i - 1 + dynasties.length) % dynasties.length;
+  load();
+}
+
+function openModal(text) {
+  modal.style.display = "flex";
+  modalText.innerText = text;
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+load();
+
+
+</script>
+
+
 </body>
 </html>
