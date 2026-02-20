@@ -170,6 +170,13 @@ urlpatterns = [
     path('bhakti-map/', views.bhakti_map, name='bhakti_map'),
     path('sikh-map/', views.sikh_map, name='sikh_map'),
 
+    #Modern Maps
+    path('portugese-map/', views.portugese_map, name='portugese_map'),
+    path('dutch-map/', views.dutch_map, name='dutch_map'),
+    path('danes-map/', views.danes_map, name='danes_map'),
+    path('french-map/', views.french_map, name='french_map'),
+    path('british-map/', views.british_map, name='british_map'),
+
 ]
 
 
