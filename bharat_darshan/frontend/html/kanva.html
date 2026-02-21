@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kanva Dynasty | Digital Atlas of India</title>
   <link rel="stylesheet" href="{% static 'css/kanva.css' %}">
 </head>
+
 <body>
   <header class="page-header">
     <h1>Kanva Dynasty (c. 75–30 BCE)</h1>
@@ -23,13 +25,22 @@
     <!-- Background Section -->
     <section class="info-card">
       <h2>Background</h2>
-      <p>The Kanva Dynasty (c. 75 BCE – 30 CE) was a brief and lesser-known dynasty in ancient India that succeeded the Shunga Empire, ruling for about a century over parts of northern India. It is often considered a transitional period between the Shungas and later dynasties like the Kushans or Western Kshatrapas. The Kanvas are primarily known from Puranic texts and inscriptions, with limited archaeological evidence. Centered in the Magadha region (modern Bihar), the dynasty controlled a smaller territory compared to the Shungas, mainly northern India, including parts of present-day Bihar, Uttar Pradesh, and possibly Madhya Pradesh.</p>
+      <p>The Kanva Dynasty (c. 75 BCE – 30 CE) was a brief and lesser-known dynasty in ancient India that succeeded the
+        Shunga Empire, ruling for about a century over parts of northern India. It is often considered a transitional
+        period between the Shungas and later dynasties like the Kushans or Western Kshatrapas. The Kanvas are primarily
+        known from Puranic texts and inscriptions, with limited archaeological evidence. Centered in the Magadha region
+        (modern Bihar), the dynasty controlled a smaller territory compared to the Shungas, mainly northern India,
+        including parts of present-day Bihar, Uttar Pradesh, and possibly Madhya Pradesh.</p>
     </section>
 
     <!-- Founding and Rise Section -->
     <section class="info-card">
       <h2>Founding and Rise</h2>
-      <p>Founder: Vasudeva Kanva (r. c. 75–66 BCE), who assassinated the last Shunga emperor, Devabhuti, and established the dynasty. He is credited with restoring some stability after the Shunga decline. The Kanvas maintained a similar administrative structure to the Shungas, with a centralized monarchy, bureaucracy, and military. They focused on governance and trade but lacked the Shungas' military prowess. Economic activities included agriculture and commerce, though the period saw gradual decline due to external pressures.</p>
+      <p>Founder: Vasudeva Kanva (r. c. 75–66 BCE), who assassinated the last Shunga emperor, Devabhuti, and established
+        the dynasty. He is credited with restoring some stability after the Shunga decline. The Kanvas maintained a
+        similar administrative structure to the Shungas, with a centralized monarchy, bureaucracy, and military. They
+        focused on governance and trade but lacked the Shungas' military prowess. Economic activities included
+        agriculture and commerce, though the period saw gradual decline due to external pressures.</p>
     </section>
 
     <!-- Notable Rulers Section -->
@@ -47,13 +58,18 @@
     <!-- Religion Section -->
     <section class="info-card">
       <h2>Religion</h2>
-      <p>Primarily Hinduism, with continued patronage of Brahmanical traditions. The Kanvas supported Sanskrit literature and religious institutions but did not make significant cultural advancements. Buddhism and Jainism persisted, with tolerance toward these faiths.</p>
+      <p>Primarily Hinduism, with continued patronage of Brahmanical traditions. The Kanvas supported Sanskrit
+        literature and religious institutions but did not make significant cultural advancements. Buddhism and Jainism
+        persisted, with tolerance toward these faiths.</p>
     </section>
 
     <!-- Administration Section -->
     <section class="info-card">
       <h2>Administration</h2>
-      <p>The Kanvas succeeded the Shungas and ruled as Brahmin kings. They maintained a similar administrative structure to their predecessors, emphasizing regional control through local governors and a strong military presence in central India. Governance focused on bureaucracy and trade, but they faced challenges from foreign invasions.</p>
+      <p>The Kanvas succeeded the Shungas and ruled as Brahmin kings. They maintained a similar administrative structure
+        to their predecessors, emphasizing regional control through local governors and a strong military presence in
+        central India. Governance focused on bureaucracy and trade, but they faced challenges from foreign invasions.
+      </p>
     </section>
 
     <!-- Achievements Section -->
@@ -68,16 +84,70 @@
       </ul>
     </section>
 
+    <div class="info-card">
+      <h2>Cultural Heritage</h2>
+      <h3>Tangible Heritage</h3>
+      <p>
+        The Kanva Dynasty (c. 73–28 BCE), the short-lived successors of the Shungas,
+        continued the artistic and architectural traditions of their predecessors
+        during their reign in the Magadha region.
+        The
+        <a href="#" class="open-modal clickable"
+          data-image="{% static 'Data/Ancient_History/kanva_pataliputra_remains.jpg' %}"
+          data-caption="Pataliputra remains from the Kanva period – Continuing the legacy of the ancient Magadha capital">
+          remaining structures at Pataliputra
+        </a>
+        from this period reflect a continuation of Shunga-style architecture,
+        though on a more modest scale owing to the dynasty's limited territorial reach.
+        The Kanva era also saw the continued production of
+       
+          punch-marked and cast coins
+        bearing symbols inherited from Shunga traditions, serving as the primary
+        archaeological evidence of their rule and economic activity.
+      </p>
+
+      <h3>Intangible Heritage</h3>
+      <p>
+        Though the Kanva Dynasty ruled for only about 45 years across four kings,
+        they played a quiet but meaningful role in preserving the Brahminical and
+        Sanskrit traditions established during the Shunga period.
+        Their reign maintained the
+        <a href="#" class="open-modal clickable"
+          data-image="{% static 'Data/Ancient_History/kanva_vedic_traditions.jpg' %}"
+          data-caption="Vedic ritual traditions preserved during the Kanva Dynasty – Brahminical culture continued through Sanskrit learning and religious patronage">
+          Vedic and Brahminical cultural continuity
+        </a>
+        including patronage of Sanskrit learning, Brahmin communities, and
+        Hindu religious rites during a transitional period in Indian history.
+        The dynasty's peaceful transfer of power and tolerance toward Buddhism
+        and Jainism reflected the pluralistic cultural environment of
+        post-Mauryan India, bridging the gap between the Shunga era and the
+        rise of the Satavahana Empire in the Deccan.
+      </p>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="zoomImage" src="" alt="Heritage Image">
+      <p class="caption" id="modalCaption"></p>
+    </div>
+
     <!-- Decline and Fall Section -->
     <section class="info-card">
       <h2>Decline and Fall</h2>
-      <p>The dynasty declined due to succession disputes, economic pressures, and foreign invasions by the Indo-Scythians, Indo-Parthians, and Western Kshatrapas. The last ruler, Susharman, was overthrown around 30 CE, leading to the empire's fragmentation. This highlighted the fragmentation of power in post-Mauryan India, setting the stage for the Kushan Empire and Gupta Dynasty.</p>
+      <p>The dynasty declined due to succession disputes, economic pressures, and foreign invasions by the
+        Indo-Scythians, Indo-Parthians, and Western Kshatrapas. The last ruler, Susharman, was overthrown around 30 CE,
+        leading to the empire's fragmentation. This highlighted the fragmentation of power in post-Mauryan India,
+        setting the stage for the Kushan Empire and Gupta Dynasty.</p>
     </section>
 
     <!-- Legacy Section -->
     <section class="info-card">
       <h2>Legacy</h2>
-      <p>The Kanvas are remembered as a short interlude in Indian history, with limited impact. Their rule preserved some stability and cultural traditions, but historical sources are sparse, relying on Puranas and inscriptions. They bridged the gap between the Shunga and later dynasties.</p>
+      <p>The Kanvas are remembered as a short interlude in Indian history, with limited impact. Their rule preserved
+        some stability and cultural traditions, but historical sources are sparse, relying on Puranas and inscriptions.
+        They bridged the gap between the Shunga and later dynasties.</p>
     </section>
 
     <!-- Map Section -->
@@ -89,4 +159,5 @@
 
   <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
+
 </html>

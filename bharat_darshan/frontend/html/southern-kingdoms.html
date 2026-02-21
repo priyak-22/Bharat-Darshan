@@ -44,7 +44,10 @@
       <p><strong>Region:</strong> Southern Tamil Nadu</p>
       <p><strong>Highlights:</strong> 
         One of the oldest Tamil dynasties, the Pandyas were patrons of Tamil literature and temple culture. 
-        Madurai became a major center of learning and religious activity.
+        <a href="#"
+                 class="open-modal clickable"
+                 data-image="{% static 'Data/Ancient_History/madurai.jpg' %}"
+                 data-caption="Madurai – Capital of the Pandya Dynasty">Madurai</a> became a major center of learning and religious activity.
       </p>
     </section>
 
@@ -53,7 +56,10 @@
       <p><strong>Capital:</strong> Kanchipuram</p>
       <p><strong>Region:</strong> Northern Tamil Nadu and southern Andhra Pradesh</p>
       <p><strong>Highlights:</strong> 
-        The Pallavas pioneered Dravidian temple architecture. 
+        The Pallavas pioneered <a href="#"
+                 class="open-modal clickable"
+                 data-image="{% static 'Data/Ancient_History/dravidian_temple.jpg' %}"
+                 data-caption="Dravidian Temple Architecture of the Pallava Dynasty">Dravidian</a> temple architecture. 
         They built the rock-cut temples and monuments of Mahabalipuram and promoted Sanskrit and Tamil culture.
       </p>
     </section>
@@ -63,7 +69,10 @@
       <p><strong>Capitals:</strong> Badami (Vatapi) and later Kalyani</p>
       <p><strong>Region:</strong> Karnataka and Deccan plateau</p>
       <p><strong>Highlights:</strong> 
-        The Chalukyas developed a distinct style of temple architecture seen at Aihole, Pattadakal, and Badami. 
+        The Chalukyas developed a distinct style of temple architecture seen at Aihole, <a href="#"
+                 class="open-modal clickable"
+                 data-image="{% static 'Data/Ancient_History/Pattadakal.jpg' %}"
+                 data-caption="Dravidian Temple Architecture of the Chalukya Dynasty">Pattadakal</a>, and Badami. 
         They played a key role in Deccan politics and administration.
       </p>
     </section>
@@ -74,7 +83,10 @@
       <p><strong>Region:</strong> Tamil Nadu, Sri Lanka, and parts of Southeast Asia</p>
       <p><strong>Highlights:</strong> 
         The Cholas built a powerful naval empire and expanded Indian influence overseas. 
-        They constructed grand temples such as the Brihadeeswarar Temple at Thanjavur and developed efficient local administration.
+        They constructed grand temples such as the <a href="#"
+                 class="open-modal clickable"
+                 data-image="{% static 'Data/Ancient_History/Brihadeeswara-Temple.jpg' %}"
+                 data-caption="Brihadeeswarar Temple at Thanjavur">Brihadeeswarar Temple at Thanjavur</a> and developed efficient local administration.
       </p>
     </section>
 
@@ -95,6 +107,12 @@
       </p>
     </section>
 
+      <!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="zoomImage" src="" alt="Heritage Image">
+  <p class="caption" id="modalCaption"></p>
+</div>
     <section class="map-section">
       <h2>Region Map</h2>
       <iframe src="{% url 'southern_kingdoms_map' %}" style="width:100%; height:450px; border:none;"></iframe>
@@ -103,6 +121,6 @@
   </main>
   
 
-  <script src="{% static 'js/kingdoms.js' %}"></script>
+  <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
 </html>
