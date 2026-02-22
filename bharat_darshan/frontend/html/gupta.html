@@ -39,9 +39,72 @@
     </section>
 
     <section class="info-card">
-      <h2>Culture and Religion</h2>
-      <p>Religious Patronage: The Guptas were mainly patrons of Hinduism but also supported Buddhism and Jainism. Temples and monasteries were built across the empire.</p>
-      <p>Art and Literature: This period saw the creation of classical Indian art such as the Ajanta cave paintings and famous Sanskrit works by scholars like Kalidasa. Sculpture and temple architecture flourished.</p>
+  <h2>Cultural Heritage</h2>
+
+  <h3>Tangible Heritage</h3>
+  <p>
+    The Gupta Empire is remembered as the Golden Age of Indian art and architecture.
+    One of its greatest physical contributions is the development of classical Hindu temple architecture.
+    The famous
+    <a href="#"
+       class="open-modal clickable"
+       data-image="{% static 'Data/Ancient_History/dashavatara_temple_deogarh.jpg' %}"
+       data-caption="Dashavatara Temple, Deogarh – Early Gupta stone temple architecture">
+      Dashavatara Temple at Deogarh
+    </a>
+    represents the earliest fully developed stone temple with sculpted panels of Vishnu and his avatars.
+  </p>
+
+  <p>
+    The Gupta period also produced magnificent cave temples and murals, especially the
+    <a href="#"
+       class="open-modal clickable"
+       data-image="{% static 'Data/Ancient_History/ajanta_caves_paintings.jpg' %}"
+       data-caption="Ajanta Caves – Buddhist murals and frescoes of the Gupta period">
+      Ajanta Caves
+    </a>,
+    famous for their exquisite paintings depicting scenes from the life of Buddha, Jataka tales, and royal court life.
+    These murals display mastery in color, expression, and human form.
+  </p>
+
+  <p>
+    Gupta coinage stands as another important artistic achievement.
+    Their gold coins or
+ 
+      Dinara coins
+    portray rulers performing religious rituals, hunting, and playing musical instruments, reflecting both wealth
+    and refined artistic taste.
+  </p>
+
+  <h3>Intangible Heritage</h3>
+  <p>
+    The Gupta age witnessed extraordinary progress in
+    <strong>literature, science, and philosophy</strong>.
+    Sanskrit literature reached its classical form during this period.
+    The great poet and dramatist Kalidasa composed masterpieces such as <i>Abhijnanashakuntalam</i> and <i>Meghaduta</i>,
+    which remain cornerstones of Indian literary tradition.
+  </p>
+
+  <p>
+    Scientific and mathematical knowledge flourished under Gupta patronage.
+    Scholars like Aryabhata made groundbreaking contributions to astronomy and mathematics,
+    including the concept of zero, the decimal system, and accurate calculations of planetary motion.
+    His work <i>Aryabhatiya</i> influenced later Indian and Islamic science.
+  </p>
+
+  <p>
+    Religious life during the Gupta Empire was marked by harmony between Hinduism and Buddhism.
+    While the Guptas were devoted to Hindu deities such as Vishnu and Shiva, they also supported Buddhist institutions.
+    This period saw the growth of Bhakti traditions and temple-centered worship.
+  </p>
+
+  <p>
+    The Gupta rulers promoted education through institutions like Nalanda and other learning centers,
+    attracting students from China, Central Asia, and Southeast Asia.
+    Their system of administration and justice emphasized moral governance based on Dharma,
+    shaping Indian political and ethical thought for centuries.
+  </p>
+
     </section>
 
     <section class="info-card">
@@ -65,6 +128,11 @@
       <h2>Decline</h2>
       <p>The Gupta Empire declined after the reign of Skandagupta due to repeated invasions by the Hunas (White Huns), internal conflicts, and weakening central authority. By around 550 CE, the empire had fragmented into smaller kingdoms, leading to the rise of regional dynasties such as the Maukharis and Pushyabhutis.</p>
     </section>
+      <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="zoomImage" src="" alt="Heritage Image">
+      <p class="caption" id="modalCaption"></p>
+    </div>
 
     <section class="map-section">
       <h2>Region Map</h2>
@@ -73,6 +141,6 @@
 
   </main>
 
-  <script src="{% static 'js/kingdoms.js' %}"></script>
+  <script src="{% static 'js/kingdom.js' %}"></script>
 </body>
 </html>

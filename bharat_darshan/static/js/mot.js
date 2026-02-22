@@ -46,3 +46,22 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onresize = positionEras;
 
 });
+const tooltip = document.getElementById("floating-tooltip");
+
+document.querySelectorAll(".era").forEach(era => {
+
+  era.addEventListener("mouseenter", (e) => {
+    tooltip.innerHTML = `<strong>${era.dataset.name}</strong><br>${era.dataset.period}`;
+    tooltip.style.opacity = "1";
+  });
+
+  era.addEventListener("mousemove", (e) => {
+    tooltip.style.left = e.clientX + 15 + "px";
+    tooltip.style.top = e.clientY - 10 + "px";
+  });
+
+  era.addEventListener("mouseleave", () => {
+    tooltip.style.opacity = "0";
+  });
+
+});

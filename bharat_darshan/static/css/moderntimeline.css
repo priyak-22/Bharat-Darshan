@@ -411,3 +411,24 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/* =========================
+   TOOLTIP
+========================= */
+#floating-tooltip {
+  position: fixed;
+  background: #fff3d6;
+  color: #3b2a15;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
