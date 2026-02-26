@@ -336,3 +336,9 @@ a:focus {
   font-size: 1.1rem;
   font-style: italic;
 }
+.custom-underline {
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 3px solid black;  /* thickness of line */
+  padding-bottom: 4px;             /* space between text and line */
+}
