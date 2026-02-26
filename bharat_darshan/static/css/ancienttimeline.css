@@ -430,3 +430,34 @@ a {
   transition: opacity 0.2s ease;
   z-index: 9999;
 }
+/* =========================
+   VIDEO SECTION          
+========================= */
+.video-link-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #c9a24d, #8b6a1f);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  z-index: 1000;
+
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-link-btn:hover {
+  background: linear-gradient(135deg, #b38c2c, #6f5315);
+  transform: translateY(-3px);
+}
+
+.video-link-btn:active {
+  transform: scale(0.95);
+}
