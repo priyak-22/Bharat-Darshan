@@ -27,7 +27,8 @@
       <h2>Background</h2>
       <p>
         The arrival of the Portuguese in India marked the beginning of European colonial and maritime involvement in
-        the Indian subcontinent. In 1498 CE, Vasco da Gama reached Calicut on the Malabar Coast after sailing around
+        the Indian subcontinent. In 1498 CE,  <a href="#" class="open-modal clickable" data-image="{% static 'Data/Modern_History/vasco_da_gama.png' %}"
+          data-caption="Vasco da Gama's arrival in India">Vasco da Gama</a> reached Calicut on the Malabar Coast after sailing around
         the Cape of Good Hope, establishing the first direct sea route between Europe and India. This discovery
         revolutionized global trade by connecting Europe directly with the spice markets of Asia and weakened the
         dominance of Arab and Venetian traders who had previously controlled the trade routes.
@@ -148,6 +149,13 @@
       <h2>Region Map</h2>
       <iframe src="{% url 'portugese_map' %}" style="width:100%; height:450px; border:none;"></iframe>
     </section>
+
+    <!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="zoomImage" src="" alt="Heritage Image">
+  <p class="caption" id="modalCaption"></p>
+</div>
 
   </main>
 
